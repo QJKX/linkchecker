@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.configuration &mdash; LinkChecker 10.1.0.post45+gffe1be37 documentation</title>
+  <title>linkcheck.configuration &mdash; LinkChecker 10.1.0.post50+gd7264945 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -32,7 +32,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post45+gffe1be37
+                10.1.0.post50+gd7264945
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -675,8 +675,9 @@
 
 <div class="viewcode-block" id="get_user_data"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.configuration.html#linkcheck.configuration.get_user_data">[docs]</a><span class="k">def</span> <span class="nf">get_user_data</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Get the user data folder.</span>
-<span class="sd">    Returns &quot;~/.linkchecker/&quot; if this folder exists, \</span>
-<span class="sd">    &quot;$XDG_DATA_HOME/linkchecker&quot; if it does not.</span>
+<span class="sd">    Returns &quot;~/.linkchecker/&quot; if this folder exists,</span>
+<span class="sd">    &quot;$XDG_DATA_HOME/linkchecker&quot; if $XDG_DATA_HOME is set,</span>
+<span class="sd">    else &quot;~/.local/share/linkchecker&quot;.</span>
 <span class="sd">    @rtype string</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">homedotdir</span> <span class="o">=</span> <span class="n">normpath</span><span class="p">(</span><span class="s2">&quot;~/.linkchecker/&quot;</span><span class="p">)</span>
@@ -690,9 +691,10 @@
 
 <div class="viewcode-block" id="get_plugin_folders"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.configuration.html#linkcheck.configuration.get_plugin_folders">[docs]</a><span class="k">def</span> <span class="nf">get_plugin_folders</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Get linkchecker plugin folders. Default is</span>
-<span class="sd">    &quot;$XDG_DATA_HOME/linkchecker/plugins/&quot;. &quot;~/.linkchecker/plugins/&quot; is also</span>
-<span class="sd">    supported for backwards compatibility, and is used if both directories</span>
-<span class="sd">    exist.&quot;&quot;&quot;</span>
+<span class="sd">    &quot;$XDG_DATA_HOME/linkchecker/plugins/&quot; if $XDG_DATA_HOME is set, else</span>
+<span class="sd">    &quot;~/.local/share/linkchecker/plugins/&quot;.</span>
+<span class="sd">    &quot;~/.linkchecker/plugins/&quot; is also</span>
+<span class="sd">    supported for backwards compatibility, and is used if it exists.&quot;&quot;&quot;</span>
     <span class="n">folders</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">defaultfolder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">get_user_data</span><span class="p">(),</span> <span class="s2">&quot;plugins&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">defaultfolder</span><span class="p">):</span>

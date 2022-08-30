@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheckerrc &mdash; LinkChecker 10.1.0.post45+gffe1be37 documentation</title>
+  <title>linkcheckerrc &mdash; LinkChecker 10.1.0.post50+gd7264945 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -35,7 +35,7 @@
             <img src="../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post45+gffe1be37
+                10.1.0.post50+gd7264945
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -357,8 +357,9 @@
 <h2>DESCRIPTION<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
 <p><strong>linkcheckerrc</strong> is the configuration file for LinkChecker. The file is
 written in an INI-style format.
-The default file location is <strong>~/.linkchecker/linkcheckerrc</strong> on Unix,
-<strong>%HOMEPATH%\.linkchecker\linkcheckerrc</strong> on Windows systems.</p>
+The default file location is <strong>$XDG_CONFIG_HOME/linkchecker/linkcheckerrc</strong>
+or else <strong>~/.config/linkchecker/linkcheckerrc</strong> on Unix,
+<strong>%HOMEPATH%\.config\linkchecker\linkcheckerrc</strong> on Windows systems.</p>
 </section>
 <section id="settings">
 <h2>SETTINGS<a class="headerlink" href="#settings" title="Permalink to this heading"></a></h2>
@@ -515,7 +516,7 @@ form.</p>
 <h4>URL checking results<a class="headerlink" href="#url-checking-results" title="Permalink to this heading"></a></h4>
 <dl class="simple">
 <dt><strong>fileoutput=</strong><em>TYPE</em>[<strong>,</strong><em>TYPE</em>…]</dt><dd><p>Output to a file <strong>linkchecker-out.</strong><em>TYPE</em>, or
-<strong>$HOME/.linkchecker/failures</strong> for the <strong>failures</strong> output type.
+<strong>$XDG_DATA_HOME/linkchecker/failures</strong> for the <strong>failures</strong> output type.
 Valid file output types are <strong>text</strong>, <strong>html</strong>, <strong>sql</strong>, <strong>csv</strong>,
 <strong>gml</strong>, <strong>dot</strong>, <strong>xml</strong>, <strong>none</strong> or <strong>failures</strong>. Default is no
 file output. The various output types are documented below. Note

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkchecker &mdash; LinkChecker 10.1.0.post45+gffe1be37 documentation</title>
+  <title>linkchecker &mdash; LinkChecker 10.1.0.post50+gd7264945 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -35,7 +35,7 @@
             <img src="../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post45+gffe1be37
+                10.1.0.post50+gd7264945
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -419,7 +419,7 @@ checked as usual:</p>
 <dt class="sig sig-object std" id="cmdoption-f">
 <span id="cmdoption-config"></span><span class="sig-name descname"><span class="pre">-f</span></span><span class="sig-prename descclassname"> <span class="pre">FILENAME</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--config</span></span><span class="sig-prename descclassname"><span class="pre">=FILENAME</span></span><a class="headerlink" href="#cmdoption-f" title="Permalink to this definition"></a></dt>
 <dd><p>Use FILENAME as configuration file. By default LinkChecker uses
-~/.linkchecker/linkcheckerrc.</p>
+$XDG_CONFIG_HOME/linkchecker/linkcheckerrc.</p>
 </dd></dl>
 
 <dl class="std option">
@@ -462,7 +462,7 @@ threads is 10. To disable threading specify a non-positive number.</p>
 <dt class="sig sig-object std" id="cmdoption-F">
 <span id="cmdoption-file-output"></span><span class="sig-name descname"><span class="pre">-F</span></span><span class="sig-prename descclassname"> <span class="pre">TYPE[/ENCODING][/FILENAME]</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--file-output</span></span><span class="sig-prename descclassname"><span class="pre">=TYPE[/ENCODING][/FILENAME]</span></span><a class="headerlink" href="#cmdoption-F" title="Permalink to this definition"></a></dt>
 <dd><p>Output to a file linkchecker-out.TYPE,
-$HOME/.linkchecker/failures for the failures output type, or
+$XDG_DATA_HOME/linkchecker/failures for the failures output type, or
 FILENAME if specified. The ENCODING specifies the output
 encoding, the default is that of your locale. Valid encodings are
 listed at
@@ -658,7 +658,7 @@ graph.</p>
 script to create the initial SQL table is included as create.sql.</p>
 </dd>
 <dt><strong>failures</strong></dt><dd><p>Suitable for cron jobs. Logs the check result into a file
-<strong>~/.linkchecker/failures</strong> which only contains entries with
+<strong>$XDG_DATA_HOME/linkchecker/failures</strong> which only contains entries with
 invalid URLs and the number of times they have failed.</p>
 </dd>
 <dt><strong>none</strong></dt><dd><p>Logs nothing. Suitable for debugging or checking the exit code.</p>
@@ -891,8 +891,8 @@ This might slow down the program or even the whole system.</p>
 </section>
 <section id="files">
 <h2>FILES<a class="headerlink" href="#files" title="Permalink to this heading"></a></h2>
-<p><strong>~/.linkchecker/linkcheckerrc</strong> - default configuration file</p>
-<p><strong>~/.linkchecker/failures</strong> - default failures logger output filename</p>
+<p><strong>$XDG_CONFIG_HOME/linkchecker/linkcheckerrc</strong> - default configuration file</p>
+<p><strong>$XDG_DATA_HOME/linkchecker/failures</strong> - default failures logger output filename</p>
 <p><strong>linkchecker-out.</strong><em>TYPE</em> - default logger file output name</p>
 </section>
 <section id="see-also">

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.command.arg_parser &mdash; LinkChecker 10.1.0.post45+gffe1be37 documentation</title>
+  <title>linkcheck.command.arg_parser &mdash; LinkChecker 10.1.0.post50+gd7264945 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -32,7 +32,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post45+gffe1be37
+                10.1.0.post50+gd7264945
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -516,8 +516,8 @@
 <span class="sd">        script to create the initial SQL table is included as create.sql.</span>
 <span class="sd">failures</span>
 <span class="sd">        Suitable for cron jobs. Logs the check result into a file</span>
-<span class="sd">        ~/.linkchecker/failures which only contains entries with invalid</span>
-<span class="sd">        URLs and the number of times they have failed.</span>
+<span class="sd">        $XDG_DATA_HOME/linkchecker/failures which only contains entries with</span>
+<span class="sd">        invalid URLs and the number of times they have failed.</span>
 <span class="sd">none    Logs nothing. Suitable for debugging or checking the exit code.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="p">)</span>
@@ -570,8 +570,8 @@
             <span class="n">metavar</span><span class="o">=</span><span class="s2">&quot;FILENAME&quot;</span><span class="p">,</span>
             <span class="n">help</span><span class="o">=</span><span class="n">_</span><span class="p">(</span>
                 <span class="s2">&quot;Use FILENAME as configuration file. Per default LinkChecker uses</span><span class="se">\n</span><span class="s2">&quot;</span>
-                <span class="s2">&quot;~/.linkchecker/linkcheckerrc (under Windows</span><span class="se">\n</span><span class="s2">&quot;</span>
-                <span class="s2">&quot;</span><span class="si">%%</span><span class="s2">HOMEPATH</span><span class="si">%%</span><span class="se">\\</span><span class="s2">.linkchecker</span><span class="se">\\</span><span class="s2">linkcheckerrc).&quot;</span>
+                <span class="s2">&quot;$XDG_CONFIG_HOME/linkchecker/linkcheckerrc (under Windows</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="s2">&quot;</span><span class="si">%%</span><span class="s2">HOMEPATH</span><span class="si">%%</span><span class="se">\\</span><span class="s2">.config</span><span class="se">\\</span><span class="s2">linkchecker</span><span class="se">\\</span><span class="s2">linkcheckerrc).&quot;</span>
             <span class="p">),</span>
         <span class="p">)</span>
         <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
@@ -624,7 +624,7 @@
             <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;fileoutput&quot;</span><span class="p">,</span>
             <span class="n">metavar</span><span class="o">=</span><span class="s2">&quot;TYPE[/ENCODING[/FILENAME]]&quot;</span><span class="p">,</span>
             <span class="n">help</span><span class="o">=</span><span class="n">_</span><span class="p">(</span>
-                <span class="s2">&quot;Output to a file linkchecker-out.TYPE, $HOME/.linkchecker/failures for</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="s2">&quot;Output to a file linkchecker-out.TYPE, $XDG_DATA_HOME/linkchecker/failures for</span><span class="se">\n</span><span class="s2">&quot;</span>
                 <span class="s2">&quot;&#39;failures&#39; output, or FILENAME if specified.</span><span class="se">\n</span><span class="s2">&quot;</span>
                 <span class="s2">&quot;The ENCODING specifies the output encoding, the default is that of your</span><span class="se">\n</span><span class="s2">&quot;</span>
                 <span class="s2">&quot;locale.</span><span class="se">\n</span><span class="s2">&quot;</span>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.configuration &mdash; LinkChecker 10.1.0.post45+gffe1be37 documentation</title>
+  <title>linkcheck.configuration &mdash; LinkChecker 10.1.0.post50+gd7264945 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -35,7 +35,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post45+gffe1be37
+                10.1.0.post50+gd7264945
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -522,9 +522,10 @@ the file is not found</p>
 <dt class="sig sig-object py" id="linkcheck.configuration.get_plugin_folders">
 <span class="sig-prename descclassname"><span class="pre">linkcheck.configuration.</span></span><span class="sig-name descname"><span class="pre">get_plugin_folders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/configuration.html#get_plugin_folders"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.configuration.get_plugin_folders" title="Permalink to this definition"></a></dt>
 <dd><p>Get linkchecker plugin folders. Default is
-“$XDG_DATA_HOME/linkchecker/plugins/”. “~/.linkchecker/plugins/” is also
-supported for backwards compatibility, and is used if both directories
-exist.</p>
+“$XDG_DATA_HOME/linkchecker/plugins/” if $XDG_DATA_HOME is set, else
+“~/.local/share/linkchecker/plugins/”.
+“~/.linkchecker/plugins/” is also
+supported for backwards compatibility, and is used if it exists.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -551,7 +552,9 @@ failures).
 <dt class="sig sig-object py" id="linkcheck.configuration.get_user_data">
 <span class="sig-prename descclassname"><span class="pre">linkcheck.configuration.</span></span><span class="sig-name descname"><span class="pre">get_user_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/configuration.html#get_user_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.configuration.get_user_data" title="Permalink to this definition"></a></dt>
 <dd><p>Get the user data folder.
-Returns “~/.linkchecker/” if this folder exists,     “$XDG_DATA_HOME/linkchecker” if it does not.
+Returns “~/.linkchecker/” if this folder exists,
+“$XDG_DATA_HOME/linkchecker” if $XDG_DATA_HOME is set,
+else “~/.local/share/linkchecker”.
 :rtype string</p>
 </dd></dl>
 
