@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.plugins.sslcertcheck &mdash; LinkChecker 10.1.0.post56+g75196921 documentation</title>
+  <title>linkcheck.plugins.sslcertcheck &mdash; LinkChecker 10.1.0.post58+g6958e2e2 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -32,7 +32,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post56+g75196921
+                10.1.0.post58+g6958e2e2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -434,16 +434,16 @@
         <span class="k">try</span><span class="p">:</span>
             <span class="n">notAfter</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">cert_time_to_seconds</span><span class="p">(</span><span class="n">cert</span><span class="p">[</span><span class="s1">&#39;notAfter&#39;</span><span class="p">])</span>
         <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Invalid SSL certficate &quot;notAfter&quot; value </span><span class="si">%r</span><span class="s1">&#39;</span><span class="p">)</span> <span class="o">%</span> <span class="n">cert</span><span class="p">[</span><span class="s1">&#39;notAfter&#39;</span><span class="p">]</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Invalid SSL certificate &quot;notAfter&quot; value </span><span class="si">%r</span><span class="s1">&#39;</span><span class="p">)</span> <span class="o">%</span> <span class="n">cert</span><span class="p">[</span><span class="s1">&#39;notAfter&#39;</span><span class="p">]</span>
             <span class="n">url_data</span><span class="o">.</span><span class="n">add_warning</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
             <span class="k">return</span>
         <span class="n">curTime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-        <span class="c1"># Calculate seconds until certifcate expires. Can be negative if</span>
+        <span class="c1"># Calculate seconds until certificate expires. Can be negative if</span>
         <span class="c1"># the certificate is already expired.</span>
         <span class="n">secondsValid</span> <span class="o">=</span> <span class="n">notAfter</span> <span class="o">-</span> <span class="n">curTime</span>
         <span class="n">args</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">expire</span><span class="o">=</span><span class="n">cert</span><span class="p">[</span><span class="s1">&#39;notAfter&#39;</span><span class="p">])</span>
         <span class="k">if</span> <span class="n">secondsValid</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;SSL certficate is expired on </span><span class="si">%(expire)s</span><span class="s1">.&#39;</span><span class="p">)</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;SSL certificate is expired on </span><span class="si">%(expire)s</span><span class="s1">.&#39;</span><span class="p">)</span>
             <span class="n">url_data</span><span class="o">.</span><span class="n">add_warning</span><span class="p">(</span><span class="n">msg</span> <span class="o">%</span> <span class="n">args</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">args</span><span class="p">[</span><span class="s1">&#39;valid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">strformat</span><span class="o">.</span><span class="n">strduration_long</span><span class="p">(</span><span class="n">secondsValid</span><span class="p">)</span>

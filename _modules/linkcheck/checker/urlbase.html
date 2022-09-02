@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.urlbase &mdash; LinkChecker 10.1.0.post56+g75196921 documentation</title>
+  <title>linkcheck.checker.urlbase &mdash; LinkChecker 10.1.0.post58+g6958e2e2 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -32,7 +32,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post56+g75196921
+                10.1.0.post58+g6958e2e2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -576,7 +576,7 @@
         <span class="c1"># This the real url we use when checking so it also referred to</span>
         <span class="c1"># as &#39;real url&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="c1"># a splitted version of url for convenience</span>
+        <span class="c1"># a split version of url for convenience</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="c1"># the scheme, host, port and anchor part of url</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">anchor</span> <span class="o">=</span> <span class="kc">None</span>
@@ -1042,7 +1042,7 @@
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="UrlBase.can_get_content"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.can_get_content">[docs]</a>    <span class="k">def</span> <span class="nf">can_get_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Indicate wether url get_content() can be called.&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Indicate whether url get_content() can be called.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;maxfilesizedownload&quot;</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="UrlBase.download_content"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.download_content">[docs]</a>    <span class="k">def</span> <span class="nf">download_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1308,7 +1308,7 @@
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="n">urlDataAttr</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wired_url_data</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Set all attributes according to the dictionnary wired_url_data&#39;&#39;&#39;</span>
+        <span class="sd">&#39;&#39;&#39;Set all attributes according to the dictionary wired_url_data&#39;&#39;&#39;</span>
         <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">urlDataAttr</span><span class="p">:</span>
             <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">wired_url_data</span><span class="p">[</span><span class="n">attr</span><span class="p">])</span></div>
 </pre></div>

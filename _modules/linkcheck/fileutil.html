@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.fileutil &mdash; LinkChecker 10.1.0.post56+g75196921 documentation</title>
+  <title>linkcheck.fileutil &mdash; LinkChecker 10.1.0.post58+g6958e2e2 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -32,7 +32,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post56+g75196921
+                10.1.0.post58+g6958e2e2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -445,7 +445,7 @@
 
 
 <div class="viewcode-block" id="is_accessable_by_others"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.is_accessable_by_others">[docs]</a><span class="k">def</span> <span class="nf">is_accessable_by_others</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Check if file is group or world accessable.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Check if file is group or world accessible.&quot;&quot;&quot;</span>
     <span class="n">mode</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">filename</span><span class="p">)[</span><span class="n">stat</span><span class="o">.</span><span class="n">ST_MODE</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">mode</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">stat</span><span class="o">.</span><span class="n">S_IRWXG</span> <span class="o">|</span> <span class="n">stat</span><span class="o">.</span><span class="n">S_IRWXO</span><span class="p">)</span></div>
 
