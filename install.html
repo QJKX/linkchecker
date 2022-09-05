@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; LinkChecker 10.1.0.post68+gd5058ecd documentation</title>
+  <title>Installation &mdash; LinkChecker 10.1.0.post74+gc627b007 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -35,7 +35,7 @@
             <img src="_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post68+gd5058ecd
+                10.1.0.post74+gc627b007
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -355,11 +355,10 @@
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
 <p>If you are upgrading from older versions of LinkChecker you should
 also read the upgrading documentation stored in <a class="reference internal" href="upgrading.html"><span class="doc">Upgrading</span></a>.</p>
-<p>When installing from source, for application translations to be installed
-<a class="reference external" href="https://pypi.org/project/polib/">polib</a> needs to be installed before LinkChecker. After LinkChecker installation
-<a class="reference external" href="https://pypi.org/project/polib/">polib</a> can be removed.</p>
-<p>Installing from the GitHub release assets requires <a class="reference external" href="https://pypi.org/project/setuptools-scm-git-archive/">setuptools-scm-git-archive</a>.</p>
-<p><a class="reference external" href="https://pypi.org/project/pip-run/">pip-run</a> may be useful for both of these cases.</p>
+<p>Installing a LinkChecker release uses pre-built distribution packages. Building
+the distribution packages requires <a class="reference external" href="https://pypi.org/project/hatchling/">hatchling</a> and <a class="reference external" href="https://pypi.org/project/hatch-vcs/">hatch-vcs</a>, and for application
+translations to be compiled <a class="reference external" href="https://pypi.org/project/polib/">polib</a> needs to be installed. After the sdist/wheel
+has been built <a class="reference external" href="https://pypi.org/project/polib/">polib</a> can be removed. <a class="reference external" href="https://pypi.org/project/pip-run/">pip-run</a> may be useful for this.</p>
 <p>There are several steps to resolve problems with detecting the character
 encoding of checked HTML pages:
 first ensure the web server, if used, is not returning an incorrect charset in
@@ -375,10 +374,14 @@ used.</p>
 <section id="setup-with-pip">
 <h2>Setup with pip<a class="headerlink" href="#setup-with-pip" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="https://pypi.org/project/pip/">pip</a> can be used to install LinkChecker on the local system.</p>
-<p>If you want application translations, first:
+<p>To install the latest release from PyPI:
+<code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">linkchecker</span></code></p>
+<p>Alternatively you can install the latest source from the LinkChecker GitHub repository.
+First, if you want application translations:
 <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">polib</span></code></p>
-<p>Then this command will install LinkChecker from the latest source:
+<p>Then:
 <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">git+https://github.com/linkchecker/linkchecker.git</span></code></p>
+<p>N.B. git archive’s cannot be used.</p>
 </section>
 <section id="setup-for-windows">
 <h2>Setup for Windows<a class="headerlink" href="#setup-for-windows" title="Permalink to this heading"></a></h2>
@@ -402,22 +405,26 @@ LinkChecker.</p>
 <section id="manual-setup-for-unix-systems">
 <h2>Manual setup for Unix systems<a class="headerlink" href="#manual-setup-for-unix-systems" title="Permalink to this heading"></a></h2>
 <p>First, install the required software.</p>
-<ol class="arabic">
-<li><p>Python &gt;= 3.7 from <a class="reference external" href="https://www.python.org/">https://www.python.org/</a></p>
-<p>Be sure to also have installed the included distutils module.
-On most distributions, the distutils module is included in
-an extra <code class="docutils literal notranslate"><span class="pre">python-dev</span></code> package.</p>
-</li>
+<ol class="arabic simple">
+<li><p>Python hatchling package from <a class="reference external" href="https://pypi.org/project/hatchling/">https://pypi.org/project/hatchling/</a></p></li>
+<li><p>Python hatch-vcs package from <a class="reference external" href="https://pypi.org/project/hatch-vcs/">https://pypi.org/project/hatch-vcs/</a></p></li>
 <li><p>Python Requests package from <a class="reference external" href="https://pypi.org/project/requests/">https://pypi.org/project/requests/</a></p></li>
 <li><p>Python Beautiful Soup package from <a class="reference external" href="https://pypi.org/project/beautifulsoup4/">https://pypi.org/project/beautifulsoup4/</a></p></li>
-<li><p><em>Optional, installation time only, for translations:</em>
+<li><p>Python dnspython package from <a class="reference external" href="https://pypi.org/project/dnspython/">https://pypi.org/project/dnspython/</a></p></li>
+<li><p><em>Optional, build time only, for translations:</em>
 polib Python module from <a class="reference external" href="https://pypi.org/project/polib/">https://pypi.org/project/polib/</a></p></li>
 <li><p><em>Optional, for bash-completion:</em>
 argcomplete Python module from <a class="reference external" href="https://pypi.org/project/argcomplete/">https://pypi.org/project/argcomplete/</a></p></li>
-<li><p><em>Optional, for displaying country codes:</em>
-GeoIP from <a class="reference external" href="https://pypi.org/project/GeoIP/">https://pypi.org/project/GeoIP/</a></p></li>
-<li><p><em>Optional, used for Virus checking:</em>
-ClamAv from <a class="reference external" href="https://www.clamav.net/">https://www.clamav.net/</a></p></li>
+<li><dl class="simple">
+<dt><em>Optional, for displaying country codes:</em></dt><dd><p>GeoIP from <a class="reference external" href="https://pypi.org/project/GeoIP/">https://pypi.org/project/GeoIP/</a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><em>Optional, used for Virus checking:</em></dt><dd><p>ClamAv from <a class="reference external" href="https://www.clamav.net/">https://www.clamav.net/</a></p>
+</dd>
+</dl>
+</li>
 <li><p><em>Optional, to run the WSGI web interface:</em>
 Apache from <a class="reference external" href="https://httpd.apache.org/">https://httpd.apache.org/</a>
 mod_wsgi from <a class="reference external" href="https://pypi.org/project/mod-wsgi/">https://pypi.org/project/mod-wsgi/</a></p></li>
@@ -425,31 +432,24 @@ mod_wsgi from <a class="reference external" href="https://pypi.org/project/mod-w
 <p>Note for developers: if you want to regenerate the po/linkchecker.pot template
 from the source files, you will need xgettext with Python support. This is
 available in gettext &gt;= 0.12.</p>
-<p>Now install the application.</p>
-<ol class="arabic">
-<li><p>Compile Python modules</p>
-<p>Run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">sdist</span> <span class="pre">--manifest-only</span></code> to create the MANIFEST
-file.
-Run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">build</span></code> to compile the Python files.
-For help about the setup.py script options, run
-<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">--help</span></code>.</p>
-</li>
-<li><ol class="loweralpha">
-<li><p>Installation as root</p>
-<p>Run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span></code> to install LinkChecker.</p>
-</li>
-<li><p>Installation as a normal user</p>
-<p>Run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span> <span class="pre">--home</span> <span class="pre">$HOME</span></code>. Note that you have
-to adjust your PATH and PYTHONPATH environment variables, eg. by
-adding the commands <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PYTHONPATH=$HOME/lib/python</span></code> and
-<code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PATH=$PATH:$HOME/bin</span></code> to your shell configuration
-file.</p>
+<p>Clone the LinkChecker repository:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/linkchecker/linkchecker.git</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">linkchecker</span></code></p>
+</div></blockquote>
+<p>Build the distribution wheel:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">hatchling</span> <span class="pre">build</span></code></p>
+</div></blockquote>
+<p>Now install the application from the wheel:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--no-index</span> <span class="pre">--user</span> <span class="pre">dist/LinkChecker-&lt;version&gt;-py3-none-any.whl</span></code></p>
+<p>Note that you may have to adjust your PATH and PYTHONPATH environment variables,
+eg. by adding the commands <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PYTHONPATH=$HOME/lib/python</span></code> and
+<code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PATH=$PATH:$HOME/bin</span></code> to your shell configuration file.</p>
 <p>For more information look at the <a class="reference external" href="https://docs.python.org/3/install/#inst-search-path">Modifying Python’s search path</a>
 documentation.</p>
-</li>
-</ol>
-</li>
-</ol>
+</div></blockquote>
 </section>
 <section id="after-installation">
 <h2>After installation<a class="headerlink" href="#after-installation" title="Permalink to this heading"></a></h2>

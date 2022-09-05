@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.configuration &mdash; LinkChecker 10.1.0.post68+gd5058ecd documentation</title>
+  <title>linkcheck.configuration &mdash; LinkChecker 10.1.0.post74+gc627b007 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -32,7 +32,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post68+gd5058ecd
+                10.1.0.post74+gc627b007
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -375,7 +375,6 @@
 <span class="kn">import</span> <span class="nn">urllib.parse</span>
 <span class="kn">import</span> <span class="nn">shutil</span>
 <span class="kn">import</span> <span class="nn">socket</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">from</span> <span class="nn">importlib.metadata</span> <span class="kn">import</span> <span class="n">distribution</span>
@@ -389,10 +388,11 @@
 <span class="n">linkchecker_distribution</span> <span class="o">=</span> <span class="n">distribution</span><span class="p">(</span><span class="n">COMMAND_NAME</span><span class="p">)</span>
 <span class="n">Version</span> <span class="o">=</span> <span class="n">linkchecker_distribution</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s2">&quot;Version&quot;</span><span class="p">]</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">ReleaseDate</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span>
-        <span class="n">linkchecker_distribution</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="s2">&quot;RELEASE_DATE&quot;</span><span class="p">))</span>
-<span class="k">except</span> <span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">_release</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
     <span class="n">ReleaseDate</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">ReleaseDate</span> <span class="o">=</span> <span class="n">_release</span><span class="o">.</span><span class="n">__release_date__</span>
 <span class="n">AppName</span> <span class="o">=</span> <span class="n">linkchecker_distribution</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span>
 <span class="n">App</span> <span class="o">=</span> <span class="n">AppName</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">Version</span>
 <span class="n">Author</span> <span class="o">=</span> <span class="n">linkchecker_distribution</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s2">&quot;Author&quot;</span><span class="p">]</span>
@@ -401,7 +401,7 @@
 <span class="n">HtmlCopyright</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Copyright &amp;copy; 2000-2016 Bastian&amp;nbsp;Kleineidam, 2010-2022 &quot;</span>
                  <span class="o">+</span> <span class="n">HtmlAuthor</span><span class="p">)</span>
 <span class="n">HtmlAppInfo</span> <span class="o">=</span> <span class="n">App</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">HtmlCopyright</span>
-<span class="n">Url</span> <span class="o">=</span> <span class="n">linkchecker_distribution</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s2">&quot;Home-page&quot;</span><span class="p">]</span>
+<span class="n">Url</span> <span class="o">=</span> <span class="n">linkchecker_distribution</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s2">&quot;Project-URL&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">SupportUrl</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/linkchecker/linkchecker/issues&quot;</span>
 <span class="n">UserAgent</span> <span class="o">=</span> <span class="s2">&quot;Mozilla/5.0 (compatible; </span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">; +</span><span class="si">%s</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">AppName</span><span class="p">,</span> <span class="n">Version</span><span class="p">,</span> <span class="n">Url</span><span class="p">)</span>
 <span class="n">Freeware</span> <span class="o">=</span> <span class="p">(</span>
