@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.fileurl &mdash; LinkChecker 10.1.0.post60+g86243c00 documentation</title>
+  <title>linkcheck.checker.fileurl &mdash; LinkChecker 10.1.0.post65+g39b065bc documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -32,7 +32,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post60+g86243c00
+                10.1.0.post65+g39b065bc
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -99,6 +99,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../man/linkchecker.html#checking-options">Checking options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../man/linkchecker.html#input-options">Input options</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../man/linkchecker.html#configuration-files">CONFIGURATION FILES</a></li>
@@ -624,12 +625,7 @@
             <span class="k">return</span> <span class="kc">True</span>
         <span class="k">if</span> <span class="n">firefox</span><span class="o">.</span><span class="n">has_sqlite</span> <span class="ow">and</span> <span class="n">firefox</span><span class="o">.</span><span class="n">extension</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ContentMimetypes</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">True</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
-            <span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;File with content type </span><span class="si">%r</span><span class="s2"> is not parseable.&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span>
-        <span class="p">)</span>
-        <span class="k">return</span> <span class="kc">False</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_content_type_parseable</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="FileUrl.set_content_type"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.set_content_type">[docs]</a>    <span class="k">def</span> <span class="nf">set_content_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return URL content type, or an empty string if content</span>

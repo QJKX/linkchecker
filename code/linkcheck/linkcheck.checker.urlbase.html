@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.urlbase &mdash; LinkChecker 10.1.0.post60+g86243c00 documentation</title>
+  <title>linkcheck.checker.urlbase &mdash; LinkChecker 10.1.0.post65+g39b065bc documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -35,7 +35,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post60+g86243c00
+                10.1.0.post65+g39b065bc
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -102,6 +102,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../man/linkchecker.html#checking-options">Checking options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../man/linkchecker.html#input-options">Input options</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../man/linkchecker.html#configuration-files">CONFIGURATION FILES</a></li>
@@ -707,6 +708,12 @@ Both user and password can be None.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="linkcheck.checker.urlbase.UrlBase.is_content_type_parseable">
+<span class="sig-name descname"><span class="pre">is_content_type_parseable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/checker/urlbase.html#UrlBase.is_content_type_parseable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.checker.urlbase.UrlBase.is_content_type_parseable" title="Permalink to this definition"></a></dt>
+<dd><p>Return True iff the content type of this url is parseable.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="linkcheck.checker.urlbase.UrlBase.is_css">
 <span class="sig-name descname"><span class="pre">is_css</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/checker/urlbase.html#UrlBase.is_css"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.checker.urlbase.UrlBase.is_css" title="Permalink to this definition"></a></dt>
 <dd><p>Return True iff content of this url is CSS stylesheet.</p>
@@ -866,7 +873,7 @@ Last modification date of retrieved page (or None).</p></li>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="linkcheck.checker.urlbase.UrlBase.ContentMimetypes">
-<span class="sig-name descname"><span class="pre">ContentMimetypes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'application/msword':</span> <span class="pre">'word',</span> <span class="pre">'application/pdf':</span> <span class="pre">'pdf',</span> <span class="pre">'application/x-httpd-php':</span> <span class="pre">'html',</span> <span class="pre">'application/x-pdf':</span> <span class="pre">'pdf',</span> <span class="pre">'application/x-plist+safari':</span> <span class="pre">'safari',</span> <span class="pre">'application/x-shockwave-flash':</span> <span class="pre">'swf',</span> <span class="pre">'application/xhtml+xml':</span> <span class="pre">'html',</span> <span class="pre">'application/xml+sitemap':</span> <span class="pre">'sitemap',</span> <span class="pre">'application/xml+sitemapindex':</span> <span class="pre">'sitemapindex',</span> <span class="pre">'text/css':</span> <span class="pre">'css',</span> <span class="pre">'text/html':</span> <span class="pre">'html',</span> <span class="pre">'text/plain+chromium':</span> <span class="pre">'chromium',</span> <span class="pre">'text/plain+linkchecker':</span> <span class="pre">'text',</span> <span class="pre">'text/plain+opera':</span> <span class="pre">'opera',</span> <span class="pre">'text/vnd.wap.wml':</span> <span class="pre">'wml'}</span></em><a class="headerlink" href="#linkcheck.checker.urlbase.UrlBase.ContentMimetypes" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ContentMimetypes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'application/msword':</span> <span class="pre">'word',</span> <span class="pre">'application/pdf':</span> <span class="pre">'pdf',</span> <span class="pre">'application/vnd.adobe.flash.movie':</span> <span class="pre">'swf',</span> <span class="pre">'application/x-httpd-php':</span> <span class="pre">'html',</span> <span class="pre">'application/x-pdf':</span> <span class="pre">'pdf',</span> <span class="pre">'application/x-plist+safari':</span> <span class="pre">'safari',</span> <span class="pre">'application/x-shockwave-flash':</span> <span class="pre">'swf',</span> <span class="pre">'application/xhtml+xml':</span> <span class="pre">'html',</span> <span class="pre">'application/xml+sitemap':</span> <span class="pre">'sitemap',</span> <span class="pre">'application/xml+sitemapindex':</span> <span class="pre">'sitemapindex',</span> <span class="pre">'text/css':</span> <span class="pre">'css',</span> <span class="pre">'text/html':</span> <span class="pre">'html',</span> <span class="pre">'text/plain+chromium':</span> <span class="pre">'chromium',</span> <span class="pre">'text/plain+linkchecker':</span> <span class="pre">'text',</span> <span class="pre">'text/plain+opera':</span> <span class="pre">'opera',</span> <span class="pre">'text/vnd.wap.wml':</span> <span class="pre">'wml'}</span></em><a class="headerlink" href="#linkcheck.checker.urlbase.UrlBase.ContentMimetypes" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
