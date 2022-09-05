@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.httputil &mdash; LinkChecker 10.1.0.post65+g39b065bc documentation</title>
+  <title>linkcheck.httputil &mdash; LinkChecker 10.1.0.post68+gd5058ecd documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -32,7 +32,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post65+g39b065bc
+                10.1.0.post68+gd5058ecd
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -365,50 +365,24 @@
 <span class="c1"># You should have received a copy of the GNU General Public License along</span>
 <span class="c1"># with this program; if not, write to the Free Software Foundation, Inc.,</span>
 <span class="c1"># 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-
 
 <div class="viewcode-block" id="x509_to_dict"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.httputil.html#linkcheck.httputil.x509_to_dict">[docs]</a><span class="k">def</span> <span class="nf">x509_to_dict</span><span class="p">(</span><span class="n">x509</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Parse a x509 pyopenssl object to a dictionary with keys</span>
 <span class="sd">    subject, subjectAltName and optional notAfter.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">requests.packages.urllib3.contrib.pyopenssl</span> <span class="kn">import</span> <span class="n">get_subj_alt_name</span>
+    <span class="kn">from</span> <span class="nn">cryptography.x509</span> <span class="kn">import</span> <span class="n">DNSName</span><span class="p">,</span> <span class="n">SubjectAlternativeName</span>
+
+    <span class="n">crypto_cert</span> <span class="o">=</span> <span class="n">x509</span><span class="o">.</span><span class="n">to_cryptography</span><span class="p">()</span>
+    <span class="n">ext</span> <span class="o">=</span> <span class="n">crypto_cert</span><span class="o">.</span><span class="n">extensions</span><span class="o">.</span><span class="n">get_extension_for_class</span><span class="p">(</span><span class="n">SubjectAlternativeName</span><span class="p">)</span>
 
     <span class="n">res</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;subject&#39;</span><span class="p">:</span> <span class="p">(((</span><span class="s1">&#39;commonName&#39;</span><span class="p">,</span> <span class="n">x509</span><span class="o">.</span><span class="n">get_subject</span><span class="p">()</span><span class="o">.</span><span class="n">CN</span><span class="p">),),),</span>
-        <span class="s1">&#39;subjectAltName&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;DNS&#39;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">get_subj_alt_name</span><span class="p">(</span><span class="n">x509</span><span class="p">)]</span>
+        <span class="s1">&#39;subjectAltName&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">(</span><span class="s1">&#39;DNS&#39;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">ext</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">get_values_for_type</span><span class="p">(</span><span class="n">DNSName</span><span class="p">)]</span>
     <span class="p">}</span>
-    <span class="n">notAfter</span> <span class="o">=</span> <span class="n">x509</span><span class="o">.</span><span class="n">get_notAfter</span><span class="p">()</span>
+    <span class="n">notAfter</span> <span class="o">=</span> <span class="n">crypto_cert</span><span class="o">.</span><span class="n">not_valid_after</span>
     <span class="k">if</span> <span class="n">notAfter</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">notAfter</span> <span class="o">=</span> <span class="n">notAfter</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
-        <span class="n">parsedtime</span> <span class="o">=</span> <span class="n">asn1_generaltime_to_seconds</span><span class="p">(</span><span class="n">notAfter</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">parsedtime</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">res</span><span class="p">[</span><span class="s1">&#39;notAfter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parsedtime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%b </span><span class="si">%d</span><span class="s1"> %H:%M:%S %Y&#39;</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">parsedtime</span><span class="o">.</span><span class="n">tzinfo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">res</span><span class="p">[</span><span class="s1">&#39;notAfter&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="s1">&#39; GMT&#39;</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="c1"># give up parsing, just set the string</span>
-            <span class="n">res</span><span class="p">[</span><span class="s1">&#39;notAfter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">notAfter</span>
-    <span class="k">return</span> <span class="n">res</span></div>
-
-
-<div class="viewcode-block" id="asn1_generaltime_to_seconds"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.httputil.html#linkcheck.httputil.asn1_generaltime_to_seconds">[docs]</a><span class="k">def</span> <span class="nf">asn1_generaltime_to_seconds</span><span class="p">(</span><span class="n">timestr</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;The given string has one of the following formats</span>
-<span class="sd">    YYYYMMDDhhmmssZ</span>
-<span class="sd">    YYYYMMDDhhmmss+hhmm</span>
-<span class="sd">    YYYYMMDDhhmmss-hhmm</span>
-
-<span class="sd">    @return: a datetime object or None on error</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">timeformat</span> <span class="o">=</span> <span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">%H%M%S&quot;</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">timestr</span><span class="p">,</span> <span class="n">timeformat</span> <span class="o">+</span> <span class="s1">&#39;Z&#39;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">res</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">timestr</span><span class="p">,</span> <span class="n">timeformat</span> <span class="o">+</span> <span class="s1">&#39;%z&#39;</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-            <span class="k">pass</span>
+        <span class="n">res</span><span class="p">[</span><span class="s1">&#39;notAfter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">notAfter</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%b </span><span class="si">%d</span><span class="s1"> %H:%M:%S %Y GMT&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">res</span></div>
 
 

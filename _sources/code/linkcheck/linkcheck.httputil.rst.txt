@@ -13,7 +13,6 @@ linkcheck.httputil
 
    .. autosummary::
    
-      asn1_generaltime_to_seconds
       get_content_type
       x509_to_dict
    
