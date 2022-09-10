@@ -30,4 +30,5 @@ linkcheck.htmlutil
    linkcheck.htmlutil.htmlsoup
    linkcheck.htmlutil.linkparse
    linkcheck.htmlutil.loginformsearch
+   linkcheck.htmlutil.srcsetparse
 

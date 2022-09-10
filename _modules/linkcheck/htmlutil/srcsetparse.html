@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.htmlutil.loginformsearch &mdash; LinkChecker 10.1.0.post81+gd60b5265 documentation</title>
+  <title>linkcheck.htmlutil.srcsetparse &mdash; LinkChecker 10.1.0.post81+gd60b5265 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://linkchecker.github.io/linkchecker/_modules/linkcheck/htmlutil/loginformsearch.html" />
+    <link rel="canonical" href="https://linkchecker.github.io/linkchecker/_modules/linkcheck/htmlutil/srcsetparse.html" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -341,7 +341,7 @@
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../../index.html">Module code</a> &raquo;</li>
           <li><a href="../../linkcheck.html">linkcheck</a> &raquo;</li>
-      <li>linkcheck.htmlutil.loginformsearch</li>
+      <li>linkcheck.htmlutil.srcsetparse</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -350,8 +350,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <h1>Source code for linkcheck.htmlutil.loginformsearch</h1><div class="highlight"><pre>
-<span></span><span class="c1"># Copyright (C) 2014 Bastian Kleineidam</span>
+  <h1>Source code for linkcheck.htmlutil.srcsetparse</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2022 Stefan Fisk</span>
 <span class="c1">#</span>
 <span class="c1"># This program is free software; you can redistribute it and/or modify</span>
 <span class="c1"># it under the terms of the GNU General Public License as published by</span>
@@ -367,47 +367,81 @@
 <span class="c1"># with this program; if not, write to the Free Software Foundation, Inc.,</span>
 <span class="c1"># 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">HTML form utils</span>
+<span class="sd">srcset attribute parser</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">..htmlutil</span> <span class="kn">import</span> <span class="n">htmlsoup</span>
-<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">log</span><span class="p">,</span> <span class="n">LOG_CHECK</span>
 
 
-<div class="viewcode-block" id="Form"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.loginformsearch.html#linkcheck.htmlutil.loginformsearch.Form">[docs]</a><span class="k">class</span> <span class="nc">Form</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Store HTML form URL and form data.&quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Set URL and empty form data.&quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
-
-<div class="viewcode-block" id="Form.add_value"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.loginformsearch.html#linkcheck.htmlutil.loginformsearch.Form.add_value">[docs]</a>    <span class="k">def</span> <span class="nf">add_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Add a form value.&quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span></div>
-
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Return string displaying URL and form data.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="s2">&quot;&lt;url=</span><span class="si">%s</span><span class="s2"> data=</span><span class="si">%s</span><span class="s2">&gt;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span></div>
+<span class="n">_TAB</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\u0009</span><span class="s1">&#39;</span>
+<span class="n">_LF</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\u000A</span><span class="s1">&#39;</span>
+<span class="n">_FF</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\u000C</span><span class="s1">&#39;</span>
+<span class="n">_CR</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\u000D</span><span class="s1">&#39;</span>
+<span class="n">_SPACE</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\u0020</span><span class="s1">&#39;</span>
+<span class="n">_COMMA</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\u002C</span><span class="s1">&#39;</span>
+<span class="n">_LEFT_PARENTHESIS</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\u0028</span><span class="s1">&#39;</span>
+<span class="n">_RIGHT_PARENTHESIS</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\u0029</span><span class="s1">&#39;</span>
 
 
-<div class="viewcode-block" id="search_form"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.loginformsearch.html#linkcheck.htmlutil.loginformsearch.search_form">[docs]</a><span class="k">def</span> <span class="nf">search_form</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">cgiuser</span><span class="p">,</span> <span class="n">cgipassword</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Search for a HTML form in the given HTML content that has input elements</span>
-<span class="sd">    with name attributes that match cgiuser and/or cgipassword. If no such form</span>
-<span class="sd">    is found return None.</span>
+<span class="n">_WHITESPACE</span> <span class="o">=</span> <span class="p">{</span><span class="n">_TAB</span><span class="p">,</span>  <span class="n">_LF</span><span class="p">,</span>  <span class="n">_FF</span><span class="p">,</span>  <span class="n">_CR</span><span class="p">,</span>  <span class="n">_SPACE</span><span class="p">}</span>
+<span class="n">_WHITESPACE_OR_COMMA</span> <span class="o">=</span> <span class="n">_WHITESPACE</span> <span class="o">|</span> <span class="p">{</span><span class="n">_COMMA</span><span class="p">}</span>
+
+
+<div class="viewcode-block" id="parse_srcset"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.srcsetparse.html#linkcheck.htmlutil.srcsetparse.parse_srcset">[docs]</a><span class="k">def</span> <span class="nf">parse_srcset</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Parse HTML srcset</span>
+
+<span class="sd">    Based on WhatWG HTML standard § 4.8.4.3.10 Parsing a srcset attribute,</span>
+<span class="sd">    but does not parse or validate descriptors.</span>
+
+<span class="sd">    https://html.spec.whatwg.org/multipage/images.html#parse-a-srcset-attribute</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">soup</span> <span class="o">=</span> <span class="n">htmlsoup</span><span class="o">.</span><span class="n">make_soup</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
-    <span class="n">cginames</span> <span class="o">=</span> <span class="p">{</span><span class="n">cgiuser</span><span class="p">,</span> <span class="n">cgipassword</span><span class="p">}</span> <span class="o">-</span> <span class="p">{</span><span class="kc">None</span><span class="p">}</span>
-    <span class="k">for</span> <span class="n">form_element</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;form&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-        <span class="n">form</span> <span class="o">=</span> <span class="n">Form</span><span class="p">(</span><span class="n">form_element</span><span class="p">[</span><span class="s2">&quot;action&quot;</span><span class="p">])</span>
-        <span class="k">for</span> <span class="n">input_element</span> <span class="ow">in</span> <span class="n">form_element</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}):</span>
-            <span class="n">form</span><span class="o">.</span><span class="n">add_value</span><span class="p">(</span><span class="n">input_element</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">input_element</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">))</span>
-        <span class="k">if</span> <span class="n">cginames</span> <span class="o">&lt;=</span> <span class="nb">set</span><span class="p">(</span><span class="n">form</span><span class="o">.</span><span class="n">data</span><span class="p">):</span>
-            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;Found form </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">form</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">form</span>
 
-    <span class="c1"># not found</span>
-    <span class="n">log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;Form with fields </span><span class="si">%s</span><span class="s2"> not found&quot;</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cginames</span><span class="p">))</span>
-    <span class="k">return</span> <span class="kc">None</span></div>
+    <span class="n">input_end</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
+    <span class="n">position</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">urls</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">while</span> <span class="n">position</span> <span class="o">&lt;</span> <span class="n">input_end</span><span class="p">:</span>
+        <span class="c1"># 4. Splitting loop: Collect a sequence of code points that are ASCII</span>
+        <span class="c1"># whitespace or U+002C COMMA characters from input given position.</span>
+        <span class="k">while</span> <span class="n">position</span> <span class="o">&lt;</span> <span class="n">input_end</span> <span class="ow">and</span> <span class="nb">input</span><span class="p">[</span><span class="n">position</span><span class="p">]</span> <span class="ow">in</span> <span class="n">_WHITESPACE_OR_COMMA</span><span class="p">:</span>
+            <span class="n">position</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># 5. If position is past the end of input, return candidates.</span>
+        <span class="k">if</span> <span class="n">position</span> <span class="o">&gt;=</span> <span class="n">input_end</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">urls</span>
+
+        <span class="c1"># 6. Collect a sequence of code points that are not ASCII</span>
+        <span class="c1"># whitespace from input given position, and let that be url.</span>
+        <span class="n">url_start</span> <span class="o">=</span> <span class="n">position</span>
+        <span class="k">while</span> <span class="n">position</span> <span class="o">&lt;</span> <span class="n">input_end</span> <span class="ow">and</span> <span class="nb">input</span><span class="p">[</span><span class="n">position</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_WHITESPACE</span><span class="p">:</span>
+            <span class="n">position</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">url_end</span> <span class="o">=</span> <span class="n">position</span>
+
+        <span class="c1"># 8, If url ends with U+002C (,), then:</span>
+        <span class="k">if</span> <span class="nb">input</span><span class="p">[</span><span class="n">url_end</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">_COMMA</span><span class="p">:</span>
+            <span class="c1"># Remove all trailing U+002C COMMA characters from url.</span>
+            <span class="k">while</span> <span class="n">url_end</span> <span class="o">&gt;</span> <span class="n">url_start</span> <span class="ow">and</span> <span class="nb">input</span><span class="p">[</span><span class="n">url_end</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">_COMMA</span><span class="p">:</span>
+                <span class="n">url_end</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># This is a shortened version of 1–4 that simply skips the</span>
+            <span class="c1"># descriptors</span>
+            <span class="k">while</span> <span class="n">position</span> <span class="o">&lt;</span> <span class="n">input_end</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">input</span><span class="p">[</span><span class="n">position</span><span class="p">]</span> <span class="o">==</span> <span class="n">_LEFT_PARENTHESIS</span><span class="p">:</span>
+                    <span class="c1"># Skip until first closing parenthesis</span>
+                    <span class="k">while</span> <span class="p">(</span><span class="n">position</span> <span class="o">&lt;</span> <span class="n">input_end</span> <span class="ow">and</span> <span class="nb">input</span><span class="p">[</span><span class="n">position</span><span class="p">]</span> <span class="o">!=</span>
+                            <span class="n">_RIGHT_PARENTHESIS</span><span class="p">):</span>
+                        <span class="n">position</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">elif</span> <span class="nb">input</span><span class="p">[</span><span class="n">position</span><span class="p">]</span> <span class="o">==</span> <span class="n">_COMMA</span><span class="p">:</span>
+                    <span class="k">break</span>
+
+                <span class="n">position</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># 9-15 is parsing and validation of the descriptors, which we ignore</span>
+
+        <span class="c1"># If we found an URL</span>
+        <span class="k">if</span> <span class="n">url_end</span> <span class="o">&gt;</span> <span class="n">url_start</span><span class="p">:</span>
+            <span class="n">urls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">input</span><span class="p">[</span><span class="n">url_start</span><span class="p">:</span><span class="n">url_end</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">urls</span></div>
 </pre></div>
 
            </div>

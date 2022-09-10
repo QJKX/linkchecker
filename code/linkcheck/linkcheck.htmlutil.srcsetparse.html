@@ -4,12 +4,12 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.dummy &mdash; LinkChecker 10.1.0.post81+gd60b5265 documentation</title>
+  <title>linkcheck.htmlutil.srcsetparse &mdash; LinkChecker 10.1.0.post81+gd60b5265 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://linkchecker.github.io/linkchecker/code/linkcheck/linkcheck.dummy.html" />
+    <link rel="canonical" href="https://linkchecker.github.io/linkchecker/code/linkcheck/linkcheck.htmlutil.srcsetparse.html" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -22,8 +22,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="linkcheck.fileutil" href="linkcheck.fileutil.html" />
-    <link rel="prev" title="linkcheck.director.task" href="linkcheck.director.task.html" /> 
+    <link rel="next" title="linkcheck.httputil" href="linkcheck.httputil.html" />
+    <link rel="prev" title="linkcheck.htmlutil.loginformsearch" href="linkcheck.htmlutil.loginformsearch.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -253,14 +253,14 @@
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.director.task.html">linkcheck.director.task</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">linkcheck.dummy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.dummy.html">linkcheck.dummy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.fileutil.html">linkcheck.fileutil</a></li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.ftpparse.html">linkcheck.ftpparse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.htmlutil.html">linkcheck.htmlutil</a><ul>
+<li class="toctree-l3 current"><a class="reference internal" href="linkcheck.htmlutil.html">linkcheck.htmlutil</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.htmlutil.htmlsoup.html">linkcheck.htmlutil.htmlsoup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.htmlutil.linkparse.html">linkcheck.htmlutil.linkparse</a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.htmlutil.loginformsearch.html">linkcheck.htmlutil.loginformsearch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="linkcheck.htmlutil.srcsetparse.html">linkcheck.htmlutil.srcsetparse</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">linkcheck.htmlutil.srcsetparse</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.httputil.html">linkcheck.httputil</a></li>
@@ -344,9 +344,10 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../index.html">Code</a> &raquo;</li>
           <li><a href="linkcheck.html">linkcheck</a> &raquo;</li>
-      <li>linkcheck.dummy</li>
+          <li><a href="linkcheck.htmlutil.html">linkcheck.htmlutil</a> &raquo;</li>
+      <li>linkcheck.htmlutil.srcsetparse</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/code/linkcheck/linkcheck.dummy.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/code/linkcheck/linkcheck.htmlutil.srcsetparse.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -354,9 +355,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-linkcheck.dummy">
-<span id="linkcheck-dummy"></span><h1>linkcheck.dummy<a class="headerlink" href="#module-linkcheck.dummy" title="Permalink to this heading"></a></h1>
-<p>Dummy objects.</p>
+  <section id="module-linkcheck.htmlutil.srcsetparse">
+<span id="linkcheck-htmlutil-srcsetparse"></span><h1>linkcheck.htmlutil.srcsetparse<a class="headerlink" href="#module-linkcheck.htmlutil.srcsetparse" title="Permalink to this heading"></a></h1>
+<p>srcset attribute parser</p>
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -364,35 +365,18 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.dummy.dummy" title="linkcheck.dummy.dummy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dummy</span></code></a>(*args, **kwargs)</p></td>
-<td><p>Ignore any positional or keyword arguments, return None.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.htmlutil.srcsetparse.parse_srcset" title="linkcheck.htmlutil.srcsetparse.parse_srcset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_srcset</span></code></a>(input)</p></td>
+<td><p>Parse HTML srcset</p></td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Classes</p>
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.dummy.Dummy" title="linkcheck.dummy.Dummy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Dummy</span></code></a>(*args, **kwargs)</p></td>
-<td><p>A dummy object ignores all access to it.</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="py class">
-<dt class="sig sig-object py" id="linkcheck.dummy.Dummy">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">linkcheck.dummy.</span></span><span class="sig-name descname"><span class="pre">Dummy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/dummy.html#Dummy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.dummy.Dummy" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A dummy object ignores all access to it. Useful for testing.</p>
-<p>Return None</p>
-</dd></dl>
-
 <dl class="py function">
-<dt class="sig sig-object py" id="linkcheck.dummy.dummy">
-<span class="sig-prename descclassname"><span class="pre">linkcheck.dummy.</span></span><span class="sig-name descname"><span class="pre">dummy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/dummy.html#dummy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.dummy.dummy" title="Permalink to this definition"></a></dt>
-<dd><p>Ignore any positional or keyword arguments, return None.</p>
+<dt class="sig sig-object py" id="linkcheck.htmlutil.srcsetparse.parse_srcset">
+<span class="sig-prename descclassname"><span class="pre">linkcheck.htmlutil.srcsetparse.</span></span><span class="sig-name descname"><span class="pre">parse_srcset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/htmlutil/srcsetparse.html#parse_srcset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.htmlutil.srcsetparse.parse_srcset" title="Permalink to this definition"></a></dt>
+<dd><p>Parse HTML srcset</p>
+<p>Based on WhatWG HTML standard § 4.8.4.3.10 Parsing a srcset attribute,
+but does not parse or validate descriptors.</p>
+<p><a class="reference external" href="https://html.spec.whatwg.org/multipage/images.html#parse-a-srcset-attribute">https://html.spec.whatwg.org/multipage/images.html#parse-a-srcset-attribute</a></p>
 </dd></dl>
 
 </section>
@@ -401,8 +385,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="linkcheck.director.task.html" class="btn btn-neutral float-left" title="linkcheck.director.task" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="linkcheck.fileutil.html" class="btn btn-neutral float-right" title="linkcheck.fileutil" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="linkcheck.htmlutil.loginformsearch.html" class="btn btn-neutral float-left" title="linkcheck.htmlutil.loginformsearch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="linkcheck.httputil.html" class="btn btn-neutral float-right" title="linkcheck.httputil" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
