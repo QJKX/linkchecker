@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.httpurl &mdash; LinkChecker 10.1.0.post93+g84443b14 documentation</title>
+  <title>linkcheck.checker.httpurl &mdash; LinkChecker 10.1.0.post95+g30e8cfad documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -32,7 +32,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post93+g84443b14
+                10.1.0.post95+g30e8cfad
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -397,7 +397,7 @@
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">internpaturl</span>
 
 <span class="c1"># import warnings</span>
-<span class="kn">from</span> <span class="nn">.const</span> <span class="kn">import</span> <span class="n">WARN_HTTP_EMPTY_CONTENT</span><span class="p">,</span> <span class="n">WARN_URL_RATE_LIMITED</span>
+<span class="kn">from</span> <span class="nn">.const</span> <span class="kn">import</span> <span class="n">WARN_HTTP_EMPTY_CONTENT</span><span class="p">,</span> <span class="n">WARN_HTTP_RATE_LIMITED</span>
 <span class="kn">from</span> <span class="nn">requests.sessions</span> <span class="kn">import</span> <span class="n">REDIRECT_STATI</span>
 
 <span class="n">HTTP_SCHEMAS</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;http://&#39;</span><span class="p">,</span> <span class="s1">&#39;https://&#39;</span><span class="p">)</span>
@@ -669,7 +669,7 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">add_warning</span><span class="p">(</span>
                     <span class="s2">&quot;Rate limited (Retry-After: </span><span class="si">%s</span><span class="s2">)&quot;</span>
                     <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Retry-After&quot;</span><span class="p">),</span>
-                    <span class="n">tag</span><span class="o">=</span><span class="n">WARN_URL_RATE_LIMITED</span><span class="p">,</span>
+                    <span class="n">tag</span><span class="o">=</span><span class="n">WARN_HTTP_RATE_LIMITED</span><span class="p">,</span>
                 <span class="p">)</span>
 
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span><span class="o">.</span><span class="n">status_code</span> <span class="o">&gt;=</span> <span class="mi">200</span><span class="p">:</span>
