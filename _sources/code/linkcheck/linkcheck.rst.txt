@@ -1,4 +1,4 @@
-linkcheck
+﻿linkcheck
 =========
 
 .. automodule:: linkcheck
