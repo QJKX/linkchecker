@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.configuration.confparse &mdash; LinkChecker 10.1.0.post101+g0d36b695 documentation</title>
+  <title>linkcheck.configuration.confparse &mdash; LinkChecker 10.1.0.post104+g61792cb8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -32,7 +32,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post101+g0d36b695
+                10.1.0.post104+g61792cb8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -540,7 +540,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">read_boolean_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="s2">&quot;sslverify&quot;</span><span class="p">)</span>
         <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">read_string_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="s2">&quot;sslverify&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">read_int_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="s2">&quot;maxrunseconds&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">read_int_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="s2">&quot;maxrunseconds&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">read_int_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="s2">&quot;resultcachesize&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="LCConfigParser.read_authentication_config"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.configuration.confparse.html#linkcheck.configuration.confparse.LCConfigParser.read_authentication_config">[docs]</a>    <span class="k">def</span> <span class="nf">read_authentication_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Read configuration options in section &quot;authentication&quot;.&quot;&quot;&quot;</span>
