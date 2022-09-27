@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.logger.graph &mdash; LinkChecker 10.1.0.post107+g36a45b0f documentation</title>
+  <title>linkcheck.logger.graph &mdash; LinkChecker 10.1.0.post109+g2c3aa5eb documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -19,6 +19,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -35,7 +36,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post107+g36a45b0f
+                10.1.0.post109+g2c3aa5eb
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -197,8 +198,33 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Code</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="linkcheck.html">linkcheck</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.ansicolor.html">linkcheck.ansicolor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.better_exchook2.html">linkcheck.better_exchook2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.html#linkcheck.LinkCheckerError"><code class="docutils literal notranslate"><span class="pre">LinkCheckerError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.html#linkcheck.LinkCheckerInterrupt"><code class="docutils literal notranslate"><span class="pre">LinkCheckerInterrupt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.html#linkcheck.get_link_pat"><code class="docutils literal notranslate"><span class="pre">get_link_pat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.html#linkcheck.init_i18n"><code class="docutils literal notranslate"><span class="pre">init_i18n()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.html#linkcheck.module_path"><code class="docutils literal notranslate"><span class="pre">module_path()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.ansicolor.html">linkcheck.ansicolor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.ansicolor.html#linkcheck.ansicolor.ColoredStreamHandler"><code class="docutils literal notranslate"><span class="pre">ColoredStreamHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.ansicolor.html#linkcheck.ansicolor.Colorizer"><code class="docutils literal notranslate"><span class="pre">Colorizer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.ansicolor.html#linkcheck.ansicolor.esc_ansicolor"><code class="docutils literal notranslate"><span class="pre">esc_ansicolor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.ansicolor.html#linkcheck.ansicolor.get_columns"><code class="docutils literal notranslate"><span class="pre">get_columns()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.ansicolor.html#linkcheck.ansicolor.get_win_color"><code class="docutils literal notranslate"><span class="pre">get_win_color()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.ansicolor.html#linkcheck.ansicolor.has_colors"><code class="docutils literal notranslate"><span class="pre">has_colors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.ansicolor.html#linkcheck.ansicolor.write_color"><code class="docutils literal notranslate"><span class="pre">write_color()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.better_exchook2.html">linkcheck.better_exchook2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.better_exchook2.html#linkcheck.better_exchook2.better_exchook"><code class="docutils literal notranslate"><span class="pre">better_exchook()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.better_exchook2.html#linkcheck.better_exchook2.fallback_findfile"><code class="docutils literal notranslate"><span class="pre">fallback_findfile()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.better_exchook2.html#linkcheck.better_exchook2.grep_full_py_identifiers"><code class="docutils literal notranslate"><span class="pre">grep_full_py_identifiers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.better_exchook2.html#linkcheck.better_exchook2.install"><code class="docutils literal notranslate"><span class="pre">install()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.better_exchook2.html#linkcheck.better_exchook2.output"><code class="docutils literal notranslate"><span class="pre">output()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.better_exchook2.html#linkcheck.better_exchook2.output_limit"><code class="docutils literal notranslate"><span class="pre">output_limit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.better_exchook2.html#linkcheck.better_exchook2.parse_py_statement"><code class="docutils literal notranslate"><span class="pre">parse_py_statement()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.better_exchook2.html#linkcheck.better_exchook2.pp_extra_info"><code class="docutils literal notranslate"><span class="pre">pp_extra_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.better_exchook2.html#linkcheck.better_exchook2.pretty_print"><code class="docutils literal notranslate"><span class="pre">pretty_print()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.bookmarks.html">linkcheck.bookmarks</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.bookmarks.chromium.html">linkcheck.bookmarks.chromium</a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.bookmarks.firefox.html">linkcheck.bookmarks.firefox</a></li>
@@ -213,6 +239,11 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.checker.html">linkcheck.checker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.checker.html#linkcheck.checker.absolute_url"><code class="docutils literal notranslate"><span class="pre">absolute_url()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.checker.html#linkcheck.checker.get_index_html"><code class="docutils literal notranslate"><span class="pre">get_index_html()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.checker.html#linkcheck.checker.get_url_from"><code class="docutils literal notranslate"><span class="pre">get_url_from()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.checker.html#linkcheck.checker.get_urlclass_from"><code class="docutils literal notranslate"><span class="pre">get_urlclass_from()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.checker.html#linkcheck.checker.guess_url"><code class="docutils literal notranslate"><span class="pre">guess_url()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.checker.const.html">linkcheck.checker.const</a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.checker.dnsurl.html">linkcheck.checker.dnsurl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.checker.fileurl.html">linkcheck.checker.fileurl</a></li>
@@ -228,7 +259,14 @@
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.checker.urlbase.html">linkcheck.checker.urlbase</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.cmdline.html">linkcheck.cmdline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.cmdline.html">linkcheck.cmdline</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.cmdline.html#linkcheck.cmdline.LCArgumentParser"><code class="docutils literal notranslate"><span class="pre">LCArgumentParser</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.cmdline.html#linkcheck.cmdline.aggregate_url"><code class="docutils literal notranslate"><span class="pre">aggregate_url()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.cmdline.html#linkcheck.cmdline.print_plugins"><code class="docutils literal notranslate"><span class="pre">print_plugins()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.cmdline.html#linkcheck.cmdline.print_usage"><code class="docutils literal notranslate"><span class="pre">print_usage()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.cmdline.html#linkcheck.cmdline.print_version"><code class="docutils literal notranslate"><span class="pre">print_version()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.command.html">linkcheck.command</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.command.arg_parser.html">linkcheck.command.arg_parser</a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.command.linkchecker.html">linkcheck.command.linkchecker</a></li>
@@ -236,14 +274,48 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.configuration.html">linkcheck.configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.configuration.html#linkcheck.configuration.Configuration"><code class="docutils literal notranslate"><span class="pre">Configuration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.configuration.html#linkcheck.configuration.get_certifi_file"><code class="docutils literal notranslate"><span class="pre">get_certifi_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.configuration.html#linkcheck.configuration.get_modules_info"><code class="docutils literal notranslate"><span class="pre">get_modules_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.configuration.html#linkcheck.configuration.get_plugin_folders"><code class="docutils literal notranslate"><span class="pre">get_plugin_folders()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.configuration.html#linkcheck.configuration.get_system_cert_file"><code class="docutils literal notranslate"><span class="pre">get_system_cert_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.configuration.html#linkcheck.configuration.get_user_config"><code class="docutils literal notranslate"><span class="pre">get_user_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.configuration.html#linkcheck.configuration.get_user_data"><code class="docutils literal notranslate"><span class="pre">get_user_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.configuration.html#linkcheck.configuration.make_userdir"><code class="docutils literal notranslate"><span class="pre">make_userdir()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.configuration.html#linkcheck.configuration.normpath"><code class="docutils literal notranslate"><span class="pre">normpath()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.configuration.html#linkcheck.configuration.split_hosts"><code class="docutils literal notranslate"><span class="pre">split_hosts()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.configuration.confparse.html">linkcheck.configuration.confparse</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.containers.html">linkcheck.containers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.cookies.html">linkcheck.cookies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.containers.html">linkcheck.containers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.containers.html#linkcheck.containers.LFUCache"><code class="docutils literal notranslate"><span class="pre">LFUCache</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.cookies.html">linkcheck.cookies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.cookies.html#linkcheck.cookies.from_file"><code class="docutils literal notranslate"><span class="pre">from_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.cookies.html#linkcheck.cookies.from_headers"><code class="docutils literal notranslate"><span class="pre">from_headers()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.data.html">linkcheck.data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.decorators.html">linkcheck.decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.decorators.html">linkcheck.decorators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.decorators.html#linkcheck.decorators.curried"><code class="docutils literal notranslate"><span class="pre">curried</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.decorators.html#linkcheck.decorators.deprecated"><code class="docutils literal notranslate"><span class="pre">deprecated()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.decorators.html#linkcheck.decorators.notimplemented"><code class="docutils literal notranslate"><span class="pre">notimplemented()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.decorators.html#linkcheck.decorators.signal_handler"><code class="docutils literal notranslate"><span class="pre">signal_handler()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.decorators.html#linkcheck.decorators.synchronize"><code class="docutils literal notranslate"><span class="pre">synchronize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.decorators.html#linkcheck.decorators.synchronized"><code class="docutils literal notranslate"><span class="pre">synchronized()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.decorators.html#linkcheck.decorators.timed"><code class="docutils literal notranslate"><span class="pre">timed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.decorators.html#linkcheck.decorators.timeit"><code class="docutils literal notranslate"><span class="pre">timeit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.decorators.html#linkcheck.decorators.update_func_meta"><code class="docutils literal notranslate"><span class="pre">update_func_meta()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.director.html">linkcheck.director</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.director.html#linkcheck.director.abort"><code class="docutils literal notranslate"><span class="pre">abort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.director.html#linkcheck.director.abort_now"><code class="docutils literal notranslate"><span class="pre">abort_now()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.director.html#linkcheck.director.check_url"><code class="docutils literal notranslate"><span class="pre">check_url()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.director.html#linkcheck.director.check_urls"><code class="docutils literal notranslate"><span class="pre">check_urls()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.director.html#linkcheck.director.get_aggregate"><code class="docutils literal notranslate"><span class="pre">get_aggregate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.director.html#linkcheck.director.interrupt"><code class="docutils literal notranslate"><span class="pre">interrupt()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.director.aggregator.html">linkcheck.director.aggregator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.director.checker.html">linkcheck.director.checker</a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.director.console.html">linkcheck.director.console</a></li>
@@ -253,9 +325,28 @@
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.director.task.html">linkcheck.director.task</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.dummy.html">linkcheck.dummy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.fileutil.html">linkcheck.fileutil</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.ftpparse.html">linkcheck.ftpparse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.dummy.html">linkcheck.dummy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.dummy.html#linkcheck.dummy.Dummy"><code class="docutils literal notranslate"><span class="pre">Dummy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.dummy.html#linkcheck.dummy.dummy"><code class="docutils literal notranslate"><span class="pre">dummy()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.fileutil.html">linkcheck.fileutil</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.fileutil.html#linkcheck.fileutil.get_mtime"><code class="docutils literal notranslate"><span class="pre">get_mtime()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.fileutil.html#linkcheck.fileutil.get_size"><code class="docutils literal notranslate"><span class="pre">get_size()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.fileutil.html#linkcheck.fileutil.get_temp_file"><code class="docutils literal notranslate"><span class="pre">get_temp_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.fileutil.html#linkcheck.fileutil.has_module"><code class="docutils literal notranslate"><span class="pre">has_module()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.fileutil.html#linkcheck.fileutil.is_accessable_by_others"><code class="docutils literal notranslate"><span class="pre">is_accessable_by_others()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.fileutil.html#linkcheck.fileutil.is_readable"><code class="docutils literal notranslate"><span class="pre">is_readable()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.fileutil.html#linkcheck.fileutil.is_tty"><code class="docutils literal notranslate"><span class="pre">is_tty()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.fileutil.html#linkcheck.fileutil.is_writable_by_others"><code class="docutils literal notranslate"><span class="pre">is_writable_by_others()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.fileutil.html#linkcheck.fileutil.path_safe"><code class="docutils literal notranslate"><span class="pre">path_safe()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.ftpparse.html">linkcheck.ftpparse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.ftpparse.html#linkcheck.ftpparse.ftpparse"><code class="docutils literal notranslate"><span class="pre">ftpparse()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.ftpparse.html#linkcheck.ftpparse.ismonth"><code class="docutils literal notranslate"><span class="pre">ismonth()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.htmlutil.html">linkcheck.htmlutil</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.htmlutil.htmlsoup.html">linkcheck.htmlutil.htmlsoup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.htmlutil.linkparse.html">linkcheck.htmlutil.linkparse</a></li>
@@ -263,14 +354,78 @@
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.htmlutil.srcsetparse.html">linkcheck.htmlutil.srcsetparse</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.httputil.html">linkcheck.httputil</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.i18n.html">linkcheck.i18n</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.lc_cgi.html">linkcheck.lc_cgi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.loader.html">linkcheck.loader</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.lock.html">linkcheck.lock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.log.html">linkcheck.log</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.logconf.html">linkcheck.logconf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.httputil.html">linkcheck.httputil</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.httputil.html#linkcheck.httputil.get_content_type"><code class="docutils literal notranslate"><span class="pre">get_content_type()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.httputil.html#linkcheck.httputil.x509_to_dict"><code class="docutils literal notranslate"><span class="pre">x509_to_dict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.i18n.html">linkcheck.i18n</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.NullTranslator"><code class="docutils literal notranslate"><span class="pre">NullTranslator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.Translator"><code class="docutils literal notranslate"><span class="pre">Translator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.get_encoded_writer"><code class="docutils literal notranslate"><span class="pre">get_encoded_writer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.get_lang"><code class="docutils literal notranslate"><span class="pre">get_lang()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.get_locale"><code class="docutils literal notranslate"><span class="pre">get_locale()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.get_translator"><code class="docutils literal notranslate"><span class="pre">get_translator()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.init"><code class="docutils literal notranslate"><span class="pre">init()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.install_builtin"><code class="docutils literal notranslate"><span class="pre">install_builtin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.install_language"><code class="docutils literal notranslate"><span class="pre">install_language()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.norm_locale"><code class="docutils literal notranslate"><span class="pre">norm_locale()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.lc_cgi.html">linkcheck.lc_cgi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lc_cgi.html#linkcheck.lc_cgi.LCFormError"><code class="docutils literal notranslate"><span class="pre">LCFormError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lc_cgi.html#linkcheck.lc_cgi.ThreadsafeIO"><code class="docutils literal notranslate"><span class="pre">ThreadsafeIO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lc_cgi.html#linkcheck.lc_cgi.application"><code class="docutils literal notranslate"><span class="pre">application()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lc_cgi.html#linkcheck.lc_cgi.checkform"><code class="docutils literal notranslate"><span class="pre">checkform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lc_cgi.html#linkcheck.lc_cgi.checklink"><code class="docutils literal notranslate"><span class="pre">checklink()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lc_cgi.html#linkcheck.lc_cgi.dump"><code class="docutils literal notranslate"><span class="pre">dump()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lc_cgi.html#linkcheck.lc_cgi.encode"><code class="docutils literal notranslate"><span class="pre">encode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lc_cgi.html#linkcheck.lc_cgi.format_error"><code class="docutils literal notranslate"><span class="pre">format_error()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lc_cgi.html#linkcheck.lc_cgi.formvalue"><code class="docutils literal notranslate"><span class="pre">formvalue()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lc_cgi.html#linkcheck.lc_cgi.get_configuration"><code class="docutils literal notranslate"><span class="pre">get_configuration()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lc_cgi.html#linkcheck.lc_cgi.get_host_name"><code class="docutils literal notranslate"><span class="pre">get_host_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lc_cgi.html#linkcheck.lc_cgi.get_response_headers"><code class="docutils literal notranslate"><span class="pre">get_response_headers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lc_cgi.html#linkcheck.lc_cgi.log"><code class="docutils literal notranslate"><span class="pre">log()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lc_cgi.html#linkcheck.lc_cgi.start_check"><code class="docutils literal notranslate"><span class="pre">start_check()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.loader.html">linkcheck.loader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.loader.html#linkcheck.loader.check_writable_by_others"><code class="docutils literal notranslate"><span class="pre">check_writable_by_others()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.loader.html#linkcheck.loader.get_folder_modules"><code class="docutils literal notranslate"><span class="pre">get_folder_modules()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.loader.html#linkcheck.loader.get_importable_files"><code class="docutils literal notranslate"><span class="pre">get_importable_files()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.loader.html#linkcheck.loader.get_module_plugins"><code class="docutils literal notranslate"><span class="pre">get_module_plugins()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.loader.html#linkcheck.loader.get_package_modules"><code class="docutils literal notranslate"><span class="pre">get_package_modules()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.loader.html#linkcheck.loader.get_plugins"><code class="docutils literal notranslate"><span class="pre">get_plugins()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.lock.html">linkcheck.lock</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lock.html#linkcheck.lock.DebugLock"><code class="docutils literal notranslate"><span class="pre">DebugLock</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lock.html#linkcheck.lock.get_lock"><code class="docutils literal notranslate"><span class="pre">get_lock()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.lock.html#linkcheck.lock.get_semaphore"><code class="docutils literal notranslate"><span class="pre">get_semaphore()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.log.html">linkcheck.log</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.log.html#linkcheck.log.critical"><code class="docutils literal notranslate"><span class="pre">critical()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.log.html#linkcheck.log.debug"><code class="docutils literal notranslate"><span class="pre">debug()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.log.html#linkcheck.log.error"><code class="docutils literal notranslate"><span class="pre">error()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.log.html#linkcheck.log.exception"><code class="docutils literal notranslate"><span class="pre">exception()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.log.html#linkcheck.log.info"><code class="docutils literal notranslate"><span class="pre">info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.log.html#linkcheck.log.is_debug"><code class="docutils literal notranslate"><span class="pre">is_debug()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.log.html#linkcheck.log.shutdown"><code class="docutils literal notranslate"><span class="pre">shutdown()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.log.html#linkcheck.log.warn"><code class="docutils literal notranslate"><span class="pre">warn()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.logconf.html">linkcheck.logconf</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.logconf.html#linkcheck.logconf.add_loghandler"><code class="docutils literal notranslate"><span class="pre">add_loghandler()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.logconf.html#linkcheck.logconf.init_log_config"><code class="docutils literal notranslate"><span class="pre">init_log_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.logconf.html#linkcheck.logconf.remove_loghandler"><code class="docutils literal notranslate"><span class="pre">remove_loghandler()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.logconf.html#linkcheck.logconf.reset_loglevel"><code class="docutils literal notranslate"><span class="pre">reset_loglevel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.logconf.html#linkcheck.logconf.set_debug"><code class="docutils literal notranslate"><span class="pre">set_debug()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.logconf.html#linkcheck.logconf.set_loglevel"><code class="docutils literal notranslate"><span class="pre">set_loglevel()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3 current"><a class="reference internal" href="linkcheck.logger.html">linkcheck.logger</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.logger.html#linkcheck.logger.LogStatistics"><code class="docutils literal notranslate"><span class="pre">LogStatistics</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.logger.csvlog.html">linkcheck.logger.csvlog</a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.logger.customxml.html">linkcheck.logger.customxml</a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.logger.dot.html">linkcheck.logger.dot</a></li>
@@ -286,17 +441,41 @@
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.logger.xmllog.html">linkcheck.logger.xmllog</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.memoryutil.html">linkcheck.memoryutil</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.mimeutil.html">linkcheck.mimeutil</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.memoryutil.html">linkcheck.memoryutil</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.memoryutil.html#linkcheck.memoryutil.write_memory_dump"><code class="docutils literal notranslate"><span class="pre">write_memory_dump()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.mimeutil.html">linkcheck.mimeutil</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.mimeutil.html#linkcheck.mimeutil.add_mimetype"><code class="docutils literal notranslate"><span class="pre">add_mimetype()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.mimeutil.html#linkcheck.mimeutil.guess_mimetype"><code class="docutils literal notranslate"><span class="pre">guess_mimetype()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.mimeutil.html#linkcheck.mimeutil.guess_mimetype_read"><code class="docutils literal notranslate"><span class="pre">guess_mimetype_read()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.mimeutil.html#linkcheck.mimeutil.init_mimedb"><code class="docutils literal notranslate"><span class="pre">init_mimedb()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.network.html">linkcheck.network</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.network.iputil.html">linkcheck.network.iputil</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.parser.html">linkcheck.parser</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.parser.html#linkcheck.parser.parse_chromium"><code class="docutils literal notranslate"><span class="pre">parse_chromium()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.parser.html#linkcheck.parser.parse_css"><code class="docutils literal notranslate"><span class="pre">parse_css()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.parser.html#linkcheck.parser.parse_firefox"><code class="docutils literal notranslate"><span class="pre">parse_firefox()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.parser.html#linkcheck.parser.parse_html"><code class="docutils literal notranslate"><span class="pre">parse_html()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.parser.html#linkcheck.parser.parse_itms_services"><code class="docutils literal notranslate"><span class="pre">parse_itms_services()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.parser.html#linkcheck.parser.parse_opera"><code class="docutils literal notranslate"><span class="pre">parse_opera()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.parser.html#linkcheck.parser.parse_safari"><code class="docutils literal notranslate"><span class="pre">parse_safari()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.parser.html#linkcheck.parser.parse_swf"><code class="docutils literal notranslate"><span class="pre">parse_swf()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.parser.html#linkcheck.parser.parse_text"><code class="docutils literal notranslate"><span class="pre">parse_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.parser.html#linkcheck.parser.parse_url"><code class="docutils literal notranslate"><span class="pre">parse_url()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.parser.html#linkcheck.parser.parse_wml"><code class="docutils literal notranslate"><span class="pre">parse_wml()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.parser.sitemap.html">linkcheck.parser.sitemap</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.plugins.html">linkcheck.plugins</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.plugins.html#linkcheck.plugins.PluginManager"><code class="docutils literal notranslate"><span class="pre">PluginManager</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.plugins.html#linkcheck.plugins.get_plugin_classes"><code class="docutils literal notranslate"><span class="pre">get_plugin_classes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.plugins.html#linkcheck.plugins.get_plugin_modules"><code class="docutils literal notranslate"><span class="pre">get_plugin_modules()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.plugins.html#linkcheck.plugins.run_plugins"><code class="docutils literal notranslate"><span class="pre">run_plugins()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.plugins.anchorcheck.html">linkcheck.plugins.anchorcheck</a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.plugins.httpheaderinfo.html">linkcheck.plugins.httpheaderinfo</a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.plugins.locationinfo.html">linkcheck.plugins.locationinfo</a></li>
@@ -309,12 +488,65 @@
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.plugins.viruscheck.html">linkcheck.plugins.viruscheck</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.robotparser2.html">linkcheck.robotparser2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.socketutil.html">linkcheck.socketutil</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.strformat.html">linkcheck.strformat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.threader.html">linkcheck.threader</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.trace.html">linkcheck.trace</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linkcheck.url.html">linkcheck.url</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.robotparser2.html">linkcheck.robotparser2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser"><code class="docutils literal notranslate"><span class="pre">RobotFileParser</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.socketutil.html">linkcheck.socketutil</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.socketutil.html#linkcheck.socketutil.create_socket"><code class="docutils literal notranslate"><span class="pre">create_socket()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.strformat.html">linkcheck.strformat</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.ascii_safe"><code class="docutils literal notranslate"><span class="pre">ascii_safe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.format_feature_warning"><code class="docutils literal notranslate"><span class="pre">format_feature_warning()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.get_paragraphs"><code class="docutils literal notranslate"><span class="pre">get_paragraphs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.indent"><code class="docutils literal notranslate"><span class="pre">indent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.limit"><code class="docutils literal notranslate"><span class="pre">limit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.paginate"><code class="docutils literal notranslate"><span class="pre">paginate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.strduration_long"><code class="docutils literal notranslate"><span class="pre">strduration_long()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.strip_control_chars"><code class="docutils literal notranslate"><span class="pre">strip_control_chars()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.stripurl"><code class="docutils literal notranslate"><span class="pre">stripurl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.strline"><code class="docutils literal notranslate"><span class="pre">strline()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.strsize"><code class="docutils literal notranslate"><span class="pre">strsize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.strtime"><code class="docutils literal notranslate"><span class="pre">strtime()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.strtimezone"><code class="docutils literal notranslate"><span class="pre">strtimezone()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.unquote"><code class="docutils literal notranslate"><span class="pre">unquote()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.strformat.html#linkcheck.strformat.wrap"><code class="docutils literal notranslate"><span class="pre">wrap()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.threader.html">linkcheck.threader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.threader.html#linkcheck.threader.StoppableThread"><code class="docutils literal notranslate"><span class="pre">StoppableThread</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.trace.html">linkcheck.trace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.trace.html#linkcheck.trace.trace_filter"><code class="docutils literal notranslate"><span class="pre">trace_filter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.trace.html#linkcheck.trace.trace_ignore"><code class="docutils literal notranslate"><span class="pre">trace_ignore()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.trace.html#linkcheck.trace.trace_off"><code class="docutils literal notranslate"><span class="pre">trace_off()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.trace.html#linkcheck.trace.trace_on"><code class="docutils literal notranslate"><span class="pre">trace_on()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linkcheck.url.html">linkcheck.url</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.collapse_segments"><code class="docutils literal notranslate"><span class="pre">collapse_segments()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.document_quote"><code class="docutils literal notranslate"><span class="pre">document_quote()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.idna_encode"><code class="docutils literal notranslate"><span class="pre">idna_encode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.is_numeric_port"><code class="docutils literal notranslate"><span class="pre">is_numeric_port()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.is_safe_domain"><code class="docutils literal notranslate"><span class="pre">is_safe_domain()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.is_safe_url"><code class="docutils literal notranslate"><span class="pre">is_safe_url()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.parse_qsl"><code class="docutils literal notranslate"><span class="pre">parse_qsl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.split_netloc"><code class="docutils literal notranslate"><span class="pre">split_netloc()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.splitparams"><code class="docutils literal notranslate"><span class="pre">splitparams()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.splitport"><code class="docutils literal notranslate"><span class="pre">splitport()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.url_fix_host"><code class="docutils literal notranslate"><span class="pre">url_fix_host()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.url_fix_mailto_urlsplit"><code class="docutils literal notranslate"><span class="pre">url_fix_mailto_urlsplit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.url_fix_wayback_query"><code class="docutils literal notranslate"><span class="pre">url_fix_wayback_query()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.url_is_absolute"><code class="docutils literal notranslate"><span class="pre">url_is_absolute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.url_needs_quoting"><code class="docutils literal notranslate"><span class="pre">url_needs_quoting()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.url_norm"><code class="docutils literal notranslate"><span class="pre">url_norm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.url_parse_query"><code class="docutils literal notranslate"><span class="pre">url_parse_query()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.url_quote"><code class="docutils literal notranslate"><span class="pre">url_quote()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linkcheck.url.html#linkcheck.url.urlunsplit"><code class="docutils literal notranslate"><span class="pre">urlunsplit()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
