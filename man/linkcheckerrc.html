@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheckerrc &mdash; LinkChecker 10.1.0.post109+g2c3aa5eb documentation</title>
+  <title>linkcheckerrc &mdash; LinkChecker 10.1.0.post114+g61071fc5 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post109+g2c3aa5eb
+                10.1.0.post114+g61071fc5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -905,6 +905,10 @@ Command line option: none</p>
 </dd>
 <dt><strong>quotechar=</strong><em>CHAR</em></dt><dd><p>Set CSV quote character. Default is a double quote (<strong>”</strong>).</p>
 </dd>
+<dt><strong>dialect=</strong><em>STRING</em></dt><dd><p>Controls the output formatting.
+See <a class="reference external" href="https://docs.python.org/3/library/csv.html#csv.Dialect">https://docs.python.org/3/library/csv.html#csv.Dialect</a>.
+Default is <strong>excel</strong>.</p>
+</dd>
 </dl>
 </section>
 <section id="sql">
@@ -990,7 +994,7 @@ Command line option: none</p>
 <dt><strong>priority=</strong><em>FLOAT</em></dt><dd><p>A number between 0.0 and 1.0 determining the priority. The default
 priority for the first URL is 1.0, for all child URLs 0.5.</p>
 </dd>
-<dt><strong>frequency=</strong>[<strong>always</strong>|<strong>hourly</strong>|<strong>daily</strong>|<strong>weekly</strong>|<strong>monthly</strong>|<strong>yearly</strong>|<strong>never</strong>]</dt><dd><p>How frequently pages are changing.</p>
+<dt><strong>frequency=</strong>[<strong>always</strong>|<strong>hourly</strong>|<strong>daily</strong>|<strong>weekly</strong>|<strong>monthly</strong>|<strong>yearly</strong>|<strong>never</strong>]</dt><dd><p>How frequently pages are changing. Default is <strong>daily</strong>.</p>
 </dd>
 </dl>
 </section>
