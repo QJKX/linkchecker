@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheckerrc &mdash; LinkChecker 10.1.0.post116+gd6d5e918 documentation</title>
+  <title>linkcheckerrc &mdash; LinkChecker 10.1.0.post118+g033dcf89 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post116+gd6d5e918
+                10.1.0.post118+g033dcf89
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -748,7 +748,7 @@ form.</p>
 <h3>output<a class="headerlink" href="#output" title="Permalink to this heading"></a></h3>
 <section id="url-checking-results">
 <h4>URL checking results<a class="headerlink" href="#url-checking-results" title="Permalink to this heading"></a></h4>
-<dl>
+<dl class="simple">
 <dt><strong>fileoutput=</strong><em>TYPE</em>[<strong>,</strong><em>TYPE</em>…]</dt><dd><p>Output to a file <strong>linkchecker-out.</strong><em>TYPE</em>, or
 <strong>$XDG_DATA_HOME/linkchecker/failures</strong> for the <strong>failures</strong> output type.
 Valid file output types are <strong>text</strong>, <strong>html</strong>, <strong>sql</strong>, <strong>csv</strong>,
@@ -778,17 +778,16 @@ only ignore matching error messages per corresponding URL. If the
 second expression is omitted, all errors are ignored. In contrast
 to <a class="reference internal" href="#filtering">filtering</a>, this happens <em>after</em> checking, which allows checking
 URLs despite certain expected and tolerable errors. Default is to
-not ignore any errors.</p>
-<p>::
-[output]</p>
-<p>ignoreerrors=</p>
-<blockquote>
-<div><p>^https://deprecated.example.com ^410 Gone</p>
-<p># ignore all errors (no second expression), also for syntax check:
-^mailto:.*&#64;example.com$</p>
-</div></blockquote>
+not ignore any errors. Example:</p>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[output]
+ignoreerrors=
+  ^https://deprecated\.example\.com ^410 Gone
+  # ignore all errors (no second expression), also for syntax check:
+  ^mailto:.*@example\.com$
+</pre></div>
+</div>
 </section>
 <section id="progress-updates">
 <h4>Progress updates<a class="headerlink" href="#progress-updates" title="Permalink to this heading"></a></h4>
