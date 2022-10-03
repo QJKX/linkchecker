@@ -18,6 +18,7 @@ linkcheck.plugins.anchorcheck
    .. autosummary::
    
       AnchorCheck
+      UrlAnchorCheck
    
    
 

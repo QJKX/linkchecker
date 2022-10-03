@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.urlbase &mdash; LinkChecker 10.1.0.post118+g033dcf89 documentation</title>
+  <title>linkcheck.checker.urlbase &mdash; LinkChecker 10.1.0.post129+gd9265bb7 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post118+g033dcf89
+                10.1.0.post129+gd9265bb7
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -1044,7 +1044,7 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">base_ref</span> <span class="o">=</span> <span class="n">urljoin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_ref</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">urljoin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_ref</span><span class="p">,</span> <span class="n">base_url</span><span class="p">)</span>
         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent_url</span><span class="p">:</span>
-            <span class="c1"># strip the parent url query and anchor</span>
+            <span class="c1"># strip the parent url anchor</span>
             <span class="n">urlparts</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlsplit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent_url</span><span class="p">))</span>
             <span class="n">urlparts</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
             <span class="n">parent_url</span> <span class="o">=</span> <span class="n">urlutil</span><span class="o">.</span><span class="n">urlunsplit</span><span class="p">(</span><span class="n">urlparts</span><span class="p">)</span>
@@ -1098,7 +1098,7 @@
             <span class="n">urlparts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">@</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">userinfo</span><span class="p">,</span> <span class="n">host</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">urlparts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">host</span>
-        <span class="c1"># safe anchor for later checking</span>
+        <span class="c1"># save anchor for later checking</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">anchor</span> <span class="o">=</span> <span class="n">split</span><span class="o">.</span><span class="n">fragment</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">anchor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">anchor</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">anchor</span><span class="p">)</span>

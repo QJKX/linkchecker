@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.plugins.anchorcheck &mdash; LinkChecker 10.1.0.post118+g033dcf89 documentation</title>
+  <title>linkcheck.plugins.anchorcheck &mdash; LinkChecker 10.1.0.post129+gd9265bb7 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post118+g033dcf89
+                10.1.0.post129+gd9265bb7
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -600,6 +600,9 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.plugins.anchorcheck.AnchorCheck" title="linkcheck.plugins.anchorcheck.AnchorCheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnchorCheck</span></code></a>(config)</p></td>
 <td><p>Checks validity of HTML anchors.</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#linkcheck.plugins.anchorcheck.UrlAnchorCheck" title="linkcheck.plugins.anchorcheck.UrlAnchorCheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UrlAnchorCheck</span></code></a>()</p></td>
+<td><p>Class to thread-safely handle collecting anchors for a URL</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="py class">
@@ -607,13 +610,7 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">linkcheck.plugins.anchorcheck.</span></span><span class="sig-name descname"><span class="pre">AnchorCheck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins/anchorcheck.html#AnchorCheck"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.anchorcheck.AnchorCheck" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_ContentPlugin</span></code></p>
 <p>Checks validity of HTML anchors.</p>
-<p>Initialize plugin.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="linkcheck.plugins.anchorcheck.AnchorCheck.add_anchor">
-<span class="sig-name descname"><span class="pre">add_anchor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins/anchorcheck.html#AnchorCheck.add_anchor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.anchorcheck.AnchorCheck.add_anchor" title="Permalink to this definition"></a></dt>
-<dd><p>Add anchor URL.</p>
-</dd></dl>
-
+<p>Add plugin-specific configuration.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="linkcheck.plugins.anchorcheck.AnchorCheck.applies_to">
 <span class="sig-name descname"><span class="pre">applies_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins/anchorcheck.html#AnchorCheck.applies_to"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.anchorcheck.AnchorCheck.applies_to" title="Permalink to this definition"></a></dt>
@@ -626,9 +623,22 @@
 <dd><p>Check content for invalid anchors.</p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="linkcheck.plugins.anchorcheck.UrlAnchorCheck">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">linkcheck.plugins.anchorcheck.</span></span><span class="sig-name descname"><span class="pre">UrlAnchorCheck</span></span><a class="reference internal" href="../../_modules/linkcheck/plugins/anchorcheck.html#UrlAnchorCheck"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.anchorcheck.UrlAnchorCheck" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to thread-safely handle collecting anchors for a URL</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="linkcheck.plugins.anchorcheck.AnchorCheck.check_anchor">
-<span class="sig-name descname"><span class="pre">check_anchor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins/anchorcheck.html#AnchorCheck.check_anchor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.anchorcheck.AnchorCheck.check_anchor" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="linkcheck.plugins.anchorcheck.UrlAnchorCheck.add_anchor">
+<span class="sig-name descname"><span class="pre">add_anchor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins/anchorcheck.html#UrlAnchorCheck.add_anchor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.anchorcheck.UrlAnchorCheck.add_anchor" title="Permalink to this definition"></a></dt>
+<dd><p>Add anchor URL.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="linkcheck.plugins.anchorcheck.UrlAnchorCheck.check_anchor">
+<span class="sig-name descname"><span class="pre">check_anchor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins/anchorcheck.html#UrlAnchorCheck.check_anchor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.anchorcheck.UrlAnchorCheck.check_anchor" title="Permalink to this definition"></a></dt>
 <dd><p>If URL is valid, parseable and has an anchor, check it.
 A warning is logged and True is returned if the anchor is not found.</p>
 </dd></dl>

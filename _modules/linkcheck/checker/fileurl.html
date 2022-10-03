@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.fileurl &mdash; LinkChecker 10.1.0.post118+g033dcf89 documentation</title>
+  <title>linkcheck.checker.fileurl &mdash; LinkChecker 10.1.0.post129+gd9265bb7 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post118+g033dcf89
+                10.1.0.post129+gd9265bb7
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -708,6 +708,14 @@
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span> <span class="o">=</span> <span class="s1">&#39;file&#39;</span></div>
 
+<div class="viewcode-block" id="FileUrl.reset"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="c1"># the local file URI</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">url_without_anchor</span> <span class="o">=</span> <span class="kc">None</span></div>
+        <span class="c1"># including the anchor in self.url allows the AnchorCheck plugin to be</span>
+        <span class="c1"># used when checking files. The anchor is stripped in UrlBase.set_cache_url()</span>
+        <span class="c1"># if AnchorCheck is not being used.</span>
+
 <div class="viewcode-block" id="FileUrl.build_base_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.build_base_url">[docs]</a>    <span class="k">def</span> <span class="nf">build_base_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;The URL is normed according to the platform:</span>
 <span class="sd">         - the base URL is made an absolute *file://* URL</span>
@@ -748,23 +756,20 @@
             <span class="c1"># of the base URL are removed first.</span>
             <span class="c1"># Otherwise the join function thinks the query is part of</span>
             <span class="c1"># the file name.</span>
-            <span class="kn">from</span> <span class="nn">.urlbase</span> <span class="kn">import</span> <span class="n">url_norm</span>
-
-            <span class="c1"># norm base url - can raise UnicodeError from url.idna_encode()</span>
-            <span class="n">base_url</span><span class="p">,</span> <span class="n">is_idn</span> <span class="o">=</span> <span class="n">url_norm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoding</span><span class="p">)</span>
-            <span class="n">urlparts</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlsplit</span><span class="p">(</span><span class="n">base_url</span><span class="p">))</span>
+            <span class="n">urlparts</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlsplit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">))</span>
             <span class="c1"># ignore query part for filesystem urls</span>
             <span class="n">urlparts</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">=</span> <span class="n">urlutil</span><span class="o">.</span><span class="n">urlunsplit</span><span class="p">(</span><span class="n">urlparts</span><span class="p">)</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">build_url</span><span class="p">()</span>
-        <span class="c1"># ignore query and fragment url parts for filesystem urls</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="c1"># ignore query url part for filesystem urls</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_directory</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_warning</span><span class="p">(</span>
                 <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Added trailing slash to directory.&quot;</span><span class="p">),</span> <span class="n">tag</span><span class="o">=</span><span class="n">WARN_FILE_MISSING_SLASH</span>
             <span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+=</span> <span class="s1">&#39;/&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">urlutil</span><span class="o">.</span><span class="n">urlunsplit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">urlutil</span><span class="o">.</span><span class="n">urlunsplit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">url_without_anchor</span> <span class="o">=</span> <span class="n">urlutil</span><span class="o">.</span><span class="n">urlunsplit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">])</span></div>
 
 <div class="viewcode-block" id="FileUrl.add_size_info"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.add_size_info">[docs]</a>    <span class="k">def</span> <span class="nf">add_size_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get size of file content and modification time from filename path.&quot;&quot;&quot;</span>
@@ -790,7 +795,7 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_directory</span><span class="p">():</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">set_result</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;directory&quot;</span><span class="p">))</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">url</span> <span class="o">=</span> <span class="n">fileutil</span><span class="o">.</span><span class="n">path_safe</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="n">fileutil</span><span class="o">.</span><span class="n">path_safe</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url_without_anchor</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">check_case_sensitivity</span><span class="p">()</span></div>
 
@@ -856,7 +861,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_directory</span><span class="p">():</span>
             <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">if</span> <span class="n">firefox</span><span class="o">.</span><span class="n">has_sqlite</span> <span class="ow">and</span> <span class="n">firefox</span><span class="o">.</span><span class="n">extension</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">firefox</span><span class="o">.</span><span class="n">has_sqlite</span> <span class="ow">and</span> <span class="n">firefox</span><span class="o">.</span><span class="n">extension</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url_without_anchor</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">True</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_content_type_parseable</span><span class="p">()</span></div>
 
@@ -864,7 +869,8 @@
         <span class="sd">&quot;&quot;&quot;Return URL content type, or an empty string if content</span>
 <span class="sd">        type could not be found.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="n">mimeutil</span><span class="o">.</span><span class="n">guess_mimetype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_content</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="n">mimeutil</span><span class="o">.</span><span class="n">guess_mimetype</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">url_without_anchor</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_content</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span></div>
 
