@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkchecker &mdash; LinkChecker 10.1.0.post139+g96c33360 documentation</title>
+  <title>linkchecker &mdash; LinkChecker 10.1.0.post145+gb6eea83f documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post139+g96c33360
+                10.1.0.post145+gb6eea83f
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -112,6 +112,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#cookie-files">COOKIE FILES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#proxy-support">PROXY SUPPORT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#performed-checks">PERFORMED CHECKS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sitemaps">SITEMAPS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#plugins">PLUGINS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#recursion">RECURSION</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#notes">NOTES</a></li>
@@ -766,7 +767,7 @@ This is only useful with <a class="reference internal" href="#cmdoption-F"><code
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-cookiefile">
 <span class="sig-name descname"><span class="pre">--cookiefile</span></span><span class="sig-prename descclassname"><span class="pre">=FILENAME</span></span><a class="headerlink" href="#cmdoption-cookiefile" title="Permalink to this definition"></a></dt>
-<dd><p>Read a file with initial cookie data. The cookie data format is
+<dd><p>Use initial cookie data read from a file. The cookie data format is
 explained below.</p>
 </dd></dl>
 
@@ -1023,6 +1024,14 @@ in the
 source file. The most prominent of them should be JavaScript links.</p>
 </dd>
 </dl>
+</section>
+<section id="sitemaps">
+<h2>SITEMAPS<a class="headerlink" href="#sitemaps" title="Permalink to this heading"></a></h2>
+<p>Sitemaps are parsed for links to check and can be detected either from a
+sitemap entry in a robots.txt, or when passed as a <a class="reference internal" href="#cmdoption-arg-FILE-OR-URL"><code class="xref std std-option docutils literal notranslate"><span class="pre">FILE-OR-URL</span></code></a>
+argument in which case detection requires the urlset/sitemapindex tag to be
+within the first 70 characters of the sitemap.
+Compressed sitemap files are not supported.</p>
 </section>
 <section id="plugins">
 <h2>PLUGINS<a class="headerlink" href="#plugins" title="Permalink to this heading"></a></h2>

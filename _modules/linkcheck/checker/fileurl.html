@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.fileurl &mdash; LinkChecker 10.1.0.post139+g96c33360 documentation</title>
+  <title>linkcheck.checker.fileurl &mdash; LinkChecker 10.1.0.post145+gb6eea83f documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post139+g96c33360
+                10.1.0.post145+gb6eea83f
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -109,6 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../man/linkchecker.html#cookie-files">COOKIE FILES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../man/linkchecker.html#proxy-support">PROXY SUPPORT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../man/linkchecker.html#performed-checks">PERFORMED CHECKS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../man/linkchecker.html#sitemaps">SITEMAPS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../man/linkchecker.html#plugins">PLUGINS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../man/linkchecker.html#recursion">RECURSION</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../man/linkchecker.html#notes">NOTES</a></li>
@@ -866,13 +867,14 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_content_type_parseable</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="FileUrl.set_content_type"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.set_content_type">[docs]</a>    <span class="k">def</span> <span class="nf">set_content_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Return URL content type, or an empty string if content</span>
+        <span class="sd">&quot;&quot;&quot;Set URL content type, or an empty string if content</span>
 <span class="sd">        type could not be found.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="n">mimeutil</span><span class="o">.</span><span class="n">guess_mimetype</span><span class="p">(</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">url_without_anchor</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_content</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;MIME type: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="FileUrl.get_intern_pattern"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.get_intern_pattern">[docs]</a>    <span class="k">def</span> <span class="nf">get_intern_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get pattern for intern URL matching.</span>
