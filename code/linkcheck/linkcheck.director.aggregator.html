@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.director.aggregator &mdash; LinkChecker 10.1.0.post136+gafccdb96 documentation</title>
+  <title>linkcheck.director.aggregator &mdash; LinkChecker 10.1.0.post139+g96c33360 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post136+gafccdb96
+                10.1.0.post139+g96c33360
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -687,6 +687,12 @@
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="linkcheck.director.aggregator.Aggregate.set_maxrated_for_host">
+<span class="sig-name descname"><span class="pre">set_maxrated_for_host</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/director/aggregator.html#Aggregate.set_maxrated_for_host"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.director.aggregator.Aggregate.set_maxrated_for_host" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the limit on the maximum request rate for a host.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="linkcheck.director.aggregator.Aggregate.start_threads">
 <span class="sig-name descname"><span class="pre">start_threads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/director/aggregator.html#Aggregate.start_threads"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.director.aggregator.Aggregate.start_threads" title="Permalink to this definition"></a></dt>
 <dd><p>Spawn threads for URL checking and status printing.</p>
@@ -703,6 +709,16 @@
 <span class="sig-name descname"><span class="pre">wait_for_host</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/director/aggregator.html#Aggregate.wait_for_host"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.director.aggregator.Aggregate.wait_for_host" title="Permalink to this definition"></a></dt>
 <dd><p>Throttle requests to one host.</p>
 </dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="linkcheck.director.aggregator.Aggregate.wait_time_max_default">
+<span class="sig-name descname"><span class="pre">wait_time_max_default</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.6</span></em><a class="headerlink" href="#linkcheck.director.aggregator.Aggregate.wait_time_max_default" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="linkcheck.director.aggregator.Aggregate.wait_time_min_default">
+<span class="sig-name descname"><span class="pre">wait_time_min_default</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.1</span></em><a class="headerlink" href="#linkcheck.director.aggregator.Aggregate.wait_time_min_default" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

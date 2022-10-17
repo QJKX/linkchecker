@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.configuration.confparse &mdash; LinkChecker 10.1.0.post136+gafccdb96 documentation</title>
+  <title>linkcheck.configuration.confparse &mdash; LinkChecker 10.1.0.post139+g96c33360 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post136+gafccdb96
+                10.1.0.post139+g96c33360
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -672,6 +672,24 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="n">option</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="n">option</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getboolean</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="n">option</span><span class="p">)</span></div>
 
+<div class="viewcode-block" id="LCConfigParser.read_float_option"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.configuration.confparse.html#linkcheck.configuration.confparse.LCConfigParser.read_float_option">[docs]</a>    <span class="k">def</span> <span class="nf">read_float_option</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">option</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Read a float option.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="n">option</span><span class="p">):</span>
+            <span class="n">num</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getfloat</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="n">option</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="nb">min</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">LinkCheckerError</span><span class="p">(</span>
+                    <span class="n">_</span><span class="p">(</span><span class="s2">&quot;invalid value for </span><span class="si">%s</span><span class="s2">: </span><span class="si">%d</span><span class="s2"> must not be less than </span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="o">%</span> <span class="p">(</span><span class="n">option</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="nb">min</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="nb">max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="nb">max</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">LinkCheckerError</span><span class="p">(</span>
+                    <span class="n">_</span><span class="p">(</span><span class="s2">&quot;invalid value for </span><span class="si">%s</span><span class="s2">: </span><span class="si">%d</span><span class="s2"> must not be greater than </span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="o">%</span> <span class="p">(</span><span class="n">option</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="nb">max</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">key</span> <span class="o">=</span> <span class="n">option</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">num</span></div>
+
 <div class="viewcode-block" id="LCConfigParser.read_int_option"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.configuration.confparse.html#linkcheck.configuration.confparse.LCConfigParser.read_int_option">[docs]</a>    <span class="k">def</span> <span class="nf">read_int_option</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">option</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Read an integer option.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="n">option</span><span class="p">):</span>
@@ -764,7 +782,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">read_int_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="s2">&quot;recursionlevel&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">read_string_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="s2">&quot;nntpserver&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">read_string_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="s2">&quot;useragent&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">read_int_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="s2">&quot;maxrequestspersecond&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">read_float_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="s2">&quot;maxrequestspersecond&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">read_int_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="s2">&quot;maxnumurls&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">read_int_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="s2">&quot;maxfilesizeparse&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">read_int_option</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="s2">&quot;maxfilesizedownload&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
