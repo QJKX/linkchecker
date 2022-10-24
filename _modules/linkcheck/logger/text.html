@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.logger.text &mdash; LinkChecker 10.1.0.post147+g0f36153f documentation</title>
+  <title>linkcheck.logger.text &mdash; LinkChecker 10.1.0.post153+gb66ca30e documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post147+g0f36153f
+                10.1.0.post153+gb66ca30e
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -817,7 +817,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
                 <span class="n">_n</span><span class="p">(</span><span class="s2">&quot;in </span><span class="si">%d</span><span class="s2"> URL&quot;</span><span class="p">,</span> <span class="s2">&quot;in </span><span class="si">%d</span><span class="s2"> URLs&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">num_urls</span><span class="p">)</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">num_urls</span>
             <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot; checked. &quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot; checked.&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
         <span class="n">warning_text</span> <span class="o">=</span> <span class="p">(</span>
             <span class="n">_n</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> warning found&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> warnings found&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">warnings_printed</span><span class="p">)</span>
             <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">warnings_printed</span>
