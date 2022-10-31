@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.strformat &mdash; LinkChecker 10.1.0.post155+gb2fd7b30 documentation</title>
+  <title>linkcheck.strformat &mdash; LinkChecker 10.1.0.post158+g740fce4d documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post155+gb2fd7b30
+                10.1.0.post158+g740fce4d
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -593,10 +593,6 @@
 necessarily optimised for large strings, so use with care.</p>
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.strformat.ascii_safe" title="linkcheck.strformat.ascii_safe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ascii_safe</span></code></a>(s)</p></td>
 <td><p>Get ASCII string without raising encoding errors.</p></td>
@@ -651,13 +647,13 @@ necessarily optimised for large strings, so use with care.</p>
 <dd><p>Get ASCII string without raising encoding errors. Unknown
 characters of the given encoding will be ignored.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>s</strong> (<em>string</em><em> or </em><em>None</em>) – the string to be encoded</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>version of s containing only ASCII characters, or None if s was None</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>string or None</p>
 </dd>
 </dl>
@@ -690,13 +686,13 @@ The first line of the text also starts a paragraph.</p>
 <dd><p>If the length of the string exceeds the given limit, it will be cut
 off and three dots will be appended.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>s</strong> (<em>string</em>) – the string to limit</p></li>
 <li><p><strong>length</strong> (<em>non-negative integer</em>) – maximum length</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>limited string, at most length+3 characters long</p>
 </dd>
 </dl>
@@ -759,11 +755,11 @@ raises a value error.</p>
 The quotes need to match if matching is True. Only one quote from each
 end will be stripped.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>if s evaluates to False, return s as is, else return
 string with stripped quotes</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>unquoted string, or s unchanged if it is evaluating to False</p>
 </dd>
 </dl>

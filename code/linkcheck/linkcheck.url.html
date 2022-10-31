@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.url &mdash; LinkChecker 10.1.0.post155+gb2fd7b30 documentation</title>
+  <title>linkcheck.url &mdash; LinkChecker 10.1.0.post158+g740fce4d documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -35,7 +35,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post155+gb2fd7b30
+                10.1.0.post158+g740fce4d
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -591,10 +591,6 @@
 <p>Functions for parsing and matching URL strings.</p>
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.url.collapse_segments" title="linkcheck.url.collapse_segments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collapse_segments</span></code></a>(path)</p></td>
 <td><p>Remove all redundant segments from the given URL path.</p></td>
@@ -691,7 +687,7 @@ False otherwise</p>
 <span class="sig-prename descclassname"><span class="pre">linkcheck.url.</span></span><span class="sig-name descname"><span class="pre">parse_qsl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_blank_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict_parsing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/url.html#parse_qsl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.url.parse_qsl" title="Permalink to this definition"></a></dt>
 <dd><p>Parse a query given as a string argument.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>qs</strong> (<em>string</em>) – URL-encoded query string to be parsed</p></li>
 <li><p><strong>keep_blank_values</strong> (<em>bool</em>) – flag indicating whether blank values in
@@ -704,12 +700,12 @@ false (the default), errors are silently ignored. If true,
 errors raise a ValueError exception.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>list of triples (key, value, separator) where key and value
 are the split CGI parameter and separator the used separator
 for this CGI parameter which is either a semicolon or an ampersand</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list of triples</p>
 </dd>
 </dl>
@@ -735,16 +731,16 @@ Returns tuple (path-without-param, param)</p>
 <dd><p>Split optional port number from host. If host has no port number,
 the given default port is returned.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>host</strong> (<em>string</em>) – host name</p></li>
 <li><p><strong>port</strong> (<em>int</em>) – the port number (default 0)</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>tuple of (host, port)</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>tuple of (string, int)</p>
 </dd>
 </dl>
@@ -788,10 +784,10 @@ it is properly quoted.</p>
 <dd><p>Normalize the given URL which must be quoted. Supports unicode
 hostnames (IDNA encoding) according to RFC 3490.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(normed url, idna flag)</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>tuple of length two</p>
 </dd>
 </dl>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck &mdash; LinkChecker 10.1.0.post155+gb2fd7b30 documentation</title>
+  <title>linkcheck &mdash; LinkChecker 10.1.0.post158+g740fce4d documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post155+gb2fd7b30
+                10.1.0.post158+g740fce4d
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -591,10 +591,6 @@
 <p>Main package for link checking.</p>
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.get_link_pat" title="linkcheck.get_link_pat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_link_pat</span></code></a>(arg[, strict])</p></td>
 <td><p>Get a link pattern matcher for intern/extern links.</p></td>
@@ -609,10 +605,6 @@
 </table>
 <p class="rubric">Exceptions</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.LinkCheckerError" title="linkcheck.LinkCheckerError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LinkCheckerError</span></code></a></p></td>
 <td><p>Exception to be raised on linkchecker-specific check errors.</p></td>
@@ -642,19 +634,19 @@
 <dd><p>Get a link pattern matcher for intern/extern links.
 Returns a compiled pattern and a negate and strict option.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>arg</strong> (<em>string</em>) – pattern from config</p></li>
 <li><p><strong>strict</strong> (<em>bool</em>) – if pattern is to be handled strict</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>dictionary with keys ‘pattern’, ‘negate’ and ‘strict’</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p>re.error on invalid regular expressions</p>
 </dd>
 </dl>
@@ -666,7 +658,7 @@ Returns a compiled pattern and a negate and strict option.</p>
 <dd><p>Initialize i18n with the configured locale dir. The environment
 variable LOCPATH can also specify a locale dir.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None</p>
 </dd>
 </dl>
@@ -680,10 +672,6 @@ variable LOCPATH can also specify a locale dir.</p>
 
 <p class="rubric">Modules</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="linkcheck.ansicolor.html#module-linkcheck.ansicolor" title="linkcheck.ansicolor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linkcheck.ansicolor</span></code></a></p></td>
 <td><p>ANSI Color definitions and functions.</p></td>
