@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheckerrc &mdash; LinkChecker 10.1.0.post158+g740fce4d documentation</title>
+  <title>linkcheckerrc &mdash; LinkChecker 10.1.0.post160+gb796cec3 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post158+g740fce4d
+                10.1.0.post160+gb796cec3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -1070,7 +1070,9 @@ configuration file the plugin is enabled. Some plugins read extra
 options in their section.</p>
 <section id="anchorcheck">
 <h3>AnchorCheck<a class="headerlink" href="#anchorcheck" title="Permalink to this heading"></a></h3>
-<p>Checks validity of HTML anchors.</p>
+<p>Checks validity of HTML anchors. When checking local files, URLs with anchors
+that link to directories e.g. “example/#anchor” are not supported. There is no
+such limitation when using http(s).</p>
 </section>
 <section id="locationinfo">
 <h3>LocationInfo<a class="headerlink" href="#locationinfo" title="Permalink to this heading"></a></h3>
@@ -1157,6 +1159,8 @@ extension installed.</p>
 <p>The following warnings are recognized in the ‘ignorewarnings’ config
 file entry:</p>
 <dl class="simple">
+<dt><strong>file-anchorcheck-directory</strong></dt><dd><p>A local directory with an anchor, not supported by AnchorCheck.</p>
+</dd>
 <dt><strong>file-missing-slash</strong></dt><dd><p>The file: URL is missing a trailing slash.</p>
 </dd>
 <dt><strong>file-system-path</strong></dt><dd><p>The file: path is not the same as the system specific path.</p>

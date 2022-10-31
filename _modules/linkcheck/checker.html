@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker &mdash; LinkChecker 10.1.0.post158+g740fce4d documentation</title>
+  <title>linkcheck.checker &mdash; LinkChecker 10.1.0.post160+gb796cec3 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post158+g740fce4d
+                10.1.0.post160+gb796cec3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -717,6 +717,9 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="n">assume_local_file</span> <span class="o">=</span> <span class="n">recursion_level</span> <span class="o">==</span> <span class="mi">0</span>
         <span class="n">klass</span> <span class="o">=</span> <span class="n">get_urlclass_from</span><span class="p">(</span><span class="n">scheme</span><span class="p">,</span> <span class="n">assume_local_file</span><span class="o">=</span><span class="n">assume_local_file</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;AnchorCheck&quot;</span> <span class="ow">in</span> <span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;enabledplugins&quot;</span><span class="p">]</span> <span class="ow">and</span> \
+                <span class="n">klass</span> <span class="o">==</span> <span class="n">fileurl</span><span class="o">.</span><span class="n">FileUrl</span><span class="p">:</span>
+            <span class="n">klass</span> <span class="o">=</span> <span class="n">fileurl</span><span class="o">.</span><span class="n">AnchorCheckFileUrl</span>
     <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> handles url </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">klass</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">base_url</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">klass</span><span class="p">(</span>
         <span class="n">base_url</span><span class="p">,</span>

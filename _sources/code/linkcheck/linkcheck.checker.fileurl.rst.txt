@@ -27,6 +27,7 @@ linkcheck.checker.fileurl
 
    .. autosummary::
    
+      AnchorCheckFileUrl
       FileUrl
    
    
