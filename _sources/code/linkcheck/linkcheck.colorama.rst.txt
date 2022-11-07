@@ -1,0 +1,43 @@
+linkcheck.colorama
+==================
+
+.. automodule:: linkcheck.colorama
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      GetConsoleScreenBufferInfo
+      SetConsoleTextAttribute
+      get_attrs
+      get_console_size
+      init
+      reset_console
+      set_console
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      CONSOLE_SCREEN_BUFFER_INFO
+      COORD
+      SMALL_RECT
+   
+   
+
+   
+   
+   
+
+
+

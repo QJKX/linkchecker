@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.fileurl &mdash; LinkChecker 10.1.0.post168+g353909ba documentation</title>
+  <title>linkcheck.checker.fileurl &mdash; LinkChecker 10.1.0.post172+gea2cb6c5 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post168+g353909ba
+                10.1.0.post172+gea2cb6c5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -263,6 +263,19 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.cmdline.html#linkcheck.cmdline.print_plugins"><code class="docutils literal notranslate"><span class="pre">print_plugins()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.cmdline.html#linkcheck.cmdline.print_usage"><code class="docutils literal notranslate"><span class="pre">print_usage()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.cmdline.html#linkcheck.cmdline.print_version"><code class="docutils literal notranslate"><span class="pre">print_version()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../code/linkcheck/linkcheck.colorama.html">linkcheck.colorama</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.CONSOLE_SCREEN_BUFFER_INFO"><code class="docutils literal notranslate"><span class="pre">CONSOLE_SCREEN_BUFFER_INFO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.COORD"><code class="docutils literal notranslate"><span class="pre">COORD</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.SMALL_RECT"><code class="docutils literal notranslate"><span class="pre">SMALL_RECT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.GetConsoleScreenBufferInfo"><code class="docutils literal notranslate"><span class="pre">GetConsoleScreenBufferInfo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.SetConsoleTextAttribute"><code class="docutils literal notranslate"><span class="pre">SetConsoleTextAttribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.get_attrs"><code class="docutils literal notranslate"><span class="pre">get_attrs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.get_console_size"><code class="docutils literal notranslate"><span class="pre">get_console_size()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.init"><code class="docutils literal notranslate"><span class="pre">init()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.reset_console"><code class="docutils literal notranslate"><span class="pre">reset_console()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.set_console"><code class="docutils literal notranslate"><span class="pre">set_console()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../code/linkcheck/linkcheck.command.html">linkcheck.command</a><ul>
@@ -895,6 +908,10 @@
 
 
 <div class="viewcode-block" id="AnchorCheckFileUrl"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.AnchorCheckFileUrl">[docs]</a><span class="k">class</span> <span class="nc">AnchorCheckFileUrl</span><span class="p">(</span><span class="n">FileUrl</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    File URL link for AnchorCheck plugin.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
 <div class="viewcode-block" id="AnchorCheckFileUrl.reset"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.AnchorCheckFileUrl.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
         <span class="c1"># the local file URI</span>
