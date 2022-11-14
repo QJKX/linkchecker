@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.plugins.anchorcheck &mdash; LinkChecker 10.1.0.post172+gea2cb6c5 documentation</title>
+  <title>linkcheck.plugins.anchorcheck &mdash; LinkChecker 10.1.0.post179+gf0c03b12 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post172+gea2cb6c5
+                10.1.0.post179+gf0c03b12
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -661,12 +661,12 @@
         <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">anchors</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">decoded_anchor</span><span class="p">):</span>
             <span class="k">return</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">anchors</span><span class="p">:</span>
-            <span class="n">anchornames</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="s2">&quot;`</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">anchors</span><span class="p">))</span>
+            <span class="n">anchornames</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">({</span><span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&#39;&quot;</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">anchors</span><span class="p">})</span>
             <span class="n">anchors</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">anchornames</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">anchors</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
         <span class="n">args</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">url_data</span><span class="o">.</span><span class="n">anchor</span><span class="p">,</span> <span class="s2">&quot;decoded&quot;</span><span class="p">:</span> <span class="n">decoded_anchor</span><span class="p">,</span> <span class="s2">&quot;anchors&quot;</span><span class="p">:</span> <span class="n">anchors</span><span class="p">}</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
             <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Anchor `</span><span class="si">%(name)s</span><span class="s2">&#39; (decoded: `</span><span class="si">%(decoded)s</span><span class="s2">&#39;) not found.&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="n">args</span><span class="p">,</span>
             <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Available anchors: </span><span class="si">%(anchors)s</span><span class="s2">.&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="n">args</span><span class="p">,</span>
         <span class="p">)</span>

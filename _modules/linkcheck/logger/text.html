@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.logger.text &mdash; LinkChecker 10.1.0.post172+gea2cb6c5 documentation</title>
+  <title>linkcheck.logger.text &mdash; LinkChecker 10.1.0.post179+gf0c03b12 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post172+gea2cb6c5
+                10.1.0.post179+gf0c03b12
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -802,7 +802,7 @@
 <div class="viewcode-block" id="TextLogger.write_warning"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_warning">[docs]</a>    <span class="k">def</span> <span class="nf">write_warning</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Write url_data.warning.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s2">&quot;warning&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s2">&quot;warning&quot;</span><span class="p">))</span>
-        <span class="n">warning_msgs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;[</span><span class="si">%s</span><span class="s2">] </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">url_data</span><span class="o">.</span><span class="n">warnings</span><span class="p">]</span>
+        <span class="n">warning_msgs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">tag</span><span class="si">}</span><span class="s2">] </span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">tag</span><span class="p">,</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">url_data</span><span class="o">.</span><span class="n">warnings</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">warning_msgs</span><span class="p">,</span> <span class="mi">65</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colorwarning</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TextLogger.write_result"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_result">[docs]</a>    <span class="k">def</span> <span class="nf">write_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>

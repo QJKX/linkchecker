@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.httpurl &mdash; LinkChecker 10.1.0.post172+gea2cb6c5 documentation</title>
+  <title>linkcheck.checker.httpurl &mdash; LinkChecker 10.1.0.post179+gf0c03b12 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post172+gea2cb6c5
+                10.1.0.post179+gf0c03b12
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -948,7 +948,7 @@
         <span class="sd">&quot;&quot;&quot;Parse URLs in HTTP headers Link:.&quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">linktype</span><span class="p">,</span> <span class="n">linkinfo</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span><span class="o">.</span><span class="n">links</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">url</span> <span class="o">=</span> <span class="n">linkinfo</span><span class="p">[</span><span class="s2">&quot;url&quot;</span><span class="p">]</span>
-            <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Link: header </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">linktype</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Link: header </span><span class="si">{</span><span class="n">linktype</span><span class="si">}</span><span class="s2">&quot;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
         <span class="k">if</span> <span class="s1">&#39;Refresh&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span><span class="p">:</span>
             <span class="kn">from</span> <span class="nn">..htmlutil.linkparse</span> <span class="kn">import</span> <span class="n">refresh_re</span>

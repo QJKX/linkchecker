@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.socketutil &mdash; LinkChecker 10.1.0.post172+gea2cb6c5 documentation</title>
+  <title>linkcheck.socketutil &mdash; LinkChecker 10.1.0.post179+gf0c03b12 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post172+gea2cb6c5
+                10.1.0.post179+gf0c03b12
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -624,7 +624,7 @@
     <span class="k">try</span><span class="p">:</span>
         <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET6</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
         <span class="n">has_ipv6</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
+    <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
         <span class="c1"># only catch these one:</span>
         <span class="c1"># socket.error: (97, &#39;Address family not supported by protocol&#39;)</span>
         <span class="c1"># socket.error: (10047, &#39;Address family not supported by protocol&#39;)</span>

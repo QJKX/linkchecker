@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.logger.sql &mdash; LinkChecker 10.1.0.post172+gea2cb6c5 documentation</title>
+  <title>linkcheck.logger.sql &mdash; LinkChecker 10.1.0.post179+gf0c03b12 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post172+gea2cb6c5
+                10.1.0.post179+gf0c03b12
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -712,8 +712,8 @@
             <span class="o">%</span> <span class="p">{</span>
                 <span class="s1">&#39;table&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">dbname</span><span class="p">,</span>
                 <span class="s1">&#39;base_url&#39;</span><span class="p">:</span> <span class="n">sqlify</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">base_url</span><span class="p">),</span>
-                <span class="s1">&#39;url_parent&#39;</span><span class="p">:</span> <span class="n">sqlify</span><span class="p">((</span><span class="n">url_data</span><span class="o">.</span><span class="n">parent_url</span><span class="p">)),</span>
-                <span class="s1">&#39;base_ref&#39;</span><span class="p">:</span> <span class="n">sqlify</span><span class="p">((</span><span class="n">url_data</span><span class="o">.</span><span class="n">base_ref</span><span class="p">)),</span>
+                <span class="s1">&#39;url_parent&#39;</span><span class="p">:</span> <span class="n">sqlify</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">parent_url</span><span class="p">),</span>
+                <span class="s1">&#39;base_ref&#39;</span><span class="p">:</span> <span class="n">sqlify</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">base_ref</span><span class="p">),</span>
                 <span class="s1">&#39;valid&#39;</span><span class="p">:</span> <span class="n">intify</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">valid</span><span class="p">),</span>
                 <span class="s1">&#39;result&#39;</span><span class="p">:</span> <span class="n">sqlify</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">result</span><span class="p">),</span>
                 <span class="s1">&#39;warning&#39;</span><span class="p">:</span> <span class="n">sqlify</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">url_data</span><span class="o">.</span><span class="n">warnings</span><span class="p">)),</span>

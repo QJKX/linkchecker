@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck &mdash; LinkChecker 10.1.0.post172+gea2cb6c5 documentation</title>
+  <title>linkcheck &mdash; LinkChecker 10.1.0.post179+gf0c03b12 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post172+gea2cb6c5
+                10.1.0.post179+gf0c03b12
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -672,7 +672,7 @@
 <span class="sd">    @rtype: dict</span>
 <span class="sd">    @raises: re.error on invalid regular expressions</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;Link pattern </span><span class="si">%r</span><span class="s2"> strict=</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">strict</span><span class="p">)</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Link pattern </span><span class="si">%r</span><span class="s2"> strict=</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">),</span> <span class="n">arg</span><span class="p">,</span> <span class="n">strict</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">arg</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;!&#39;</span><span class="p">):</span>
         <span class="n">pattern</span> <span class="o">=</span> <span class="n">arg</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
         <span class="n">negate</span> <span class="o">=</span> <span class="kc">True</span>
@@ -682,7 +682,7 @@
     <span class="k">try</span><span class="p">:</span>
         <span class="n">regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
     <span class="k">except</span> <span class="n">re</span><span class="o">.</span><span class="n">error</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;invalid regular expression </span><span class="si">%r</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">msg</span><span class="p">))</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;invalid regular expression </span><span class="si">%r</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">),</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span>
         <span class="k">raise</span>
     <span class="k">return</span> <span class="p">{</span>
         <span class="s2">&quot;pattern&quot;</span><span class="p">:</span> <span class="n">regex</span><span class="p">,</span>

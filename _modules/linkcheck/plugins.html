@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.plugins &mdash; LinkChecker 10.1.0.post172+gea2cb6c5 documentation</title>
+  <title>linkcheck.plugins &mdash; LinkChecker 10.1.0.post179+gf0c03b12 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post172+gea2cb6c5
+                10.1.0.post179+gf0c03b12
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -664,10 +664,8 @@
 <div class="viewcode-block" id="get_plugin_modules"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.plugins.html#linkcheck.plugins.get_plugin_modules">[docs]</a><span class="k">def</span> <span class="nf">get_plugin_modules</span><span class="p">(</span><span class="n">folders</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Get plugin modules for given folders.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">folder</span> <span class="ow">in</span> <span class="n">folders</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">module</span> <span class="ow">in</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_folder_modules</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="s1">&#39;linkcheck.dummy&#39;</span><span class="p">):</span>
-            <span class="k">yield</span> <span class="n">module</span>
-    <span class="k">for</span> <span class="n">module</span> <span class="ow">in</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_package_modules</span><span class="p">(</span><span class="s1">&#39;plugins&#39;</span><span class="p">,</span> <span class="n">__path__</span><span class="p">):</span>
-        <span class="k">yield</span> <span class="n">module</span></div>
+        <span class="k">yield from</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_folder_modules</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="s1">&#39;linkcheck.dummy&#39;</span><span class="p">)</span>
+    <span class="k">yield from</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_package_modules</span><span class="p">(</span><span class="s1">&#39;plugins&#39;</span><span class="p">,</span> <span class="n">__path__</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="get_plugin_classes"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.plugins.html#linkcheck.plugins.get_plugin_classes">[docs]</a><span class="k">def</span> <span class="nf">get_plugin_classes</span><span class="p">(</span><span class="n">modules</span><span class="p">):</span>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.strformat &mdash; LinkChecker 10.1.0.post172+gea2cb6c5 documentation</title>
+  <title>linkcheck.strformat &mdash; LinkChecker 10.1.0.post179+gf0c03b12 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post172+gea2cb6c5
+                10.1.0.post179+gf0c03b12
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -672,10 +672,10 @@
     <span class="k">return</span> <span class="n">s</span></div>
 
 
-<span class="n">_para_mac</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(?:</span><span class="si">%(sep)s</span><span class="s2">)(?:(?:</span><span class="si">%(sep)s</span><span class="s2">)\s*)+&quot;</span> <span class="o">%</span> <span class="p">{</span><span class="s1">&#39;sep&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">}</span>
-<span class="n">_para_posix</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(?:</span><span class="si">%(sep)s</span><span class="s2">)(?:(?:</span><span class="si">%(sep)s</span><span class="s2">)\s*)+&quot;</span> <span class="o">%</span> <span class="p">{</span><span class="s1">&#39;sep&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">}</span>
-<span class="n">_para_win</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(?:</span><span class="si">%(sep)s</span><span class="s2">)(?:(?:</span><span class="si">%(sep)s</span><span class="s2">)\s*)+&quot;</span> <span class="o">%</span> <span class="p">{</span><span class="s1">&#39;sep&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">}</span>
-<span class="n">_para_ro</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">|</span><span class="si">%s</span><span class="s2">|</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">_para_mac</span><span class="p">,</span> <span class="n">_para_posix</span><span class="p">,</span> <span class="n">_para_win</span><span class="p">))</span>
+<span class="n">_para_mac</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(?:</span><span class="si">{sep}</span><span class="s2">)(?:(?:</span><span class="si">{sep}</span><span class="s2">)\s*)+&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">_para_posix</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(?:</span><span class="si">{sep}</span><span class="s2">)(?:(?:</span><span class="si">{sep}</span><span class="s2">)\s*)+&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">_para_win</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(?:</span><span class="si">{sep}</span><span class="s2">)(?:(?:</span><span class="si">{sep}</span><span class="s2">)\s*)+&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">_para_ro</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">_para_mac</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="n">_para_posix</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="n">_para_win</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="get_paragraphs"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.get_paragraphs">[docs]</a><span class="k">def</span> <span class="nf">get_paragraphs</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
@@ -703,7 +703,7 @@
 
 <div class="viewcode-block" id="indent"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.indent">[docs]</a><span class="k">def</span> <span class="nf">indent</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">indent_string</span><span class="o">=</span><span class="s2">&quot;  &quot;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Indent each line of text with the given indent string.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">indent_string</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">splitlines</span><span class="p">())</span></div>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">indent_string</span><span class="si">}{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">splitlines</span><span class="p">())</span></div>
 
 
 <div class="viewcode-block" id="paginate"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.paginate">[docs]</a><span class="k">def</span> <span class="nf">paginate</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
@@ -790,7 +790,7 @@
     <span class="n">time_str</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">time_str</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
         <span class="n">time_str</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-    <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">time_str</span><span class="p">))</span></div>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">time_str</span><span class="p">))</span></div>
 
 
 <div class="viewcode-block" id="strtimezone"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.strtimezone">[docs]</a><span class="k">def</span> <span class="nf">strtimezone</span><span class="p">():</span>

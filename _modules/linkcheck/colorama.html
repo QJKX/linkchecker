@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.colorama &mdash; LinkChecker 10.1.0.post172+gea2cb6c5 documentation</title>
+  <title>linkcheck.colorama &mdash; LinkChecker 10.1.0.post179+gf0c03b12 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.1.0.post172+gea2cb6c5
+                10.1.0.post179+gf0c03b12
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -718,7 +718,7 @@
     <span class="k">global</span> <span class="n">_default_foreground</span><span class="p">,</span> <span class="n">_default_background</span><span class="p">,</span> <span class="n">_default_style</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">attrs</span> <span class="o">=</span> <span class="n">GetConsoleScreenBufferInfo</span><span class="p">()</span><span class="o">.</span><span class="n">wAttributes</span>
-    <span class="k">except</span> <span class="p">(</span><span class="n">ArgumentError</span><span class="p">,</span> <span class="ne">WindowsError</span><span class="p">):</span>
+    <span class="k">except</span> <span class="p">(</span><span class="n">ArgumentError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">):</span>
         <span class="n">_default_foreground</span> <span class="o">=</span> <span class="n">GREY</span>
         <span class="n">_default_background</span> <span class="o">=</span> <span class="n">BLACK</span>
         <span class="n">_default_style</span> <span class="o">=</span> <span class="n">NORMAL</span>
