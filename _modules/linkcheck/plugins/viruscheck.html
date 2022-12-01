@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.plugins.viruscheck &mdash; LinkChecker 10.2.0 documentation</title>
+  <title>linkcheck.plugins.viruscheck &mdash; LinkChecker 10.2.0.post7+gd90d4e1f1 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -33,7 +33,7 @@
             <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.0
+                10.2.0.post7+gd90d4e1f1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -640,7 +640,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">clamav_conf</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">url_data</span><span class="o">.</span><span class="n">extern</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="VirusCheck.check"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.VirusCheck.check">[docs]</a>    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Try to ask GeoIP database for country info.&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Scan content for viruses.&quot;&quot;&quot;</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">url_data</span><span class="o">.</span><span class="n">get_raw_content</span><span class="p">()</span>
         <span class="n">infected</span><span class="p">,</span> <span class="n">errors</span> <span class="o">=</span> <span class="n">scan</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">clamav_conf</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">infected</span> <span class="ow">or</span> <span class="n">errors</span><span class="p">:</span>
