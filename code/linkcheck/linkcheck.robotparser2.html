@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.robotparser2 &mdash; LinkChecker 10.2.1 documentation</title>
+  <title>linkcheck.robotparser2 &mdash; LinkChecker 10.2.1.post2+g9a5f91401 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1
+                10.2.1.post2+g9a5f91401
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -607,6 +607,10 @@
 <a class="reference external" href="https://www.robotstxt.org/norobots-rfc.txt">https://www.robotstxt.org/norobots-rfc.txt</a></p>
 <p class="rubric">Classes</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Entry</span></code>()</p></td>
 <td><p>An entry has one or more user-agents and zero or more rulelines.</p></td>
@@ -632,10 +636,10 @@ credentials.</p>
 <span class="sig-name descname"><span class="pre">can_fetch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useragent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/robotparser2.html#RobotFileParser.can_fetch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.robotparser2.RobotFileParser.can_fetch" title="Permalink to this definition"></a></dt>
 <dd><p>Using the parsed robots.txt decide if useragent can fetch url.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>True if agent can fetch url, else False</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>bool</p>
 </dd>
 </dl>
@@ -646,10 +650,10 @@ credentials.</p>
 <span class="sig-name descname"><span class="pre">get_crawldelay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useragent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/robotparser2.html#RobotFileParser.get_crawldelay"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.robotparser2.RobotFileParser.get_crawldelay" title="Permalink to this definition"></a></dt>
 <dd><p>Look for a configured crawl delay.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>crawl delay in seconds or zero</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>integer &gt;= 0</p>
 </dd>
 </dl>
@@ -669,10 +673,10 @@ current time.</p>
 <p>This is useful for long-running web spiders that need to
 check for new robots.txt files periodically.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>last modified in time.time() format</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>number</p>
 </dd>
 </dl>
@@ -685,7 +689,7 @@ check for new robots.txt files periodically.</p>
 We allow that a user-agent: line is not preceded by
 one or more blank lines.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>None</p>
 </dd>
 </dl>

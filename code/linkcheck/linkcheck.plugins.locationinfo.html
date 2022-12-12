@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.plugins.locationinfo &mdash; LinkChecker 10.2.1 documentation</title>
+  <title>linkcheck.plugins.locationinfo &mdash; LinkChecker 10.2.1.post2+g9a5f91401 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1
+                10.2.1.post2+g9a5f91401
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -606,6 +606,10 @@
 <p>Store and retrieve country names for IPs.</p>
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.plugins.locationinfo.get_geoip_dat" title="linkcheck.plugins.locationinfo.get_geoip_dat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_geoip_dat</span></code></a>()</p></td>
 <td><p>Find a GeoIP database, preferring city over country lookup.</p></td>
@@ -617,6 +621,10 @@
 </table>
 <p class="rubric">Classes</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.plugins.locationinfo.LocationInfo" title="linkcheck.plugins.locationinfo.LocationInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocationInfo</span></code></a>(config)</p></td>
 <td><p>Adds the country and if possible city name of the URL host as info.</p></td>
@@ -655,7 +663,7 @@ Needs GeoIP or pygeoip and a local country or city lookup DB installed.</p>
 <span class="sig-prename descclassname"><span class="pre">linkcheck.plugins.locationinfo.</span></span><span class="sig-name descname"><span class="pre">get_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins/locationinfo.html#get_location"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.locationinfo.get_location" title="Permalink to this definition"></a></dt>
 <dd><p>Get translated country and optional city name.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>country with optional city or an boolean False if not found</p>
 </dd>
 </dl>

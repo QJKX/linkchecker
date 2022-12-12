@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.plugins.viruscheck &mdash; LinkChecker 10.2.1 documentation</title>
+  <title>linkcheck.plugins.viruscheck &mdash; LinkChecker 10.2.1.post2+g9a5f91401 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1
+                10.2.1.post2+g9a5f91401
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -606,6 +606,10 @@
 <p>Check page content for virus infection with clamav.</p>
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.plugins.viruscheck.canonical_clamav_conf" title="linkcheck.plugins.viruscheck.canonical_clamav_conf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">canonical_clamav_conf</span></code></a>()</p></td>
 <td><p>Default clamav configs for various platforms.</p></td>
@@ -623,6 +627,10 @@
 </table>
 <p class="rubric">Classes</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.plugins.viruscheck.ClamavConfig" title="linkcheck.plugins.viruscheck.ClamavConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClamavConfig</span></code></a>(filename)</p></td>
 <td><p>Clamav configuration wrapper, with clamd connection method.</p></td>
@@ -637,6 +645,10 @@
 </table>
 <p class="rubric">Exceptions</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.plugins.viruscheck.ClamavError" title="linkcheck.plugins.viruscheck.ClamavError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClamavError</span></code></a></p></td>
 <td><p>Raised on clamav errors.</p></td>
@@ -673,7 +685,7 @@
 <span class="sig-name descname"><span class="pre">new_connection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins/viruscheck.html#ClamavConfig.new_connection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.viruscheck.ClamavConfig.new_connection" title="Permalink to this definition"></a></dt>
 <dd><p>Connect to clamd for stream scanning.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>tuple (connected socket, host)</p>
 </dd>
 </dl>
@@ -763,10 +775,10 @@ A local clamav daemon must be installed.</p>
 <span class="sig-prename descclassname"><span class="pre">linkcheck.plugins.viruscheck.</span></span><span class="sig-name descname"><span class="pre">scan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clamconf</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins/viruscheck.html#scan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.viruscheck.scan" title="Permalink to this definition"></a></dt>
 <dd><p>Scan data for viruses.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>(infection msgs, errors)</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>([], [])</p>
 </dd>
 </dl>

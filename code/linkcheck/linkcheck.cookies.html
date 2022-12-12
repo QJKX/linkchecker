@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.cookies &mdash; LinkChecker 10.2.1 documentation</title>
+  <title>linkcheck.cookies &mdash; LinkChecker 10.2.1.post2+g9a5f91401 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1
+                10.2.1.post2+g9a5f91401
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -605,6 +605,10 @@
 <p>Parsing of cookies.</p>
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.cookies.from_file" title="linkcheck.cookies.from_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_file</span></code></a>(filename)</p></td>
 <td><p>Parse cookie data from a text file in HTTP header format.</p></td>
@@ -619,7 +623,7 @@
 <span class="sig-prename descclassname"><span class="pre">linkcheck.cookies.</span></span><span class="sig-name descname"><span class="pre">from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/cookies.html#from_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.cookies.from_file" title="Permalink to this definition"></a></dt>
 <dd><p>Parse cookie data from a text file in HTTP header format.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>list of tuples (headers, scheme, host, path)</p>
 </dd>
 </dl>
@@ -630,10 +634,10 @@
 <span class="sig-prename descclassname"><span class="pre">linkcheck.cookies.</span></span><span class="sig-name descname"><span class="pre">from_headers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strheader</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/cookies.html#from_headers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.cookies.from_headers" title="Permalink to this definition"></a></dt>
 <dd><p>Parse cookie data from a string in HTTP header (RFC 2616) format.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>list of cookies</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p>ValueError for incomplete or invalid data</p>
 </dd>
 </dl>

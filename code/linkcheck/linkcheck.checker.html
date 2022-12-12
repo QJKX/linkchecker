@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker &mdash; LinkChecker 10.2.1 documentation</title>
+  <title>linkcheck.checker &mdash; LinkChecker 10.2.1.post2+g9a5f91401 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1
+                10.2.1.post2+g9a5f91401
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -605,6 +605,10 @@
 <p>Main functions for link checking.</p>
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.checker.absolute_url" title="linkcheck.checker.absolute_url"><code class="xref py py-obj docutils literal notranslate"><span class="pre">absolute_url</span></code></a>(base_url, base_ref, parent_url)</p></td>
 <td><p>Search for the absolute url to detect the link type.</p></td>
@@ -629,7 +633,7 @@
 <dd><p>Search for the absolute url to detect the link type. This does not
 join any url fragments together!</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>base_url</strong> (<em>string</em><em> or </em><em>None</em>) – base url from a link tag</p></li>
 <li><p><strong>base_ref</strong> (<em>string</em><em> or </em><em>None</em>) – base url from &lt;base&gt; tag</p></li>
@@ -644,7 +648,7 @@ join any url fragments together!</p>
 <span class="sig-prename descclassname"><span class="pre">linkcheck.checker.</span></span><span class="sig-name descname"><span class="pre">get_index_html</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">urls</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/checker.html#get_index_html"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.checker.get_index_html" title="Permalink to this definition"></a></dt>
 <dd><p>Construct artificial index.html from given URLs.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>urls</strong> (<em>iterator</em><em> of </em><em>string</em>) – URL strings</p>
 </dd>
 </dl>
@@ -655,7 +659,7 @@ join any url fragments together!</p>
 <span class="sig-prename descclassname"><span class="pre">linkcheck.checker.</span></span><span class="sig-name descname"><span class="pre">get_url_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursion_level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extern</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url_encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/checker.html#get_url_from"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.checker.get_url_from" title="Permalink to this definition"></a></dt>
 <dd><p>Get url data from given base data.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>base_url</strong> (<em>string</em><em> or </em><em>None</em>) – base url from a link tag</p></li>
 <li><p><strong>recursion_level</strong> (<em>number</em>) – current recursion level</p></li>
@@ -684,14 +688,14 @@ cannot be matched and assume_local_file is True, assume a local file.</p>
 <span class="sig-prename descclassname"><span class="pre">linkcheck.checker.</span></span><span class="sig-name descname"><span class="pre">guess_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/checker.html#guess_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.checker.guess_url" title="Permalink to this definition"></a></dt>
 <dd><p>Guess if URL is a http or ftp URL.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>url</strong> (<em>unicode</em>) – the URL to check</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>url with <em>http://</em> or <em>ftp://</em> prepended if it’s detected as
 a http respective ftp URL.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>unicode</p>
 </dd>
 </dl>
@@ -699,6 +703,10 @@ a http respective ftp URL.</p>
 
 <p class="rubric">Modules</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="linkcheck.checker.const.html#module-linkcheck.checker.const" title="linkcheck.checker.const"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linkcheck.checker.const</span></code></a></p></td>
 <td><p>Helper constants.</p></td>
