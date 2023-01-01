@@ -1,40 +1,76 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.parser &mdash; LinkChecker 10.2.1.post2+g9a5f91401 documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  <title>linkcheck.parser &mdash; LinkChecker 10.2.1.post4+gd179b916b documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
     <link rel="canonical" href="https://linkchecker.github.io/linkchecker/_modules/linkcheck/parser.html" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../../index.html" class="icon icon-home"> LinkChecker
-            <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
+          
+
+          
           </a>
+
+          
+            
+            
               <div class="version">
-                10.2.1.post2+g9a5f91401
+                10.2.1.post4+gd179b916b
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -42,8 +78,19 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
     
+            
+            
+              
+            
+            
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a><ul>
@@ -564,6 +611,8 @@
 </li>
 </ul>
 
+            
+          
   <ul>
     <li><a href="../../genindex.html">Index</a></li>
     <li><hr></li>
@@ -572,30 +621,68 @@
   </ul>
   
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">LinkChecker</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
-          <li class="breadcrumb-item"><a href="../linkcheck.html">linkcheck</a></li>
-      <li class="breadcrumb-item active">linkcheck.parser</li>
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../linkcheck.html">linkcheck</a> &raquo;</li>
+        
+      <li>linkcheck.parser</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <h1>Source code for linkcheck.parser</h1><div class="highlight"><pre>
 <span></span><span class="c1"># Copyright (C) 2000-2014 Bastian Kleineidam</span>
 <span class="c1">#</span>
@@ -621,7 +708,7 @@
 
 
 <div class="viewcode-block" id="parse_url"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.parser.html#linkcheck.parser.parse_url">[docs]</a><span class="k">def</span> <span class="nf">parse_url</span><span class="p">(</span><span class="n">url_data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Parse a URL.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse a URL.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">url_data</span><span class="o">.</span><span class="n">is_directory</span><span class="p">():</span>
         <span class="c1"># both ftp and file links represent directories as HTML data</span>
         <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;html&quot;</span>
@@ -645,14 +732,14 @@
 
 
 <div class="viewcode-block" id="parse_html"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.parser.html#linkcheck.parser.parse_html">[docs]</a><span class="k">def</span> <span class="nf">parse_html</span><span class="p">(</span><span class="n">url_data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Parse into HTML content and search for URLs to check.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse into HTML content and search for URLs to check.</span>
 <span class="sd">    Found URLs are added to the URL queue.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">linkparse</span><span class="o">.</span><span class="n">find_links</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">get_soup</span><span class="p">(),</span> <span class="n">url_data</span><span class="o">.</span><span class="n">add_url</span><span class="p">,</span> <span class="n">linkparse</span><span class="o">.</span><span class="n">LinkTags</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="parse_opera"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.parser.html#linkcheck.parser.parse_opera">[docs]</a><span class="k">def</span> <span class="nf">parse_opera</span><span class="p">(</span><span class="n">url_data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Parse an opera bookmark file.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse an opera bookmark file.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">..bookmarks.opera</span> <span class="kn">import</span> <span class="n">parse_bookmark_data</span>
 
     <span class="k">for</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">lineno</span> <span class="ow">in</span> <span class="n">parse_bookmark_data</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">get_content</span><span class="p">()):</span>
@@ -660,7 +747,7 @@
 
 
 <div class="viewcode-block" id="parse_chromium"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.parser.html#linkcheck.parser.parse_chromium">[docs]</a><span class="k">def</span> <span class="nf">parse_chromium</span><span class="p">(</span><span class="n">url_data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Parse a Chromium or Google Chrome bookmark file.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse a Chromium or Google Chrome bookmark file.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">..bookmarks.chromium</span> <span class="kn">import</span> <span class="n">parse_bookmark_data</span>
 
     <span class="k">for</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">parse_bookmark_data</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">get_content</span><span class="p">()):</span>
@@ -668,7 +755,7 @@
 
 
 <div class="viewcode-block" id="parse_safari"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.parser.html#linkcheck.parser.parse_safari">[docs]</a><span class="k">def</span> <span class="nf">parse_safari</span><span class="p">(</span><span class="n">url_data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Parse a Safari bookmark file.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse a Safari bookmark file.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">..bookmarks.safari</span> <span class="kn">import</span> <span class="n">parse_bookmark_data</span>
 
     <span class="k">for</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">parse_bookmark_data</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">get_raw_content</span><span class="p">()):</span>
@@ -676,7 +763,7 @@
 
 
 <div class="viewcode-block" id="parse_text"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.parser.html#linkcheck.parser.parse_text">[docs]</a><span class="k">def</span> <span class="nf">parse_text</span><span class="p">(</span><span class="n">url_data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Parse a text file with one url per line; comment and blank</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse a text file with one url per line; comment and blank</span>
 <span class="sd">    lines are ignored.&quot;&quot;&quot;</span>
     <span class="n">lineno</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">url_data</span><span class="o">.</span><span class="n">get_content</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
@@ -688,7 +775,7 @@
 
 
 <div class="viewcode-block" id="parse_css"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.parser.html#linkcheck.parser.parse_css">[docs]</a><span class="k">def</span> <span class="nf">parse_css</span><span class="p">(</span><span class="n">url_data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Parse a CSS file for url() patterns.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">lineno</span> <span class="o">=</span> <span class="mi">0</span>
@@ -703,7 +790,7 @@
 
 
 <div class="viewcode-block" id="parse_swf"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.parser.html#linkcheck.parser.parse_swf">[docs]</a><span class="k">def</span> <span class="nf">parse_swf</span><span class="p">(</span><span class="n">url_data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Parse a SWF file for URLs.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse a SWF file for URLs.&quot;&quot;&quot;</span>
     <span class="n">linkfinder</span> <span class="o">=</span> <span class="n">linkparse</span><span class="o">.</span><span class="n">swf_url_re</span><span class="o">.</span><span class="n">finditer</span>
     <span class="k">for</span> <span class="n">mo</span> <span class="ow">in</span> <span class="n">linkfinder</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">get_raw_content</span><span class="p">()):</span>
         <span class="c1"># We&#39;re scraping binary data for anything that looks like an URL using</span>
@@ -714,21 +801,21 @@
 
 
 <div class="viewcode-block" id="parse_wml"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.parser.html#linkcheck.parser.parse_wml">[docs]</a><span class="k">def</span> <span class="nf">parse_wml</span><span class="p">(</span><span class="n">url_data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Parse into WML content and search for URLs to check.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse into WML content and search for URLs to check.</span>
 <span class="sd">    Found URLs are added to the URL queue.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">linkparse</span><span class="o">.</span><span class="n">find_links</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">get_soup</span><span class="p">(),</span> <span class="n">url_data</span><span class="o">.</span><span class="n">add_url</span><span class="p">,</span> <span class="n">linkparse</span><span class="o">.</span><span class="n">WmlTags</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="parse_firefox"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.parser.html#linkcheck.parser.parse_firefox">[docs]</a><span class="k">def</span> <span class="nf">parse_firefox</span><span class="p">(</span><span class="n">url_data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Parse a Firefox3 bookmark file.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse a Firefox3 bookmark file.&quot;&quot;&quot;</span>
     <span class="n">filename</span> <span class="o">=</span> <span class="n">url_data</span><span class="o">.</span><span class="n">get_os_filename</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">firefox</span><span class="o">.</span><span class="n">parse_bookmark_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
         <span class="n">url_data</span><span class="o">.</span><span class="n">add_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="parse_itms_services"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.parser.html#linkcheck.parser.parse_itms_services">[docs]</a><span class="k">def</span> <span class="nf">parse_itms_services</span><span class="p">(</span><span class="n">url_data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Get &quot;url&quot; CGI parameter value as child URL.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get &quot;url&quot; CGI parameter value as child URL.&quot;&quot;&quot;</span>
     <span class="n">query</span> <span class="o">=</span> <span class="n">url_data</span><span class="o">.</span><span class="n">urlparts</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">sep</span> <span class="ow">in</span> <span class="n">urlutil</span><span class="o">.</span><span class="n">parse_qsl</span><span class="p">(</span>
         <span class="n">query</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">url_data</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span> <span class="n">keep_blank_values</span><span class="o">=</span><span class="kc">True</span>
@@ -742,30 +829,46 @@
 </pre></div>
 
            </div>
+           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2000-2016 Bastian Kleineidam, 2010-2022 LinkChecker Authors.</p>
-  </div>
+    <p>
+        &#169; Copyright 2000-2016 Bastian Kleineidam, 2010-2023 LinkChecker Authors.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
