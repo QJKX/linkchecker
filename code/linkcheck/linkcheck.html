@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck &mdash; LinkChecker 10.2.1.post14+ga61ffac5d documentation</title>
+  <title>linkcheck &mdash; LinkChecker 10.2.1.post16+gbeab10ba4 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post14+ga61ffac5d
+                10.2.1.post16+gbeab10ba4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -374,16 +374,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.i18n.html">linkcheck.i18n</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.NullTranslator"><code class="docutils literal notranslate"><span class="pre">NullTranslator</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.Translator"><code class="docutils literal notranslate"><span class="pre">Translator</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.get_encoded_writer"><code class="docutils literal notranslate"><span class="pre">get_encoded_writer()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.get_lang"><code class="docutils literal notranslate"><span class="pre">get_lang()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.get_locale"><code class="docutils literal notranslate"><span class="pre">get_locale()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.get_translator"><code class="docutils literal notranslate"><span class="pre">get_translator()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.init"><code class="docutils literal notranslate"><span class="pre">init()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.install_builtin"><code class="docutils literal notranslate"><span class="pre">install_builtin()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.install_language"><code class="docutils literal notranslate"><span class="pre">install_language()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="linkcheck.i18n.html#linkcheck.i18n.norm_locale"><code class="docutils literal notranslate"><span class="pre">norm_locale()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.lc_cgi.html">linkcheck.lc_cgi</a><ul>
@@ -612,7 +604,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.get_link_pat" title="linkcheck.get_link_pat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_link_pat</span></code></a>(arg[, strict])</p></td>
 <td><p>Get a link pattern matcher for intern/extern links.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#linkcheck.init_i18n" title="linkcheck.init_i18n"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_i18n</span></code></a>([loc])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#linkcheck.init_i18n" title="linkcheck.init_i18n"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_i18n</span></code></a>()</p></td>
 <td><p>Initialize i18n with the configured locale dir.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.module_path" title="linkcheck.module_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">module_path</span></code></a>()</p></td>
@@ -675,7 +667,7 @@ Returns a compiled pattern and a negate and strict option.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="linkcheck.init_i18n">
-<span class="sig-prename descclassname"><span class="pre">linkcheck.</span></span><span class="sig-name descname"><span class="pre">init_i18n</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck.html#init_i18n"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.init_i18n" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">linkcheck.</span></span><span class="sig-name descname"><span class="pre">init_i18n</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck.html#init_i18n"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.init_i18n" title="Permalink to this definition"></a></dt>
 <dd><p>Initialize i18n with the configured locale dir. The environment
 variable LOCPATH can also specify a locale dir.</p>
 <dl class="field-list simple">

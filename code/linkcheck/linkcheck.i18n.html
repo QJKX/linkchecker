@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.i18n &mdash; LinkChecker 10.2.1.post14+ga61ffac5d documentation</title>
+  <title>linkcheck.i18n &mdash; LinkChecker 10.2.1.post16+gbeab10ba4 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
             <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post14+ga61ffac5d
+                10.2.1.post16+gbeab10ba4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -374,16 +374,8 @@
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">linkcheck.i18n</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#linkcheck.i18n.NullTranslator"><code class="docutils literal notranslate"><span class="pre">NullTranslator</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#linkcheck.i18n.Translator"><code class="docutils literal notranslate"><span class="pre">Translator</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#linkcheck.i18n.get_encoded_writer"><code class="docutils literal notranslate"><span class="pre">get_encoded_writer()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#linkcheck.i18n.get_lang"><code class="docutils literal notranslate"><span class="pre">get_lang()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#linkcheck.i18n.get_locale"><code class="docutils literal notranslate"><span class="pre">get_locale()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#linkcheck.i18n.get_translator"><code class="docutils literal notranslate"><span class="pre">get_translator()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#linkcheck.i18n.init"><code class="docutils literal notranslate"><span class="pre">init()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#linkcheck.i18n.install_builtin"><code class="docutils literal notranslate"><span class="pre">install_builtin()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#linkcheck.i18n.install_language"><code class="docutils literal notranslate"><span class="pre">install_language()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#linkcheck.i18n.norm_locale"><code class="docutils literal notranslate"><span class="pre">norm_locale()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="linkcheck.lc_cgi.html">linkcheck.lc_cgi</a><ul>
@@ -613,72 +605,11 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.i18n.get_encoded_writer" title="linkcheck.i18n.get_encoded_writer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_encoded_writer</span></code></a>([out, encoding, errors])</p></td>
 <td><p>Get wrapped output writer with given encoding and error handling.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#linkcheck.i18n.get_lang" title="linkcheck.i18n.get_lang"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_lang</span></code></a>(lang)</p></td>
-<td><p>Return lang if it is supported, or the default language.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.i18n.get_locale" title="linkcheck.i18n.get_locale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_locale</span></code></a>()</p></td>
-<td><p>Search the default platform locale and norm it.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#linkcheck.i18n.get_translator" title="linkcheck.i18n.get_translator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_translator</span></code></a>(domain, directory[, ...])</p></td>
-<td><p>Search the appropriate GNUTranslations class.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.i18n.init" title="linkcheck.i18n.init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init</span></code></a>(domain, directory[, loc])</p></td>
-<td><p>Initialize this gettext i18n module.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#linkcheck.i18n.install_builtin" title="linkcheck.i18n.install_builtin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install_builtin</span></code></a>(translator, do_unicode)</p></td>
-<td><p>Install _() and _n() gettext methods into default namespace.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.i18n.install_language" title="linkcheck.i18n.install_language"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install_language</span></code></a>(language)</p></td>
-<td><p>Install translation service routines into default namespace.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#linkcheck.i18n.norm_locale" title="linkcheck.i18n.norm_locale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norm_locale</span></code></a>(loc)</p></td>
-<td><p>Normalize a locale.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#linkcheck.i18n.init" title="linkcheck.i18n.init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init</span></code></a>(domain, directory)</p></td>
+<td><p>Initialize this gettext i18n module and install the gettext translator class.</p></td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Classes</p>
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.i18n.NullTranslator" title="linkcheck.i18n.NullTranslator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NullTranslator</span></code></a>([fp])</p></td>
-<td><p>A dummy translation class always installing its gettext methods into the default namespace.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#linkcheck.i18n.Translator" title="linkcheck.i18n.Translator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Translator</span></code></a>([fp])</p></td>
-<td><p>A translation class always installing its gettext methods into the default namespace.</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="py class">
-<dt class="sig sig-object py" id="linkcheck.i18n.NullTranslator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">linkcheck.i18n.</span></span><span class="sig-name descname"><span class="pre">NullTranslator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/i18n.html#NullTranslator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.i18n.NullTranslator" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">NullTranslations</span></code></p>
-<p>A dummy translation class always installing its gettext methods into
-the default namespace.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="linkcheck.i18n.NullTranslator.install">
-<span class="sig-name descname"><span class="pre">install</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">do_unicode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/i18n.html#NullTranslator.install"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.i18n.NullTranslator.install" title="Permalink to this definition"></a></dt>
-<dd><p>Install gettext methods into the default namespace.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="linkcheck.i18n.Translator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">linkcheck.i18n.</span></span><span class="sig-name descname"><span class="pre">Translator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/i18n.html#Translator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.i18n.Translator" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">GNUTranslations</span></code></p>
-<p>A translation class always installing its gettext methods into the
-default namespace.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="linkcheck.i18n.Translator.install">
-<span class="sig-name descname"><span class="pre">install</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">do_unicode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/i18n.html#Translator.install"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.i18n.Translator.install" title="Permalink to this definition"></a></dt>
-<dd><p>Install gettext methods into the default namespace.</p>
-</dd></dl>
-
-</dd></dl>
-
 <dl class="py function">
 <dt class="sig sig-object py" id="linkcheck.i18n.get_encoded_writer">
 <span class="sig-prename descclassname"><span class="pre">linkcheck.i18n.</span></span><span class="sig-name descname"><span class="pre">get_encoded_writer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">out=&lt;_io.TextIOWrapper</span> <span class="pre">name='&lt;stdout&gt;'</span> <span class="pre">mode='w'</span> <span class="pre">encoding='utf-8'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors='replace'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/i18n.html#get_encoded_writer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.i18n.get_encoded_writer" title="Permalink to this definition"></a></dt>
@@ -686,48 +617,9 @@ default namespace.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="linkcheck.i18n.get_lang">
-<span class="sig-prename descclassname"><span class="pre">linkcheck.i18n.</span></span><span class="sig-name descname"><span class="pre">get_lang</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/i18n.html#get_lang"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.i18n.get_lang" title="Permalink to this definition"></a></dt>
-<dd><p>Return lang if it is supported, or the default language.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="linkcheck.i18n.get_locale">
-<span class="sig-prename descclassname"><span class="pre">linkcheck.i18n.</span></span><span class="sig-name descname"><span class="pre">get_locale</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/i18n.html#get_locale"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.i18n.get_locale" title="Permalink to this definition"></a></dt>
-<dd><p>Search the default platform locale and norm it.
-:returns (locale, encoding)
-:rtype (string, string)</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="linkcheck.i18n.get_translator">
-<span class="sig-prename descclassname"><span class="pre">linkcheck.i18n.</span></span><span class="sig-name descname"><span class="pre">get_translator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">languages=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translatorklass=&lt;class</span> <span class="pre">'linkcheck.i18n.Translator'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fallback=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fallbackklass=&lt;class</span> <span class="pre">'linkcheck.i18n.NullTranslator'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/i18n.html#get_translator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.i18n.get_translator" title="Permalink to this definition"></a></dt>
-<dd><p>Search the appropriate GNUTranslations class.</p>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="linkcheck.i18n.init">
-<span class="sig-prename descclassname"><span class="pre">linkcheck.i18n.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/i18n.html#init"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.i18n.init" title="Permalink to this definition"></a></dt>
-<dd><p>Initialize this gettext i18n module. Searches for supported languages
-and installs the gettext translator class.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="linkcheck.i18n.install_builtin">
-<span class="sig-prename descclassname"><span class="pre">linkcheck.i18n.</span></span><span class="sig-name descname"><span class="pre">install_builtin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">translator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_unicode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/i18n.html#install_builtin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.i18n.install_builtin" title="Permalink to this definition"></a></dt>
-<dd><p>Install _() and _n() gettext methods into default namespace.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="linkcheck.i18n.install_language">
-<span class="sig-prename descclassname"><span class="pre">linkcheck.i18n.</span></span><span class="sig-name descname"><span class="pre">install_language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/i18n.html#install_language"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.i18n.install_language" title="Permalink to this definition"></a></dt>
-<dd><p>Install translation service routines into default namespace.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="linkcheck.i18n.norm_locale">
-<span class="sig-prename descclassname"><span class="pre">linkcheck.i18n.</span></span><span class="sig-name descname"><span class="pre">norm_locale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loc</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/i18n.html#norm_locale"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.i18n.norm_locale" title="Permalink to this definition"></a></dt>
-<dd><p>Normalize a locale.</p>
+<span class="sig-prename descclassname"><span class="pre">linkcheck.i18n.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/i18n.html#init"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.i18n.init" title="Permalink to this definition"></a></dt>
+<dd><p>Initialize this gettext i18n module and install the gettext translator class.</p>
 </dd></dl>
 
 </section>

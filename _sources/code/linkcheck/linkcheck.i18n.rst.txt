@@ -14,24 +14,11 @@ linkcheck.i18n
    .. autosummary::
    
       get_encoded_writer
-      get_lang
-      get_locale
-      get_translator
       init
-      install_builtin
-      install_language
-      norm_locale
    
    
 
    
-   
-   .. rubric:: Classes
-
-   .. autosummary::
-   
-      NullTranslator
-      Translator
    
    
 
