@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.lc_cgi &mdash; LinkChecker 10.2.1.post27+g05bf593fd documentation</title>
+  <title>linkcheck.lc_cgi &mdash; LinkChecker 10.2.1.post29+g054a583b7 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -14,10 +14,8 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -32,15 +30,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> LinkChecker
-            <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            LinkChecker
+              <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post27+g05bf593fd
+                10.2.1.post29+g054a583b7
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -580,7 +582,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Code</a></li>
           <li class="breadcrumb-item"><a href="linkcheck.html">linkcheck</a></li>
       <li class="breadcrumb-item active">linkcheck.lc_cgi</li>
@@ -598,10 +600,6 @@
 <p>Functions used by the WSGI script.</p>
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.lc_cgi.application" title="linkcheck.lc_cgi.application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">application</span></code></a>(environ, start_response)</p></td>
 <td><p>WSGI interface: start an URL check.</p></td>
@@ -643,10 +641,6 @@
 </table>
 <p class="rubric">Classes</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.lc_cgi.ThreadsafeIO" title="linkcheck.lc_cgi.ThreadsafeIO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ThreadsafeIO</span></code></a>()</p></td>
 <td><p>Thread-safe unicode I/O class.</p></td>
@@ -655,10 +649,6 @@
 </table>
 <p class="rubric">Exceptions</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#linkcheck.lc_cgi.LCFormError" title="linkcheck.lc_cgi.LCFormError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LCFormError</span></code></a></p></td>
 <td><p>Form related errors.</p></td>
@@ -735,13 +725,13 @@ only plain strings as exception text.</p>
 <span class="sig-prename descclassname"><span class="pre">linkcheck.lc_cgi.</span></span><span class="sig-name descname"><span class="pre">format_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">why</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/lc_cgi.html#format_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.lc_cgi.format_error" title="Permalink to this definition"></a></dt>
 <dd><p>Format standard error page.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>why</strong> (<em>unicode</em>) – error message</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>HTML page content</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>unicode</p>
 </dd>
 </dl>
