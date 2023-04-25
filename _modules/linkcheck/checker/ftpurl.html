@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.ftpurl &mdash; LinkChecker 10.2.1.post29+g054a583b7 documentation</title>
+  <title>linkcheck.checker.ftpurl &mdash; LinkChecker 10.2.1.post34+g2987a588b documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,7 +13,8 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/sphinx_highlight.js"></script>
@@ -35,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post29+g054a583b7
+                10.2.1.post34+g2987a588b
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -613,7 +614,7 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">ftplib</span>
-<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
 
 <span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">log</span><span class="p">,</span> <span class="n">LOG_CHECK</span><span class="p">,</span> <span class="n">LinkCheckerError</span><span class="p">,</span> <span class="n">mimeutil</span>
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">internpaturl</span><span class="p">,</span> <span class="n">get_index_html</span>
@@ -774,12 +775,12 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="c1"># download file in BINARY mode</span>
             <span class="n">ftpcmd</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;RETR </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span>
-            <span class="n">buf</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
+            <span class="n">buf</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">()</span>
 
             <span class="k">def</span> <span class="nf">stor_data</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">                </span><span class="sd">&quot;&quot;&quot;Helper method storing given data&quot;&quot;&quot;</span>
                 <span class="c1"># limit the download size</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">buf</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span><span class="p">:</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">buf</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;maxfilesizedownload&quot;</span><span class="p">]:</span>
                     <span class="k">raise</span> <span class="n">LinkCheckerError</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;FTP file size too large&quot;</span><span class="p">))</span>
                 <span class="n">buf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
