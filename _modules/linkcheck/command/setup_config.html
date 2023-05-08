@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.command.setup_config &mdash; LinkChecker 10.2.1.post43+g35e2f5a2f documentation</title>
+  <title>linkcheck.command.setup_config &mdash; LinkChecker 10.2.1.post49+g6ada5d951 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post43+g35e2f5a2f
+                10.2.1.post49+g6ada5d951
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -623,7 +623,6 @@
 <span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">get_link_pat</span><span class="p">,</span> <span class="n">log</span>
 
 <span class="kn">from</span> <span class="nn">..cmdline</span> <span class="kn">import</span> <span class="n">print_version</span><span class="p">,</span> <span class="n">print_usage</span><span class="p">,</span> <span class="n">print_plugins</span>
-<span class="kn">from</span> <span class="nn">..director</span> <span class="kn">import</span> <span class="n">console</span>
 
 
 <div class="viewcode-block" id="has_encoding"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.command.setup_config.html#linkcheck.command.setup_config.has_encoding">[docs]</a><span class="k">def</span> <span class="nf">has_encoding</span><span class="p">(</span><span class="n">encoding</span><span class="p">):</span>
@@ -759,7 +758,7 @@
             <span class="p">}</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Enter LinkChecker HTTP/FTP password:&quot;</span><span class="p">)</span>
-        <span class="n">_password</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getpass</span><span class="p">(</span><span class="n">console</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">msg</span><span class="p">))</span>
+        <span class="n">_password</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getpass</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         <span class="n">constructauth</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="k">if</span> <span class="n">options</span><span class="o">.</span><span class="n">quiet</span><span class="p">:</span>
         <span class="n">config</span><span class="p">[</span><span class="s2">&quot;logger&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">logger_new</span><span class="p">(</span><span class="s2">&quot;none&quot;</span><span class="p">)</span>

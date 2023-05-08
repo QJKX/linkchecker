@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.plugins.parseword &mdash; LinkChecker 10.2.1.post43+g35e2f5a2f documentation</title>
+  <title>linkcheck.plugins.parseword &mdash; LinkChecker 10.2.1.post49+g6ada5d951 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post43+g35e2f5a2f
+                10.2.1.post49+g6ada5d951
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -734,7 +734,7 @@
                     <span class="k">raise</span> <span class="n">Error</span><span class="p">(</span><span class="s2">&quot;could not open word file </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">filename</span><span class="p">)</span>
                 <span class="k">try</span><span class="p">:</span>
                     <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">Hyperlinks</span><span class="p">:</span>
-                        <span class="n">line</span> <span class="o">=</span> <span class="n">get_line_number</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">Range</span><span class="p">)</span>
+                        <span class="n">line</span> <span class="o">=</span> <span class="n">get_line_number</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">link</span><span class="o">.</span><span class="n">Range</span><span class="p">)</span>
                         <span class="n">name</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">TextToDisplay</span>
                         <span class="n">url_data</span><span class="o">.</span><span class="n">add_url</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">Address</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="n">line</span><span class="p">)</span>
                 <span class="k">finally</span><span class="p">:</span>

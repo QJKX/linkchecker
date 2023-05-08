@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.configuration &mdash; LinkChecker 10.2.1.post43+g35e2f5a2f documentation</title>
+  <title>linkcheck.configuration &mdash; LinkChecker 10.2.1.post49+g6ada5d951 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post43+g35e2f5a2f
+                10.2.1.post49+g6ada5d951
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -899,8 +899,7 @@
 
 <div class="viewcode-block" id="Configuration.sanitize_ssl"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.configuration.html#linkcheck.configuration.Configuration.sanitize_ssl">[docs]</a>    <span class="k">def</span> <span class="nf">sanitize_ssl</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Use local installed certificate file if available.</span>
-<span class="sd">        Tries to get system, then certifi, then the own</span>
-<span class="sd">        installed certificate file.&quot;&quot;&quot;</span>
+<span class="sd">        Tries to get system, then certifi certificate file.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="p">[</span><span class="s2">&quot;sslverify&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
                 <span class="bp">self</span><span class="p">[</span><span class="s2">&quot;sslverify&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_system_cert_file</span><span class="p">()</span>
