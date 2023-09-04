@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker &mdash; LinkChecker 10.2.1.post71+g3d630b880 documentation</title>
+  <title>linkcheck.checker &mdash; LinkChecker 10.2.1.post75+g0faccf2ab documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -15,7 +15,7 @@
   
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../_static/documentation_options.js?v=564893c2"></script>
+        <script src="../../_static/documentation_options.js?v=4be5d22d"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post71+g3d630b880
+                10.2.1.post75+g0faccf2ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -255,8 +255,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.checker.internpaturl.html">linkcheck.checker.internpaturl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.checker.itmsservicesurl.html">linkcheck.checker.itmsservicesurl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.checker.mailtourl.html">linkcheck.checker.mailtourl</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.checker.nntpurl.html">linkcheck.checker.nntpurl</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.checker.telneturl.html">linkcheck.checker.telneturl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.checker.unknownurl.html">linkcheck.checker.unknownurl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.checker.urlbase.html">linkcheck.checker.urlbase</a></li>
 </ul>
@@ -766,12 +764,8 @@
         <span class="n">klass</span> <span class="o">=</span> <span class="n">ftpurl</span><span class="o">.</span><span class="n">FtpUrl</span>
     <span class="k">elif</span> <span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;file&quot;</span><span class="p">:</span>
         <span class="n">klass</span> <span class="o">=</span> <span class="n">fileurl</span><span class="o">.</span><span class="n">FileUrl</span>
-    <span class="k">elif</span> <span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;telnet&quot;</span><span class="p">:</span>
-        <span class="n">klass</span> <span class="o">=</span> <span class="n">telneturl</span><span class="o">.</span><span class="n">TelnetUrl</span>
     <span class="k">elif</span> <span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;mailto&quot;</span><span class="p">:</span>
         <span class="n">klass</span> <span class="o">=</span> <span class="n">mailtourl</span><span class="o">.</span><span class="n">MailtoUrl</span>
-    <span class="k">elif</span> <span class="n">scheme</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;nntp&quot;</span><span class="p">,</span> <span class="s2">&quot;news&quot;</span><span class="p">,</span> <span class="s2">&quot;snews&quot;</span><span class="p">):</span>
-        <span class="n">klass</span> <span class="o">=</span> <span class="n">nntpurl</span><span class="o">.</span><span class="n">NntpUrl</span>
     <span class="k">elif</span> <span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;dns&quot;</span><span class="p">:</span>
         <span class="n">klass</span> <span class="o">=</span> <span class="n">dnsurl</span><span class="o">.</span><span class="n">DnsUrl</span>
     <span class="k">elif</span> <span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;itms-services&quot;</span><span class="p">:</span>
@@ -820,8 +814,6 @@
     <span class="n">httpurl</span><span class="p">,</span>
     <span class="n">dnsurl</span><span class="p">,</span>
     <span class="n">mailtourl</span><span class="p">,</span>
-    <span class="n">telneturl</span><span class="p">,</span>
-    <span class="n">nntpurl</span><span class="p">,</span>
     <span class="n">ignoreurl</span><span class="p">,</span>
     <span class="n">itmsservicesurl</span><span class="p">,</span>
 <span class="p">)</span>

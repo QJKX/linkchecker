@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkchecker &mdash; LinkChecker 10.2.1.post71+g3d630b880 documentation</title>
+  <title>linkchecker &mdash; LinkChecker 10.2.1.post75+g0faccf2ab documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -16,7 +16,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=564893c2"></script>
+        <script src="../_static/documentation_options.js?v=4be5d22d"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -39,7 +39,7 @@
               <img src="../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post71+g3d630b880
+                10.2.1.post75+g0faccf2ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -258,8 +258,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../code/linkcheck/linkcheck.checker.internpaturl.html">linkcheck.checker.internpaturl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../code/linkcheck/linkcheck.checker.itmsservicesurl.html">linkcheck.checker.itmsservicesurl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../code/linkcheck/linkcheck.checker.mailtourl.html">linkcheck.checker.mailtourl</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../code/linkcheck/linkcheck.checker.nntpurl.html">linkcheck.checker.nntpurl</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../code/linkcheck/linkcheck.checker.telneturl.html">linkcheck.checker.telneturl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../code/linkcheck/linkcheck.checker.unknownurl.html">linkcheck.checker.unknownurl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../code/linkcheck/linkcheck.checker.urlbase.html">linkcheck.checker.urlbase</a></li>
 </ul>
@@ -608,11 +606,10 @@
 <li><p>recursive and multithreaded checking</p></li>
 <li><p>output in colored or normal text, HTML, SQL, CSV, XML or a sitemap
 graph in different formats</p></li>
-<li><p>support for HTTP/1.1, HTTPS, FTP, mailto:, news:, nntp:, Telnet and
-local file links</p></li>
+<li><p>support for HTTP/1.1, HTTPS, FTP, mailto: and local file links</p></li>
 <li><p>restriction of link checking with URL filters</p></li>
 <li><p>proxy support</p></li>
-<li><p>username/password authorization for HTTP, FTP and Telnet</p></li>
+<li><p>username/password authorization for HTTP and FTP</p></li>
 <li><p>support for robots.txt exclusion protocol</p></li>
 <li><p>support for Cookies</p></li>
 <li><p>support for HTML5</p></li>
@@ -795,14 +792,6 @@ See section <a class="reference internal" href="#regular-expressions">REGULAR EX
 </dd></dl>
 
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-N">
-<span id="cmdoption-nntp-server"></span><span class="sig-name descname"><span class="pre">-N</span></span><span class="sig-prename descclassname"> <span class="pre">STRING</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--nntp-server</span></span><span class="sig-prename descclassname"><span class="pre">=STRING</span></span><a class="headerlink" href="#cmdoption-N" title="Link to this definition"></a></dt>
-<dd><p>Specify an NNTP server for news: links. Default is the
-environment variable <span class="target" id="index-0"></span><a class="reference internal" href="#envvar-NNTP_SERVER"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">NNTP_SERVER</span></code></a>. If no host is given, only the
-syntax of the link is checked.</p>
-</dd></dl>
-
-<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-no-follow-url">
 <span class="sig-name descname"><span class="pre">--no-follow-url</span></span><span class="sig-prename descclassname"><span class="pre">=REGEX</span></span><a class="headerlink" href="#cmdoption-no-follow-url" title="Link to this definition"></a></dt>
 <dd><p>Check but do not recurse into URLs matching the given regular
@@ -953,16 +942,16 @@ and one to all URLs starting with <strong>https://example.org/</strong>:</p>
 </section>
 <section id="proxy-support">
 <h2>PROXY SUPPORT<a class="headerlink" href="#proxy-support" title="Link to this heading"></a></h2>
-<p>To use a proxy on Unix or Windows set the <span class="target" id="index-1"></span><a class="reference internal" href="#envvar-http_proxy"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">http_proxy</span></code></a> or
-<span class="target" id="index-2"></span><a class="reference internal" href="#envvar-https_proxy"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">https_proxy</span></code></a> environment variables to the proxy URL. The URL should be
+<p>To use a proxy on Unix or Windows set the <span class="target" id="index-0"></span><a class="reference internal" href="#envvar-http_proxy"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">http_proxy</span></code></a> or
+<span class="target" id="index-1"></span><a class="reference internal" href="#envvar-https_proxy"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">https_proxy</span></code></a> environment variables to the proxy URL. The URL should be
 of the form
 <strong>http://</strong>[<em>user</em><strong>:</strong><em>pass</em><strong>&#64;</strong>]<em>host</em>[<strong>:</strong><em>port</em>].
 LinkChecker also detects manual proxy settings of Internet Explorer
 under Windows systems. On a Mac use
 the Internet Config to select a proxy.
-You can also set a comma-separated domain list in the <span class="target" id="index-3"></span><a class="reference internal" href="#envvar-no_proxy"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">no_proxy</span></code></a>
+You can also set a comma-separated domain list in the <span class="target" id="index-2"></span><a class="reference internal" href="#envvar-no_proxy"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">no_proxy</span></code></a>
 environment variable to ignore any proxy settings for these domains.
-The <span class="target" id="index-4"></span><a class="reference internal" href="#envvar-curl_ca_bundle"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">curl_ca_bundle</span></code></a> environment variable can be used to identify an
+The <span class="target" id="index-3"></span><a class="reference internal" href="#envvar-curl_ca_bundle"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">curl_ca_bundle</span></code></a> environment variable can be used to identify an
 alternative certificate bundle to be used with an HTTPS proxy.</p>
 <p>Setting a HTTP proxy on Unix for example looks like this:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">http_proxy</span><span class="o">=</span><span class="s2">&quot;http://proxy.example.com:8080&quot;</span>
@@ -1018,12 +1007,6 @@ is <strong>anonymous</strong>, the default password is <strong>anonymous&#64;</s
 <li><p>try to change to the given directory</p></li>
 <li><p>list the file with the NLST command</p></li>
 </ol>
-</dd>
-<dt>Telnet links (<strong>telnet:</strong>)</dt><dd><p>We try to connect and if user/password are given, login to the given
-telnet server.</p>
-</dd>
-<dt>NNTP links (<strong>news:</strong>, <strong>snews:</strong>, <strong>nntp</strong>)</dt><dd><p>We try to connect to the given NNTP server. If a news group or
-article is specified, try to request it from the server.</p>
 </dd>
 <dt>Unsupported links (<strong>javascript:</strong>, etc.)</dt><dd><p>An unsupported link will only print a warning. No further checking
 will be made.</p>
@@ -1089,17 +1072,9 @@ option to prevent this.</p>
 <p>If your platform does not support threading, LinkChecker disables it
 automatically.</p>
 <p>You can supply multiple user/password pairs in a configuration file.</p>
-<p>When checking <strong>news:</strong> links the given NNTP host doesn’t need to be the
-same as the host of the user browsing your pages.</p>
 </section>
 <section id="environment">
 <h2>ENVIRONMENT<a class="headerlink" href="#environment" title="Link to this heading"></a></h2>
-<dl class="std envvar">
-<dt class="sig sig-object std" id="envvar-NNTP_SERVER">
-<span class="sig-name descname"><span class="pre">NNTP_SERVER</span></span><a class="headerlink" href="#envvar-NNTP_SERVER" title="Link to this definition"></a></dt>
-<dd><p>specifies default NNTP server</p>
-</dd></dl>
-
 <dl class="std envvar">
 <dt class="sig sig-object std" id="envvar-http_proxy">
 <span class="sig-name descname"><span class="pre">http_proxy</span></span><a class="headerlink" href="#envvar-http_proxy" title="Link to this definition"></a></dt>

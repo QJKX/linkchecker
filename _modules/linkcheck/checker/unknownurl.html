@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.unknownurl &mdash; LinkChecker 10.2.1.post71+g3d630b880 documentation</title>
+  <title>linkcheck.checker.unknownurl &mdash; LinkChecker 10.2.1.post75+g0faccf2ab documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -15,7 +15,7 @@
   
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../../_static/documentation_options.js?v=564893c2"></script>
+        <script src="../../../_static/documentation_options.js?v=4be5d22d"></script>
         <script src="../../../_static/doctools.js?v=888ff710"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post71+g3d630b880
+                10.2.1.post75+g0faccf2ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -255,8 +255,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.checker.internpaturl.html">linkcheck.checker.internpaturl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.checker.itmsservicesurl.html">linkcheck.checker.itmsservicesurl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html">linkcheck.checker.mailtourl</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.checker.nntpurl.html">linkcheck.checker.nntpurl</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.checker.telneturl.html">linkcheck.checker.telneturl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.checker.unknownurl.html">linkcheck.checker.unknownurl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.checker.urlbase.html">linkcheck.checker.urlbase</a></li>
 </ul>
@@ -670,11 +668,11 @@
 <span class="s2">|cap        # Calendar Access Protocol</span>
 <span class="s2">|cid        # content identifier</span>
 <span class="s2">|coap       # coap</span>
-<span class="s2">|coap\+tcp  # coap+tcp [1]</span>
-<span class="s2">|coap\+ws   # coap+ws [1]</span>
+<span class="s2">|coap\+tcp  # coap+tcp (see [reviewer notes])</span>
+<span class="s2">|coap\+ws   # coap+ws (see [reviewer notes])</span>
 <span class="s2">|coaps      # coaps</span>
-<span class="s2">|coaps\+tcp # coaps+tcp [1]</span>
-<span class="s2">|coaps\+ws  # coaps+ws [1]</span>
+<span class="s2">|coaps\+tcp # coaps+tcp (see [reviewer notes])</span>
+<span class="s2">|coaps\+ws  # coaps+ws (see [reviewer notes])</span>
 <span class="s2">|crid       # TV-Anytime Content Reference Identifier</span>
 <span class="s2">|data       # data</span>
 <span class="s2">|dav        # dav</span>
@@ -705,11 +703,14 @@
 <span class="s2">|mid        # message identifier</span>
 <span class="s2">|msrp       # Message Session Relay Protocol</span>
 <span class="s2">|msrps      # Message Session Relay Protocol Secure</span>
+<span class="s2">|mt         # Matter protocol on-boarding payloads that are encoded for use in QR Codes and/or NFC Tags</span>
 <span class="s2">|mtqp       # Message Tracking Query Protocol</span>
 <span class="s2">|mupdate    # Mailbox Update (MUPDATE) Protocol</span>
+<span class="s2">|news       # USENET news</span>
 <span class="s2">|nfs        # network file system protocol</span>
 <span class="s2">|ni         # ni</span>
 <span class="s2">|nih        # nih</span>
+<span class="s2">|nntp       # USENET news using NNTP access</span>
 <span class="s2">|opaquelocktoken # opaquelocktokent</span>
 <span class="s2">|pkcs11     # PKCS#11</span>
 <span class="s2">|pop        # Post Office Protocol v3</span>
@@ -768,6 +769,7 @@
 <span class="s2">|apt        # apt</span>
 <span class="s2">|ar         # ar</span>
 <span class="s2">|ark        # ark</span>
+<span class="s2">|at         # at (see [reviewer notes])</span>
 <span class="s2">|attachment # attachment</span>
 <span class="s2">|aw         # aw</span>
 <span class="s2">|barion     # barion</span>
@@ -791,6 +793,7 @@
 <span class="s2">|cvs        # cvs</span>
 <span class="s2">|dab        # dab</span>
 <span class="s2">|dat        # dat</span>
+<span class="s2">|dhttp      # dhttp (see [reviewer notes])</span>
 <span class="s2">|diaspora   # diaspora</span>
 <span class="s2">|did        # did</span>
 <span class="s2">|dis        # dis</span>
@@ -800,12 +803,12 @@
 <span class="s2">|doi        # doi</span>
 <span class="s2">|dpp        # dpp</span>
 <span class="s2">|drm        # drm</span>
-<span class="s2">|drop       # drop</span>
 <span class="s2">|dtmi       # dtmi</span>
 <span class="s2">|dvb        # dvb</span>
 <span class="s2">|dvx        # dvx</span>
 <span class="s2">|dweb       # dweb</span>
 <span class="s2">|ed2k       # ed2k</span>
+<span class="s2">|eid        # eid</span>
 <span class="s2">|elsi       # elsi</span>
 <span class="s2">|embedded   # embedded</span>
 <span class="s2">|ens        # ens</span>
@@ -847,7 +850,9 @@
 <span class="s2">|lastfm     # lastfm</span>
 <span class="s2">|lbry       # lbry</span>
 <span class="s2">|ldaps      # ldaps</span>
+<span class="s2">|lid        # lid</span>
 <span class="s2">|lorawan    # lorawan</span>
+<span class="s2">|lpa        # lpa</span>
 <span class="s2">|lvlt       # lvlt</span>
 <span class="s2">|magnet     # magnet</span>
 <span class="s2">|maps       # maps</span>
@@ -874,6 +879,7 @@
 <span class="s2">|ms\-help   # ms-help</span>
 <span class="s2">|ms\-infopath # ms-infopath</span>
 <span class="s2">|ms\-inputapp # ms-inputapp</span>
+<span class="s2">|ms\-launchremotedesktop # ms-launchremotedesktop</span>
 <span class="s2">|ms\-lockscreencomponent\-config # ms-lockscreencomponent-config</span>
 <span class="s2">|ms\-media\-stream\-id # ms-media-stream-id</span>
 <span class="s2">|ms\-meetnow # ms-meetnow</span>
@@ -885,6 +891,8 @@
 <span class="s2">|ms\-powerpoint # ms-powerpoint</span>
 <span class="s2">|ms\-project # ms-project</span>
 <span class="s2">|ms\-publisher # ms-publisher</span>
+<span class="s2">|ms\-remotedesktop # ms-remotedesktop</span>
+<span class="s2">|ms\-remotedesktop\-launch # ms-remotedesktop-launch</span>
 <span class="s2">|ms\-restoretabcompanion # ms-restoretabcompanion</span>
 <span class="s2">|ms\-screenclip # ms-screenclip</span>
 <span class="s2">|ms\-screensketch # ms-screensketch</span>
@@ -925,7 +933,6 @@
 <span class="s2">|ms\-word   # ms-word</span>
 <span class="s2">|msnim      # msnim</span>
 <span class="s2">|mss        # mss</span>
-<span class="s2">|mt         # Matter protocol</span>
 <span class="s2">|mumble     # mumble</span>
 <span class="s2">|mvn        # mvn</span>
 <span class="s2">|notes      # notes</span>
@@ -934,6 +941,7 @@
 <span class="s2">|oid        # oid</span>
 <span class="s2">|onenote    # onenote</span>
 <span class="s2">|onenote\-cmd # onenote-cmd</span>
+<span class="s2">|openid     # OpenID Connect</span>
 <span class="s2">|openpgp4fpr # openpgp4fpr</span>
 <span class="s2">|otpauth    # otpauth</span>
 <span class="s2">|palm       # palm</span>
@@ -973,12 +981,14 @@
 <span class="s2">|spotify    # spotify</span>
 <span class="s2">|ssb        # ssb</span>
 <span class="s2">|ssh        # ssh</span>
+<span class="s2">|starknet   # starknet</span>
 <span class="s2">|steam      # steam</span>
 <span class="s2">|submit     # submit</span>
 <span class="s2">|svn        # svn</span>
 <span class="s2">|swh        # swh</span>
-<span class="s2">|swid       # swid</span>
-<span class="s2">|swidpath   # swidpath</span>
+<span class="s2">|swid       # swid (see [reviewer notes])</span>
+<span class="s2">|swidpath   # swidpath (see [reviewer notes])</span>
+<span class="s2">|taler      # taler</span>
 <span class="s2">|teamspeak  # teamspeak</span>
 <span class="s2">|teliaeid   # teliaeid</span>
 <span class="s2">|things     # things</span>
@@ -994,8 +1004,9 @@
 <span class="s2">|vscode     # vscode</span>
 <span class="s2">|vscode\-insiders # vscode-insiders</span>
 <span class="s2">|vsls       # vsls</span>
-<span class="s2">|w3         # w3</span>
+<span class="s2">|w3         # w3 (see [reviewer notes])</span>
 <span class="s2">|wcr        # wcr</span>
+<span class="s2">|web\+ap    # web+ap</span>
 <span class="s2">|web3       # web3</span>
 <span class="s2">|webcal     # webcal</span>
 <span class="s2">|wifi       # wifi</span>
@@ -1007,13 +1018,18 @@
 <span class="s2">&quot;&quot;&quot;</span>
 
 <span class="n">ignored_schemes_historical</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">|bb         # bb</span>
+<span class="s2">|drop       # drop</span>
 <span class="s2">|fax        # fax</span>
 <span class="s2">|filesystem # filesystem</span>
+<span class="s2">|grd        # grd</span>
 <span class="s2">|mailserver # Access to data available from mail servers</span>
 <span class="s2">|modem      # modem</span>
+<span class="s2">|p1         # p1</span>
 <span class="s2">|pack       # pack</span>
 <span class="s2">|prospero   # Prospero Directory Service</span>
 <span class="s2">|snews      # NNTP over SSL/TLS</span>
+<span class="s2">|upt        # upt</span>
 <span class="s2">|videotex   # videotex</span>
 <span class="s2">|wais       # Wide Area Information Servers</span>
 <span class="s2">|wpid       # wpid</span>

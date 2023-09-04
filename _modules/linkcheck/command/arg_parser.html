@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.command.arg_parser &mdash; LinkChecker 10.2.1.post71+g3d630b880 documentation</title>
+  <title>linkcheck.command.arg_parser &mdash; LinkChecker 10.2.1.post75+g0faccf2ab documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -15,7 +15,7 @@
   
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../../_static/documentation_options.js?v=564893c2"></script>
+        <script src="../../../_static/documentation_options.js?v=4be5d22d"></script>
         <script src="../../../_static/doctools.js?v=888ff710"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post71+g3d630b880
+                10.2.1.post75+g0faccf2ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -255,8 +255,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.checker.internpaturl.html">linkcheck.checker.internpaturl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.checker.itmsservicesurl.html">linkcheck.checker.itmsservicesurl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html">linkcheck.checker.mailtourl</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.checker.nntpurl.html">linkcheck.checker.nntpurl</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.checker.telneturl.html">linkcheck.checker.telneturl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.checker.unknownurl.html">linkcheck.checker.unknownurl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../code/linkcheck/linkcheck.checker.urlbase.html">linkcheck.checker.urlbase</a></li>
 </ul>
@@ -632,8 +630,6 @@
 <span class="sd"> o If your platform does not support threading, LinkChecker disables it</span>
 <span class="sd">   automatically.</span>
 <span class="sd"> o You can supply multiple user/password pairs in a configuration file.</span>
-<span class="sd"> o When checking &#39;news:&#39; links the given NNTP host doesn&#39;t need to be the</span>
-<span class="sd">   same as the host of the user browsing your pages.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="p">)</span>
 
@@ -978,17 +974,6 @@
             <span class="n">help</span><span class="o">=</span><span class="n">_</span><span class="p">(</span>
                 <span class="s2">&quot;Check but do not recurse into URLs matching the given regular</span><span class="se">\n</span><span class="s2">&quot;</span>
                 <span class="s2">&quot;expression. This option can be given multiple times.&quot;</span>
-            <span class="p">),</span>
-        <span class="p">)</span>
-        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
-            <span class="s2">&quot;-N&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;--nntp-server&quot;</span><span class="p">,</span>
-            <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;nntpserver&quot;</span><span class="p">,</span>
-            <span class="n">metavar</span><span class="o">=</span><span class="s2">&quot;STRING&quot;</span><span class="p">,</span>
-            <span class="n">help</span><span class="o">=</span><span class="n">_</span><span class="p">(</span>
-                <span class="s2">&quot;Specify an NNTP server for &#39;news:...&#39; links. Default is the</span><span class="se">\n</span><span class="s2">&quot;</span>
-                <span class="s2">&quot;environment variable NNTP_SERVER. If no host is given,</span><span class="se">\n</span><span class="s2">&quot;</span>
-                <span class="s2">&quot;only the syntax of the link is checked.&quot;</span>
             <span class="p">),</span>
         <span class="p">)</span>
         <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>

@@ -46,8 +46,6 @@ linkcheck.checker
    linkcheck.checker.internpaturl
    linkcheck.checker.itmsservicesurl
    linkcheck.checker.mailtourl
-   linkcheck.checker.nntpurl
-   linkcheck.checker.telneturl
    linkcheck.checker.unknownurl
    linkcheck.checker.urlbase
 
