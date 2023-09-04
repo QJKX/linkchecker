@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.logger.text &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
+  <title>linkcheck.logger.text &mdash; LinkChecker 10.2.1.post71+g3d630b880 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -15,7 +15,7 @@
   
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/documentation_options.js?v=564893c2"></script>
         <script src="../../../_static/doctools.js?v=888ff710"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post68+g2185f6ee8
+                10.2.1.post71+g3d630b880
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -615,7 +615,7 @@
 <span class="kn">import</span> <span class="nn">time</span>
 
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">_Logger</span>
-<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">ansicolor</span><span class="p">,</span> <span class="n">strformat</span><span class="p">,</span> <span class="n">configuration</span><span class="p">,</span> <span class="n">i18n</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">ansicolor</span><span class="p">,</span> <span class="n">log</span><span class="p">,</span> <span class="n">strformat</span><span class="p">,</span> <span class="n">configuration</span><span class="p">,</span> <span class="n">LOG_CHECK</span>
 
 
 <div class="viewcode-block" id="TextLogger">
@@ -636,6 +636,7 @@
 
     <span class="n">LoggerArgs</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;linkchecker-out.txt&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;wraplength&quot;</span><span class="p">:</span> <span class="mi">65</span><span class="p">,</span>
         <span class="s1">&#39;colorparent&#39;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
         <span class="s1">&#39;colorurl&#39;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
         <span class="s1">&#39;colorname&#39;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
@@ -654,20 +655,24 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize error counter and optional file output.&quot;&quot;&quot;</span>
         <span class="n">args</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_args</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">args</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">output_encoding</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="n">i18n</span><span class="o">.</span><span class="n">default_encoding</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">init_fileoutput</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">colorparent</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;colorparent&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">colorurl</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;colorurl&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">colorname</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;colorname&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">colorreal</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;colorreal&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">colorbase</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;colorbase&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">colorvalid</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;colorvalid&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">colorinvalid</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;colorinvalid&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">colorinfo</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;colorinfo&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">colorwarning</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;colorwarning&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">colordltime</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;colordltime&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">colordlsize</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;colordlsize&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">colorreset</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;colorreset&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wraplength</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="s2">&quot;wraplength&quot;</span><span class="p">])</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wraplength</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">LoggerArgs</span><span class="p">[</span><span class="s2">&quot;wraplength&quot;</span><span class="p">]</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Invalid value for wraplength. Using default.&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colorparent</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;colorparent&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colorurl</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;colorurl&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colorname</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;colorname&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colorreal</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;colorreal&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colorbase</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;colorbase&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colorvalid</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;colorvalid&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colorinvalid</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;colorinvalid&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colorinfo</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;colorinfo&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colorwarning</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;colorwarning&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colordltime</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;colordltime&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colordlsize</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;colordlsize&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colorreset</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;colorreset&quot;</span><span class="p">]</span>
 
 <div class="viewcode-block" id="TextLogger.init_fileoutput">
 <a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.init_fileoutput">[docs]</a>
@@ -834,7 +839,7 @@
     <span class="k">def</span> <span class="nf">write_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url_data.info.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s2">&quot;info&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s2">&quot;info&quot;</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">info</span><span class="p">,</span> <span class="mi">65</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colorinfo</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">info</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">wraplength</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colorinfo</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="TextLogger.write_modified">
@@ -851,7 +856,7 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url_data.warning.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s2">&quot;warning&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s2">&quot;warning&quot;</span><span class="p">))</span>
         <span class="n">warning_msgs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">tag</span><span class="si">}</span><span class="s2">] </span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">tag</span><span class="p">,</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">url_data</span><span class="o">.</span><span class="n">warnings</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">warning_msgs</span><span class="p">,</span> <span class="mi">65</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colorwarning</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">warning_msgs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">wraplength</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colorwarning</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="TextLogger.write_result">
