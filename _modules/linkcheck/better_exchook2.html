@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.better_exchook2 &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.better_exchook2 &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -634,7 +634,9 @@
 <span class="n">pykeywords</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="parse_py_statement"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.parse_py_statement">[docs]</a><span class="k">def</span> <span class="nf">parse_py_statement</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+<div class="viewcode-block" id="parse_py_statement">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.parse_py_statement">[docs]</a>
+<span class="k">def</span> <span class="nf">parse_py_statement</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
     <span class="n">state</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">curtoken</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="n">spaces</span> <span class="o">=</span> <span class="s2">&quot; </span><span class="se">\t\n</span><span class="s2">&quot;</span>
@@ -689,7 +691,10 @@
     <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span> <span class="k">yield</span> <span class="p">(</span><span class="s2">&quot;comment&quot;</span><span class="p">,</span> <span class="n">curtoken</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="grep_full_py_identifiers"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.grep_full_py_identifiers">[docs]</a><span class="k">def</span> <span class="nf">grep_full_py_identifiers</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
+
+<div class="viewcode-block" id="grep_full_py_identifiers">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.grep_full_py_identifiers">[docs]</a>
+<span class="k">def</span> <span class="nf">grep_full_py_identifiers</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">pykeywords</span>
     <span class="n">tokens</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -705,12 +710,21 @@
         <span class="k">if</span> <span class="n">token</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="s2">&quot;.0123456789&quot;</span><span class="p">:</span> <span class="k">continue</span>
         <span class="k">yield</span> <span class="n">token</span></div>
 
-<div class="viewcode-block" id="output"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.output">[docs]</a><span class="k">def</span> <span class="nf">output</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">out</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="output_limit"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.output_limit">[docs]</a><span class="k">def</span> <span class="nf">output_limit</span><span class="p">():</span>
+<div class="viewcode-block" id="output">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.output">[docs]</a>
+<span class="k">def</span> <span class="nf">output</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">out</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="output_limit">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.output_limit">[docs]</a>
+<span class="k">def</span> <span class="nf">output_limit</span><span class="p">():</span>
     <span class="k">return</span> <span class="mi">300</span></div>
 
-<div class="viewcode-block" id="pp_extra_info"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.pp_extra_info">[docs]</a><span class="k">def</span> <span class="nf">pp_extra_info</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">depthlimit</span> <span class="o">=</span> <span class="mi">3</span><span class="p">):</span>
+
+<div class="viewcode-block" id="pp_extra_info">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.pp_extra_info">[docs]</a>
+<span class="k">def</span> <span class="nf">pp_extra_info</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">depthlimit</span> <span class="o">=</span> <span class="mi">3</span><span class="p">):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;__len__&quot;</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
@@ -732,8 +746,11 @@
         <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
             <span class="k">pass</span>
     <span class="k">return</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">s</span><span class="p">)</span></div>
+
     
-<div class="viewcode-block" id="pretty_print"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.pretty_print">[docs]</a><span class="k">def</span> <span class="nf">pretty_print</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+<div class="viewcode-block" id="pretty_print">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.pretty_print">[docs]</a>
+<span class="k">def</span> <span class="nf">pretty_print</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
     <span class="n">limit</span> <span class="o">=</span> <span class="n">output_limit</span><span class="p">()</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">limit</span><span class="p">:</span>
@@ -742,14 +759,20 @@
     <span class="k">if</span> <span class="n">extra_info</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">extra_info</span>
     <span class="k">return</span> <span class="n">s</span></div>
 
-<div class="viewcode-block" id="fallback_findfile"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.fallback_findfile">[docs]</a><span class="k">def</span> <span class="nf">fallback_findfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+
+<div class="viewcode-block" id="fallback_findfile">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.fallback_findfile">[docs]</a>
+<span class="k">def</span> <span class="nf">fallback_findfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
     <span class="n">mods</span> <span class="o">=</span> <span class="p">[</span> <span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">m</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s2">&quot;__file__&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="vm">__file__</span> <span class="p">]</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">mods</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">None</span>
     <span class="n">altfn</span> <span class="o">=</span> <span class="n">mods</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="vm">__file__</span>
     <span class="k">if</span> <span class="n">altfn</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;.py&quot;</span><span class="p">:</span> <span class="n">altfn</span> <span class="o">=</span> <span class="n">altfn</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># *.pyc or whatever</span>
     <span class="k">return</span> <span class="n">altfn</span></div>
 
-<div class="viewcode-block" id="better_exchook"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.better_exchook">[docs]</a><span class="k">def</span> <span class="nf">better_exchook</span><span class="p">(</span><span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">):</span>
+
+<div class="viewcode-block" id="better_exchook">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.better_exchook">[docs]</a>
+<span class="k">def</span> <span class="nf">better_exchook</span><span class="p">(</span><span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">):</span>
     <span class="n">output</span><span class="p">(</span><span class="s1">&#39;Traceback (most recent call last):&#39;</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">)</span>
     <span class="n">allLocals</span><span class="p">,</span><span class="n">allGlobals</span> <span class="o">=</span> <span class="p">{},{}</span>
     <span class="k">try</span><span class="p">:</span>
@@ -834,8 +857,12 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="n">output</span><span class="p">(</span><span class="n">_format_final_exc_line</span><span class="p">(</span><span class="n">etype</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">value</span><span class="p">),</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="install"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.install">[docs]</a><span class="k">def</span> <span class="nf">install</span><span class="p">():</span>
+
+<div class="viewcode-block" id="install">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.better_exchook2.html#linkcheck.better_exchook2.install">[docs]</a>
+<span class="k">def</span> <span class="nf">install</span><span class="p">():</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">excepthook</span> <span class="o">=</span> <span class="n">better_exchook</span></div>
+
 </pre></div>
 
            </div>

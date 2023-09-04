@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.director &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.director &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -619,7 +619,9 @@
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">aggregator</span><span class="p">,</span> <span class="n">console</span>
 
 
-<div class="viewcode-block" id="check_urls"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.director.html#linkcheck.director.check_urls">[docs]</a><span class="k">def</span> <span class="nf">check_urls</span><span class="p">(</span><span class="n">aggregate</span><span class="p">):</span>
+<div class="viewcode-block" id="check_urls">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.director.html#linkcheck.director.check_urls">[docs]</a>
+<span class="k">def</span> <span class="nf">check_urls</span><span class="p">(</span><span class="n">aggregate</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Main check function; checks all configured URLs until interrupted</span>
 <span class="sd">    with Ctrl-C.</span>
 
@@ -663,11 +665,14 @@
         <span class="n">console</span><span class="o">.</span><span class="n">internal_error</span><span class="p">()</span>
         <span class="n">aggregate</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">log_internal_error</span><span class="p">()</span>
         <span class="n">abort</span><span class="p">(</span><span class="n">aggregate</span><span class="p">)</span></div>
+
     <span class="c1"># Not caught exceptions at this point are SystemExit and GeneratorExit,</span>
     <span class="c1"># and both should be handled by the calling layer.</span>
 
 
-<div class="viewcode-block" id="check_url"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.director.html#linkcheck.director.check_url">[docs]</a><span class="k">def</span> <span class="nf">check_url</span><span class="p">(</span><span class="n">aggregate</span><span class="p">):</span>
+<div class="viewcode-block" id="check_url">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.director.html#linkcheck.director.check_url">[docs]</a>
+<span class="k">def</span> <span class="nf">check_url</span><span class="p">(</span><span class="n">aggregate</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Helper function waiting for URL queue.&quot;&quot;&quot;</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
@@ -680,7 +685,10 @@
                 <span class="k">break</span></div>
 
 
-<div class="viewcode-block" id="interrupt"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.director.html#linkcheck.director.interrupt">[docs]</a><span class="k">def</span> <span class="nf">interrupt</span><span class="p">(</span><span class="n">aggregate</span><span class="p">):</span>
+
+<div class="viewcode-block" id="interrupt">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.director.html#linkcheck.director.interrupt">[docs]</a>
+<span class="k">def</span> <span class="nf">interrupt</span><span class="p">(</span><span class="n">aggregate</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Interrupt execution and shutdown, ignoring any subsequent</span>
 <span class="sd">    interrupts.&quot;&quot;&quot;</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -693,7 +701,10 @@
             <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="abort"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.director.html#linkcheck.director.abort">[docs]</a><span class="k">def</span> <span class="nf">abort</span><span class="p">(</span><span class="n">aggregate</span><span class="p">):</span>
+
+<div class="viewcode-block" id="abort">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.director.html#linkcheck.director.abort">[docs]</a>
+<span class="k">def</span> <span class="nf">abort</span><span class="p">(</span><span class="n">aggregate</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Helper function to ensure a clean shutdown.&quot;&quot;&quot;</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
@@ -707,7 +718,10 @@
             <span class="n">abort_now</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="abort_now"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.director.html#linkcheck.director.abort_now">[docs]</a><span class="k">def</span> <span class="nf">abort_now</span><span class="p">():</span>
+
+<div class="viewcode-block" id="abort_now">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.director.html#linkcheck.director.abort_now">[docs]</a>
+<span class="k">def</span> <span class="nf">abort_now</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Force exit of current process without cleanup.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;posix&#39;</span><span class="p">:</span>
         <span class="c1"># Unix systems can use signals</span>
@@ -724,7 +738,10 @@
         <span class="n">os</span><span class="o">.</span><span class="n">_exit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="get_aggregate"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.director.html#linkcheck.director.get_aggregate">[docs]</a><span class="k">def</span> <span class="nf">get_aggregate</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_aggregate">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.director.html#linkcheck.director.get_aggregate">[docs]</a>
+<span class="k">def</span> <span class="nf">get_aggregate</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get an aggregator instance with given configuration.&quot;&quot;&quot;</span>
     <span class="n">_urlqueue</span> <span class="o">=</span> <span class="n">urlqueue</span><span class="o">.</span><span class="n">UrlQueue</span><span class="p">(</span><span class="n">max_allowed_urls</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;maxnumurls&quot;</span><span class="p">])</span>
     <span class="n">_robots_txt</span> <span class="o">=</span> <span class="n">robots_txt</span><span class="o">.</span><span class="n">RobotsTxt</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;useragent&quot;</span><span class="p">])</span>
@@ -733,6 +750,7 @@
     <span class="k">return</span> <span class="n">aggregator</span><span class="o">.</span><span class="n">Aggregate</span><span class="p">(</span>
         <span class="n">config</span><span class="p">,</span> <span class="n">_urlqueue</span><span class="p">,</span> <span class="n">_robots_txt</span><span class="p">,</span> <span class="n">plugin_manager</span><span class="p">,</span> <span class="n">result_cache</span>
     <span class="p">)</span></div>
+
 </pre></div>
 
            </div>

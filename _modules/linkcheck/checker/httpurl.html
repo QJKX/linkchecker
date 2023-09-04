@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.httpurl &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.checker.httpurl &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -640,7 +640,7 @@
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">internpaturl</span>
 
 <span class="c1"># import warnings</span>
-<span class="kn">from</span> <span class="nn">.const</span> <span class="kn">import</span> <span class="n">WARN_HTTP_EMPTY_CONTENT</span><span class="p">,</span> <span class="n">WARN_HTTP_RATE_LIMITED</span>
+<span class="kn">from</span> <span class="nn">.const</span> <span class="kn">import</span> <span class="n">WARN_HTTP_EMPTY_CONTENT</span><span class="p">,</span> <span class="n">WARN_HTTP_RATE_LIMITED</span><span class="p">,</span> <span class="n">WARN_HTTP_REDIRECTED</span>
 <span class="kn">from</span> <span class="nn">requests.sessions</span> <span class="kn">import</span> <span class="n">REDIRECT_STATI</span>
 
 <span class="n">HTTP_SCHEMAS</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;http://&#39;</span><span class="p">,</span> <span class="s1">&#39;https://&#39;</span><span class="p">)</span>
@@ -649,12 +649,16 @@
 <span class="n">nofollow_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\bnofollow\b&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="HttpUrl"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl">[docs]</a><span class="k">class</span> <span class="nc">HttpUrl</span><span class="p">(</span><span class="n">internpaturl</span><span class="o">.</span><span class="n">InternPatternUrl</span><span class="p">):</span>
+<div class="viewcode-block" id="HttpUrl">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl">[docs]</a>
+<span class="k">class</span> <span class="nc">HttpUrl</span><span class="p">(</span><span class="n">internpaturl</span><span class="o">.</span><span class="n">InternPatternUrl</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Url link with http scheme.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="HttpUrl.reset"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="HttpUrl.reset">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.reset">[docs]</a>
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize HTTP specific variables.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -666,7 +670,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">ssl_cipher</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ssl_cert</span> <span class="o">=</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="HttpUrl.allows_robots"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.allows_robots">[docs]</a>    <span class="k">def</span> <span class="nf">allows_robots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.allows_robots">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.allows_robots">[docs]</a>
+    <span class="k">def</span> <span class="nf">allows_robots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Fetch and parse the robots.txt of given url. Checks if LinkChecker</span>
 <span class="sd">        can get the requested resource content.</span>
@@ -682,7 +689,10 @@
             <span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;timeout&quot;</span><span class="p">]</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="HttpUrl.content_allows_robots"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.content_allows_robots">[docs]</a>    <span class="k">def</span> <span class="nf">content_allows_robots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.content_allows_robots">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.content_allows_robots">[docs]</a>
+    <span class="k">def</span> <span class="nf">content_allows_robots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return False if the content of this URL forbids robots to</span>
 <span class="sd">        search for recursive links.</span>
@@ -693,7 +703,10 @@
         <span class="n">soup</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_soup</span><span class="p">()</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;meta&quot;</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;robots&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">nofollow_re</span><span class="p">})</span></div>
 
-<div class="viewcode-block" id="HttpUrl.add_size_info"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.add_size_info">[docs]</a>    <span class="k">def</span> <span class="nf">add_size_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.add_size_info">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.add_size_info">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_size_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get size of URL content from HTTP header.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">headers</span>
@@ -709,7 +722,10 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span></div>
 
-<div class="viewcode-block" id="HttpUrl.check_connection"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.check_connection">[docs]</a>    <span class="k">def</span> <span class="nf">check_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.check_connection">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.check_connection">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Check a URL with HTTP protocol.</span>
 <span class="sd">        Here is an excerpt from RFC 1945 with common response codes:</span>
@@ -744,7 +760,10 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">allows_simple_recursion</span><span class="p">():</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">parse_header_links</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="HttpUrl.build_request"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.build_request">[docs]</a>    <span class="k">def</span> <span class="nf">build_request</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.build_request">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.build_request">[docs]</a>
+    <span class="k">def</span> <span class="nf">build_request</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Build a prepared request object.&quot;&quot;&quot;</span>
         <span class="n">clientheaders</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent_url</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent_url</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">HTTP_SCHEMAS</span><span class="p">):</span>
@@ -756,13 +775,17 @@
         <span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">prepare_request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="HttpUrl.send_request"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.send_request">[docs]</a>    <span class="k">def</span> <span class="nf">send_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.send_request">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.send_request">[docs]</a>
+    <span class="k">def</span> <span class="nf">send_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Send request and store response in self.url_connection.&quot;&quot;&quot;</span>
         <span class="c1"># throttle the number of requests to each host</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">wait_for_host</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
         <span class="n">kwargs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_request_kwargs</span><span class="p">()</span>
         <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;allow_redirects&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_send_request</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
 
     <span class="k">def</span> <span class="nf">_send_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Send GET request.&quot;&quot;&quot;</span>
@@ -813,7 +836,9 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ssl_cert</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="HttpUrl.construct_auth"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.construct_auth">[docs]</a>    <span class="k">def</span> <span class="nf">construct_auth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="HttpUrl.construct_auth">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.construct_auth">[docs]</a>
+    <span class="k">def</span> <span class="nf">construct_auth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Construct HTTP Basic authentication credentials if there</span>
 <span class="sd">        is user/password information available. Does not overwrite if</span>
 <span class="sd">        credentials have already been constructed.&quot;&quot;&quot;</span>
@@ -823,12 +848,18 @@
         <span class="k">if</span> <span class="n">_user</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">_password</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">auth</span> <span class="o">=</span> <span class="p">(</span><span class="n">_user</span><span class="p">,</span> <span class="n">_password</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="HttpUrl.set_content_type"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.set_content_type">[docs]</a>    <span class="k">def</span> <span class="nf">set_content_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.set_content_type">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.set_content_type">[docs]</a>
+    <span class="k">def</span> <span class="nf">set_content_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set MIME type from HTTP response headers.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="n">httputil</span><span class="o">.</span><span class="n">get_content_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span>
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;MIME type: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="HttpUrl.set_encoding"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.set_encoding">[docs]</a>    <span class="k">def</span> <span class="nf">set_encoding</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.set_encoding">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.set_encoding">[docs]</a>
+    <span class="k">def</span> <span class="nf">set_encoding</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set content encoding&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">encoding</span> <span class="o">==</span> <span class="s2">&quot;ISO-8859-1&quot;</span><span class="p">:</span>
             <span class="c1"># Although RFC 2616 (HTTP/1.1) says that text data in a non-ISO-8859-1</span>
@@ -841,14 +872,20 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">content_encoding</span> <span class="o">=</span> <span class="n">encoding</span></div>
 
-<div class="viewcode-block" id="HttpUrl.is_redirect"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.is_redirect">[docs]</a>    <span class="k">def</span> <span class="nf">is_redirect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.is_redirect">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.is_redirect">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_redirect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if current response is a redirect.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">(</span>
             <span class="s1">&#39;location&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span>
             <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">in</span> <span class="n">REDIRECT_STATI</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="HttpUrl.get_request_kwargs"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.get_request_kwargs">[docs]</a>    <span class="k">def</span> <span class="nf">get_request_kwargs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.get_request_kwargs">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.get_request_kwargs">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_request_kwargs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Construct keyword parameters for Session.request() and</span>
 <span class="sd">        Session.resolve_redirects().&quot;&quot;&quot;</span>
         <span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;timeout&quot;</span><span class="p">])</span>
@@ -858,12 +895,18 @@
             <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;verify&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="k">return</span> <span class="n">kwargs</span></div>
 
-<div class="viewcode-block" id="HttpUrl.get_redirects"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.get_redirects">[docs]</a>    <span class="k">def</span> <span class="nf">get_redirects</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.get_redirects">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.get_redirects">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_redirects</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return iterator of redirects for given request.&quot;&quot;&quot;</span>
         <span class="n">kwargs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_request_kwargs</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">resolve_redirects</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="HttpUrl.follow_redirections"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.follow_redirections">[docs]</a>    <span class="k">def</span> <span class="nf">follow_redirections</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.follow_redirections">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.follow_redirections">[docs]</a>
+    <span class="k">def</span> <span class="nf">follow_redirections</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Follow all redirections of http response.&quot;&quot;&quot;</span>
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;follow all redirections&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_redirect</span><span class="p">():</span>
@@ -875,7 +918,11 @@
             <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;Redirected to </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">newurl</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">aliases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newurl</span><span class="p">)</span>
             <span class="c1"># XXX on redirect errors this is not printed</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">add_info</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Redirected to `</span><span class="si">%(url)s</span><span class="s2">&#39;.&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="n">newurl</span><span class="p">})</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_warning</span><span class="p">(</span>
+                <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Redirected to `</span><span class="si">%(url)s</span><span class="s2">&#39; status: </span><span class="si">%(code)d</span><span class="s2"> </span><span class="si">%(reason)s</span><span class="s2">.&quot;</span><span class="p">)</span>
+                <span class="o">%</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="n">newurl</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span>
+                   <span class="s1">&#39;reason&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span><span class="o">.</span><span class="n">reason</span><span class="p">},</span>
+                <span class="n">tag</span><span class="o">=</span><span class="n">WARN_HTTP_REDIRECTED</span><span class="p">)</span>
             <span class="c1"># Reset extern and recalculate</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">extern</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">set_extern</span><span class="p">(</span><span class="n">newurl</span><span class="p">)</span>
@@ -895,7 +942,10 @@
             <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
                 <span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;Redirected response encoding </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_encoding</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="HttpUrl.check_response"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.check_response">[docs]</a>    <span class="k">def</span> <span class="nf">check_response</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.check_response">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.check_response">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_response</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check final result and log it.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span><span class="o">.</span><span class="n">status_code</span> <span class="o">&gt;=</span> <span class="mi">400</span>
@@ -927,10 +977,16 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">set_result</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;OK&quot;</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="HttpUrl.get_content"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.get_content">[docs]</a>    <span class="k">def</span> <span class="nf">get_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.get_content">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.get_content">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_content</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content_encoding</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="HttpUrl.read_content"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.read_content">[docs]</a>    <span class="k">def</span> <span class="nf">read_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.read_content">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.read_content">[docs]</a>
+    <span class="k">def</span> <span class="nf">read_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return data and data size for this URL.</span>
 <span class="sd">        Can be overridden in subclasses.&quot;&quot;&quot;</span>
         <span class="n">maxbytes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;maxfilesizedownload&quot;</span><span class="p">]</span>
@@ -941,7 +997,10 @@
             <span class="n">buf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">buf</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="HttpUrl.parse_header_links"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.parse_header_links">[docs]</a>    <span class="k">def</span> <span class="nf">parse_header_links</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.parse_header_links">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.parse_header_links">[docs]</a>
+    <span class="k">def</span> <span class="nf">parse_header_links</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Parse URLs in HTTP headers Link:.&quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">linktype</span><span class="p">,</span> <span class="n">linkinfo</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span><span class="o">.</span><span class="n">links</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">url</span> <span class="o">=</span> <span class="n">linkinfo</span><span class="p">[</span><span class="s2">&quot;url&quot;</span><span class="p">]</span>
@@ -961,7 +1020,10 @@
             <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Content-Location: header&quot;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="HttpUrl.is_parseable"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.is_parseable">[docs]</a>    <span class="k">def</span> <span class="nf">is_parseable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.is_parseable">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.is_parseable">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_parseable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Check if content is parseable for recursion.</span>
 
@@ -979,14 +1041,19 @@
                 <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;Read MIME type: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_content_type_parseable</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="HttpUrl.get_robots_txt_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.get_robots_txt_url">[docs]</a>    <span class="k">def</span> <span class="nf">get_robots_txt_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HttpUrl.get_robots_txt_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.httpurl.html#linkcheck.checker.httpurl.HttpUrl.get_robots_txt_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_robots_txt_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the according robots.txt URL for this URL.</span>
 
 <span class="sd">        @return: robots.txt URL</span>
 <span class="sd">        @rtype: string</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">://</span><span class="si">%s</span><span class="s2">/robots.txt&quot;</span> <span class="o">%</span> <span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span></div></div>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">://</span><span class="si">%s</span><span class="s2">/robots.txt&quot;</span> <span class="o">%</span> <span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span></div>
+</div>
+
 </pre></div>
 
            </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.ftpparse &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.ftpparse &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -630,12 +630,17 @@
 <span class="p">)</span>
 
 
-<div class="viewcode-block" id="ismonth"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.ftpparse.html#linkcheck.ftpparse.ismonth">[docs]</a><span class="k">def</span> <span class="nf">ismonth</span><span class="p">(</span><span class="n">txt</span><span class="p">):</span>
+<div class="viewcode-block" id="ismonth">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.ftpparse.html#linkcheck.ftpparse.ismonth">[docs]</a>
+<span class="k">def</span> <span class="nf">ismonth</span><span class="p">(</span><span class="n">txt</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if given text is a month name.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">txt</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">months</span></div>
 
 
-<div class="viewcode-block" id="ftpparse"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.ftpparse.html#linkcheck.ftpparse.ftpparse">[docs]</a><span class="k">def</span> <span class="nf">ftpparse</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ftpparse">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.ftpparse.html#linkcheck.ftpparse.ftpparse">[docs]</a>
+<span class="k">def</span> <span class="nf">ftpparse</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse a FTP list line into a dictionary with attributes:</span>
 <span class="sd">    name - name of file (string)</span>
 <span class="sd">    trycwd - False if cwd is definitely pointless, True otherwise</span>
@@ -748,6 +753,7 @@
     <span class="c1"># &quot;DISK$ANONFTP:[ANONYMOUS]&quot; (VMS)</span>
     <span class="c1"># &quot;Directory DISK$PCSA:[ANONYM]&quot; (VMS)</span>
     <span class="k">return</span> <span class="kc">None</span></div>
+
 </pre></div>
 
            </div>

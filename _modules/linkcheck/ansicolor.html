@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.ansicolor &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.ansicolor &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -759,7 +759,9 @@
 <span class="n">Beep</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\007</span><span class="s2">&quot;</span>
 
 
-<div class="viewcode-block" id="esc_ansicolor"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.esc_ansicolor">[docs]</a><span class="k">def</span> <span class="nf">esc_ansicolor</span><span class="p">(</span><span class="n">color</span><span class="p">):</span>
+<div class="viewcode-block" id="esc_ansicolor">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.esc_ansicolor">[docs]</a>
+<span class="k">def</span> <span class="nf">esc_ansicolor</span><span class="p">(</span><span class="n">color</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;convert a named color definition to an escaped ANSI color&quot;&quot;&quot;</span>
     <span class="n">control</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="k">if</span> <span class="s2">&quot;;&quot;</span> <span class="ow">in</span> <span class="n">color</span><span class="p">:</span>
@@ -769,10 +771,13 @@
     <span class="k">return</span> <span class="n">AnsiEsc</span> <span class="o">%</span> <span class="p">(</span><span class="n">control</span> <span class="o">+</span> <span class="n">cnum</span><span class="p">)</span></div>
 
 
+
 <span class="n">AnsiReset</span> <span class="o">=</span> <span class="n">esc_ansicolor</span><span class="p">(</span><span class="n">default</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="get_win_color"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.get_win_color">[docs]</a><span class="k">def</span> <span class="nf">get_win_color</span><span class="p">(</span><span class="n">color</span><span class="p">):</span>
+<div class="viewcode-block" id="get_win_color">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.get_win_color">[docs]</a>
+<span class="k">def</span> <span class="nf">get_win_color</span><span class="p">(</span><span class="n">color</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert a named color definition to Windows console color foreground,</span>
 <span class="sd">    background and style numbers.&quot;&quot;&quot;</span>
     <span class="n">foreground</span> <span class="o">=</span> <span class="n">background</span> <span class="o">=</span> <span class="n">style</span> <span class="o">=</span> <span class="kc">None</span>
@@ -788,7 +793,10 @@
     <span class="k">return</span> <span class="n">foreground</span><span class="p">,</span> <span class="n">background</span><span class="p">,</span> <span class="n">style</span></div>
 
 
-<div class="viewcode-block" id="has_colors"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.has_colors">[docs]</a><span class="k">def</span> <span class="nf">has_colors</span><span class="p">(</span><span class="n">fp</span><span class="p">):</span>
+
+<div class="viewcode-block" id="has_colors">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.has_colors">[docs]</a>
+<span class="k">def</span> <span class="nf">has_colors</span><span class="p">(</span><span class="n">fp</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Test if given file is an ANSI color enabled tty.&quot;&quot;&quot;</span>
     <span class="c1"># The is_tty() function ensures that we do not colorize</span>
     <span class="c1"># redirected streams, as this is almost never what we want</span>
@@ -808,7 +816,10 @@
     <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<div class="viewcode-block" id="get_columns"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.get_columns">[docs]</a><span class="k">def</span> <span class="nf">get_columns</span><span class="p">(</span><span class="n">fp</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_columns">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.get_columns">[docs]</a>
+<span class="k">def</span> <span class="nf">get_columns</span><span class="p">(</span><span class="n">fp</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return number of columns for given file.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">is_tty</span><span class="p">(</span><span class="n">fp</span><span class="p">):</span>
         <span class="k">return</span> <span class="mi">80</span>
@@ -823,6 +834,7 @@
         <span class="k">except</span> <span class="n">curses</span><span class="o">.</span><span class="n">error</span><span class="p">:</span>
             <span class="k">pass</span>
     <span class="k">return</span> <span class="mi">80</span></div>
+
 
 
 <span class="k">def</span> <span class="nf">_write_color_colorama</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
@@ -847,7 +859,9 @@
     <span class="n">write_color</span> <span class="o">=</span> <span class="n">_write_color_ansi</span>
 
 
-<div class="viewcode-block" id="Colorizer"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.Colorizer">[docs]</a><span class="k">class</span> <span class="nc">Colorizer</span><span class="p">:</span>
+<div class="viewcode-block" id="Colorizer">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.Colorizer">[docs]</a>
+<span class="k">class</span> <span class="nc">Colorizer</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Prints colored messages to streams.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fp</span><span class="p">):</span>
@@ -874,7 +888,10 @@
         <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="ColoredStreamHandler"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.ColoredStreamHandler">[docs]</a><span class="k">class</span> <span class="nc">ColoredStreamHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ColoredStreamHandler">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.ColoredStreamHandler">[docs]</a>
+<span class="k">class</span> <span class="nc">ColoredStreamHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Send colored log messages to streams (file-like objects).&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strm</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -891,12 +908,17 @@
             <span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span>
         <span class="p">}</span>
 
-<div class="viewcode-block" id="ColoredStreamHandler.get_color"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.ColoredStreamHandler.get_color">[docs]</a>    <span class="k">def</span> <span class="nf">get_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">):</span>
+<div class="viewcode-block" id="ColoredStreamHandler.get_color">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.ColoredStreamHandler.get_color">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get appropriate color according to log level.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">levelno</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ColoredStreamHandler.emit"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.ColoredStreamHandler.emit">[docs]</a>    <span class="k">def</span> <span class="nf">emit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ColoredStreamHandler.emit">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.ansicolor.html#linkcheck.ansicolor.ColoredStreamHandler.emit">[docs]</a>
+    <span class="k">def</span> <span class="nf">emit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Emit a record.</span>
 
 <span class="sd">        If a formatter is specified, it is used to format the record.</span>
@@ -914,7 +936,9 @@
             <span class="k">except</span> <span class="ne">UnicodeError</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">msg</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></div>
+</div>
+
 </pre></div>
 
            </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.plugins.viruscheck &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.plugins.viruscheck &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -619,7 +619,9 @@
 <span class="kn">from</span> <span class="nn">..socketutil</span> <span class="kn">import</span> <span class="n">create_socket</span>
 
 
-<div class="viewcode-block" id="VirusCheck"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.VirusCheck">[docs]</a><span class="k">class</span> <span class="nc">VirusCheck</span><span class="p">(</span><span class="n">_ContentPlugin</span><span class="p">):</span>
+<div class="viewcode-block" id="VirusCheck">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.VirusCheck">[docs]</a>
+<span class="k">class</span> <span class="nc">VirusCheck</span><span class="p">(</span><span class="n">_ContentPlugin</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Checks the page content for virus infections with clamav.</span>
 <span class="sd">    A local clamav daemon must be installed.&quot;&quot;&quot;</span>
 
@@ -631,11 +633,16 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">clamav_conf</span><span class="p">:</span>
             <span class="n">log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">LOG_PLUGIN</span><span class="p">,</span> <span class="s2">&quot;clamav daemon not found for VirusCheck plugin&quot;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="VirusCheck.applies_to"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.VirusCheck.applies_to">[docs]</a>    <span class="k">def</span> <span class="nf">applies_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+<div class="viewcode-block" id="VirusCheck.applies_to">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.VirusCheck.applies_to">[docs]</a>
+    <span class="k">def</span> <span class="nf">applies_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check for clamav and extern.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">clamav_conf</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">url_data</span><span class="o">.</span><span class="n">extern</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="VirusCheck.check"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.VirusCheck.check">[docs]</a>    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="VirusCheck.check">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.VirusCheck.check">[docs]</a>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Scan content for viruses.&quot;&quot;&quot;</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">url_data</span><span class="o">.</span><span class="n">get_raw_content</span><span class="p">()</span>
         <span class="n">infected</span><span class="p">,</span> <span class="n">errors</span> <span class="o">=</span> <span class="n">scan</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">clamav_conf</span><span class="p">)</span>
@@ -647,7 +654,10 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="n">url_data</span><span class="o">.</span><span class="n">add_info</span><span class="p">(</span><span class="s2">&quot;No viruses in data found.&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="VirusCheck.read_config"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.VirusCheck.read_config">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="VirusCheck.read_config">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.VirusCheck.read_config">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">read_config</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">configparser</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Read configuration file options.&quot;&quot;&quot;</span>
         <span class="n">config</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
@@ -658,16 +668,23 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="n">config</span><span class="p">[</span><span class="n">option</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
-        <span class="k">return</span> <span class="n">config</span></div></div>
+        <span class="k">return</span> <span class="n">config</span></div>
+</div>
 
 
-<div class="viewcode-block" id="ClamavError"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamavError">[docs]</a><span class="k">class</span> <span class="nc">ClamavError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ClamavError">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamavError">[docs]</a>
+<span class="k">class</span> <span class="nc">ClamavError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Raised on clamav errors.&quot;&quot;&quot;</span>
 
     <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="ClamdScanner"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamdScanner">[docs]</a><span class="k">class</span> <span class="nc">ClamdScanner</span><span class="p">:</span>
+
+<div class="viewcode-block" id="ClamdScanner">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamdScanner">[docs]</a>
+<span class="k">class</span> <span class="nc">ClamdScanner</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Virus scanner using a clamd daemon process.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">clamav_conf</span><span class="p">):</span>
@@ -678,7 +695,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">sock_rcvbuf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">getsockopt</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SO_RCVBUF</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">wsock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_scansock</span><span class="p">()</span>
 
-<div class="viewcode-block" id="ClamdScanner.new_scansock"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamdScanner.new_scansock">[docs]</a>    <span class="k">def</span> <span class="nf">new_scansock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ClamdScanner.new_scansock">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamdScanner.new_scansock">[docs]</a>
+    <span class="k">def</span> <span class="nf">new_scansock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a connected socket for sending scan data to it.&quot;&quot;&quot;</span>
         <span class="n">port</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">try</span><span class="p">:</span>
@@ -704,11 +723,17 @@
             <span class="k">raise</span>
         <span class="k">return</span> <span class="n">wsock</span></div>
 
-<div class="viewcode-block" id="ClamdScanner.scan"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamdScanner.scan">[docs]</a>    <span class="k">def</span> <span class="nf">scan</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ClamdScanner.scan">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamdScanner.scan">[docs]</a>
+    <span class="k">def</span> <span class="nf">scan</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Scan given data for viruses.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">wsock</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ClamdScanner.close"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamdScanner.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ClamdScanner.close">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamdScanner.close">[docs]</a>
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get results and close clamd daemon sockets.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">wsock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
         <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sock_rcvbuf</span><span class="p">)</span>
@@ -718,10 +743,14 @@
             <span class="k">if</span> <span class="sa">b</span><span class="s2">&quot;ERROR</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">,</span> <span class="s1">&#39;replace&#39;</span><span class="p">))</span>
             <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sock_rcvbuf</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+</div>
 
 
-<div class="viewcode-block" id="canonical_clamav_conf"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.canonical_clamav_conf">[docs]</a><span class="k">def</span> <span class="nf">canonical_clamav_conf</span><span class="p">():</span>
+
+<div class="viewcode-block" id="canonical_clamav_conf">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.canonical_clamav_conf">[docs]</a>
+<span class="k">def</span> <span class="nf">canonical_clamav_conf</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Default clamav configs for various platforms.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;posix&#39;</span><span class="p">:</span>
         <span class="n">clamavconf</span> <span class="o">=</span> <span class="s2">&quot;/etc/clamav/clamd.conf&quot;</span>
@@ -732,20 +761,29 @@
     <span class="k">return</span> <span class="n">clamavconf</span></div>
 
 
-<div class="viewcode-block" id="get_clamav_conf"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.get_clamav_conf">[docs]</a><span class="k">def</span> <span class="nf">get_clamav_conf</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_clamav_conf">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.get_clamav_conf">[docs]</a>
+<span class="k">def</span> <span class="nf">get_clamav_conf</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialize clamav configuration.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">ClamavConfig</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
     <span class="n">log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">LOG_PLUGIN</span><span class="p">,</span> <span class="s2">&quot;No ClamAV config file found at </span><span class="si">%r</span><span class="s2">.&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="get_sockinfo"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.get_sockinfo">[docs]</a><span class="k">def</span> <span class="nf">get_sockinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_sockinfo">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.get_sockinfo">[docs]</a>
+<span class="k">def</span> <span class="nf">get_sockinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return socket.getaddrinfo for given host and port.&quot;&quot;&quot;</span>
     <span class="n">family</span><span class="p">,</span> <span class="n">socktype</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span>
     <span class="k">return</span> <span class="n">socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="n">socktype</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="ClamavConfig"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamavConfig">[docs]</a><span class="k">class</span> <span class="nc">ClamavConfig</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ClamavConfig">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamavConfig">[docs]</a>
+<span class="k">class</span> <span class="nc">ClamavConfig</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Clamav configuration wrapper, with clamd connection method.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
@@ -759,7 +797,9 @@
                 <span class="n">_</span><span class="p">(</span><span class="s2">&quot;only one of TCPSocket and LocalSocket must be enabled&quot;</span><span class="p">)</span>
             <span class="p">)</span>
 
-<div class="viewcode-block" id="ClamavConfig.parseconf"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamavConfig.parseconf">[docs]</a>    <span class="k">def</span> <span class="nf">parseconf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<div class="viewcode-block" id="ClamavConfig.parseconf">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamavConfig.parseconf">[docs]</a>
+    <span class="k">def</span> <span class="nf">parseconf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Parse clamav configuration from given file.&quot;&quot;&quot;</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">fd</span><span class="p">:</span>
             <span class="c1"># yet another config format, sigh</span>
@@ -774,7 +814,10 @@
                 <span class="k">else</span><span class="p">:</span>
                     <span class="bp">self</span><span class="p">[</span><span class="n">split</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">split</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="ClamavConfig.new_connection"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamavConfig.new_connection">[docs]</a>    <span class="k">def</span> <span class="nf">new_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ClamavConfig.new_connection">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamavConfig.new_connection">[docs]</a>
+    <span class="k">def</span> <span class="nf">new_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Connect to clamd for stream scanning.</span>
 
 <span class="sd">        @return: tuple (connected socket, host)</span>
@@ -789,7 +832,10 @@
             <span class="k">raise</span> <span class="n">ClamavError</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;one of TCPSocket or LocalSocket must be enabled&quot;</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">sock</span><span class="p">,</span> <span class="n">host</span></div>
 
-<div class="viewcode-block" id="ClamavConfig.create_local_socket"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamavConfig.create_local_socket">[docs]</a>    <span class="k">def</span> <span class="nf">create_local_socket</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ClamavConfig.create_local_socket">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamavConfig.create_local_socket">[docs]</a>
+    <span class="k">def</span> <span class="nf">create_local_socket</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create local socket, connect to it and return socket object.&quot;&quot;&quot;</span>
         <span class="n">sock</span> <span class="o">=</span> <span class="n">create_socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_UNIX</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
         <span class="n">addr</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;LocalSocket&#39;</span><span class="p">]</span>
@@ -800,7 +846,10 @@
             <span class="k">raise</span>
         <span class="k">return</span> <span class="n">sock</span></div>
 
-<div class="viewcode-block" id="ClamavConfig.create_tcp_socket"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamavConfig.create_tcp_socket">[docs]</a>    <span class="k">def</span> <span class="nf">create_tcp_socket</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ClamavConfig.create_tcp_socket">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.ClamavConfig.create_tcp_socket">[docs]</a>
+    <span class="k">def</span> <span class="nf">create_tcp_socket</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create tcp socket, connect to it and return socket object.&quot;&quot;&quot;</span>
         <span class="n">port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="s1">&#39;TCPSocket&#39;</span><span class="p">])</span>
         <span class="n">sockinfo</span> <span class="o">=</span> <span class="n">get_sockinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">port</span><span class="p">)</span>
@@ -810,10 +859,14 @@
         <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
             <span class="n">sock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
             <span class="k">raise</span>
-        <span class="k">return</span> <span class="n">sock</span></div></div>
+        <span class="k">return</span> <span class="n">sock</span></div>
+</div>
 
 
-<div class="viewcode-block" id="scan"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.scan">[docs]</a><span class="k">def</span> <span class="nf">scan</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">clamconf</span><span class="p">):</span>
+
+<div class="viewcode-block" id="scan">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.viruscheck.html#linkcheck.plugins.viruscheck.scan">[docs]</a>
+<span class="k">def</span> <span class="nf">scan</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">clamconf</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Scan data for viruses.</span>
 
 <span class="sd">    @return: (infection msgs, errors)</span>
@@ -829,6 +882,7 @@
     <span class="k">finally</span><span class="p">:</span>
         <span class="n">scanner</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">scanner</span><span class="o">.</span><span class="n">infected</span><span class="p">,</span> <span class="n">scanner</span><span class="o">.</span><span class="n">errors</span></div>
+
 </pre></div>
 
            </div>

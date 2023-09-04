@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.plugins &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.plugins &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -14,11 +14,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -39,7 +39,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -597,7 +597,7 @@
            <div itemprop="articleBody">
              
   <section id="module-linkcheck.plugins">
-<span id="linkcheck-plugins"></span><h1>linkcheck.plugins<a class="headerlink" href="#module-linkcheck.plugins" title="Permalink to this heading"></a></h1>
+<span id="linkcheck-plugins"></span><h1>linkcheck.plugins<a class="headerlink" href="#module-linkcheck.plugins" title="Link to this heading"></a></h1>
 <p>Module for plugin management.</p>
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
@@ -623,31 +623,31 @@
 </table>
 <dl class="py class">
 <dt class="sig sig-object py" id="linkcheck.plugins.PluginManager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">linkcheck.plugins.</span></span><span class="sig-name descname"><span class="pre">PluginManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#PluginManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.PluginManager" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">linkcheck.plugins.</span></span><span class="sig-name descname"><span class="pre">PluginManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#PluginManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.PluginManager" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Manage all connection and content plugins.</p>
 <p>Load enabled plugins.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="linkcheck.plugins.PluginManager.load_modules">
-<span class="sig-name descname"><span class="pre">load_modules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modules</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#PluginManager.load_modules"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.PluginManager.load_modules" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">load_modules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modules</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#PluginManager.load_modules"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.PluginManager.load_modules" title="Link to this definition"></a></dt>
 <dd><p>Load plugin modules.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="linkcheck.plugins.PluginManager.run_connection_plugins">
-<span class="sig-name descname"><span class="pre">run_connection_plugins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#PluginManager.run_connection_plugins"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.PluginManager.run_connection_plugins" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">run_connection_plugins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#PluginManager.run_connection_plugins"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.PluginManager.run_connection_plugins" title="Link to this definition"></a></dt>
 <dd><p>Run all connection plugins.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="linkcheck.plugins.PluginManager.run_content_plugins">
-<span class="sig-name descname"><span class="pre">run_content_plugins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#PluginManager.run_content_plugins"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.PluginManager.run_content_plugins" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">run_content_plugins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#PluginManager.run_content_plugins"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.PluginManager.run_content_plugins" title="Link to this definition"></a></dt>
 <dd><p>Run all content plugins.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="linkcheck.plugins.PluginManager.run_parser_plugins">
-<span class="sig-name descname"><span class="pre">run_parser_plugins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pagetype</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#PluginManager.run_parser_plugins"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.PluginManager.run_parser_plugins" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">run_parser_plugins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pagetype</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#PluginManager.run_parser_plugins"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.PluginManager.run_parser_plugins" title="Link to this definition"></a></dt>
 <dd><p>Run parser plugins for given pagetype.</p>
 </dd></dl>
 
@@ -655,19 +655,19 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="linkcheck.plugins.get_plugin_classes">
-<span class="sig-prename descclassname"><span class="pre">linkcheck.plugins.</span></span><span class="sig-name descname"><span class="pre">get_plugin_classes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modules</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#get_plugin_classes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.get_plugin_classes" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">linkcheck.plugins.</span></span><span class="sig-name descname"><span class="pre">get_plugin_classes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modules</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#get_plugin_classes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.get_plugin_classes" title="Link to this definition"></a></dt>
 <dd><p>Get plugin classes for given modules.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="linkcheck.plugins.get_plugin_modules">
-<span class="sig-prename descclassname"><span class="pre">linkcheck.plugins.</span></span><span class="sig-name descname"><span class="pre">get_plugin_modules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folders</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#get_plugin_modules"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.get_plugin_modules" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">linkcheck.plugins.</span></span><span class="sig-name descname"><span class="pre">get_plugin_modules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folders</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#get_plugin_modules"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.get_plugin_modules" title="Link to this definition"></a></dt>
 <dd><p>Get plugin modules for given folders.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="linkcheck.plugins.run_plugins">
-<span class="sig-prename descclassname"><span class="pre">linkcheck.plugins.</span></span><span class="sig-name descname"><span class="pre">run_plugins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plugins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_after_match</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#run_plugins"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.run_plugins" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">linkcheck.plugins.</span></span><span class="sig-name descname"><span class="pre">run_plugins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plugins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_after_match</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/linkcheck/plugins.html#run_plugins"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#linkcheck.plugins.run_plugins" title="Link to this definition"></a></dt>
 <dd><p>Run the check(url_data) method of given plugins.</p>
 </dd></dl>
 

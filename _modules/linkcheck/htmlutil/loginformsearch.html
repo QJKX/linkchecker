@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.htmlutil.loginformsearch &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.htmlutil.loginformsearch &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -615,7 +615,9 @@
 <span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">log</span><span class="p">,</span> <span class="n">LOG_CHECK</span>
 
 
-<div class="viewcode-block" id="Form"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.loginformsearch.html#linkcheck.htmlutil.loginformsearch.Form">[docs]</a><span class="k">class</span> <span class="nc">Form</span><span class="p">:</span>
+<div class="viewcode-block" id="Form">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.loginformsearch.html#linkcheck.htmlutil.loginformsearch.Form">[docs]</a>
+<span class="k">class</span> <span class="nc">Form</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Store HTML form URL and form data.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
@@ -623,16 +625,22 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
 
-<div class="viewcode-block" id="Form.add_value"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.loginformsearch.html#linkcheck.htmlutil.loginformsearch.Form.add_value">[docs]</a>    <span class="k">def</span> <span class="nf">add_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="Form.add_value">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.loginformsearch.html#linkcheck.htmlutil.loginformsearch.Form.add_value">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a form value.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span></div>
+
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return string displaying URL and form data.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;url=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="si">}</span><span class="s2"> data=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="si">}</span><span class="s2">&gt;&quot;</span></div>
 
 
-<div class="viewcode-block" id="search_form"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.loginformsearch.html#linkcheck.htmlutil.loginformsearch.search_form">[docs]</a><span class="k">def</span> <span class="nf">search_form</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">cgiuser</span><span class="p">,</span> <span class="n">cgipassword</span><span class="p">):</span>
+
+<div class="viewcode-block" id="search_form">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.loginformsearch.html#linkcheck.htmlutil.loginformsearch.search_form">[docs]</a>
+<span class="k">def</span> <span class="nf">search_form</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">cgiuser</span><span class="p">,</span> <span class="n">cgipassword</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Search for a HTML form in the given HTML content that has input elements</span>
 <span class="sd">    with name attributes that match cgiuser and/or cgipassword. If no such form</span>
 <span class="sd">    is found return None.</span>
@@ -650,6 +658,7 @@
     <span class="c1"># not found</span>
     <span class="n">log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;Form with fields </span><span class="si">%s</span><span class="s2"> not found&quot;</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cginames</span><span class="p">))</span>
     <span class="k">return</span> <span class="kc">None</span></div>
+
 </pre></div>
 
            </div>

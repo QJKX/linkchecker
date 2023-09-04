@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.telneturl &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.checker.telneturl &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -618,17 +618,24 @@
 <span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">log</span><span class="p">,</span> <span class="n">LOG_CHECK</span>
 
 
-<div class="viewcode-block" id="encode"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.telneturl.html#linkcheck.checker.telneturl.encode">[docs]</a><span class="k">def</span> <span class="nf">encode</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;iso-8859-1&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">):</span>
+<div class="viewcode-block" id="encode">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.telneturl.html#linkcheck.checker.telneturl.encode">[docs]</a>
+<span class="k">def</span> <span class="nf">encode</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;iso-8859-1&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Encode telnet data like username and password.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encoding</span><span class="p">,</span> <span class="n">errors</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="TelnetUrl"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.telneturl.html#linkcheck.checker.telneturl.TelnetUrl">[docs]</a><span class="k">class</span> <span class="nc">TelnetUrl</span><span class="p">(</span><span class="n">urlbase</span><span class="o">.</span><span class="n">UrlBase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TelnetUrl">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.telneturl.html#linkcheck.checker.telneturl.TelnetUrl">[docs]</a>
+<span class="k">class</span> <span class="nc">TelnetUrl</span><span class="p">(</span><span class="n">urlbase</span><span class="o">.</span><span class="n">UrlBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Url link with telnet scheme.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="TelnetUrl.build_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.telneturl.html#linkcheck.checker.telneturl.TelnetUrl.build_url">[docs]</a>    <span class="k">def</span> <span class="nf">build_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TelnetUrl.build_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.telneturl.html#linkcheck.checker.telneturl.TelnetUrl.build_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">build_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Call super.build_url(), set default telnet port and initialize</span>
 <span class="sd">        the login credentials.</span>
@@ -640,7 +647,10 @@
         <span class="c1"># set user/pass</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_user_password</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="TelnetUrl.local_check"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.telneturl.html#linkcheck.checker.telneturl.TelnetUrl.local_check">[docs]</a>    <span class="k">def</span> <span class="nf">local_check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TelnetUrl.local_check">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.telneturl.html#linkcheck.checker.telneturl.TelnetUrl.local_check">[docs]</a>
+    <span class="k">def</span> <span class="nf">local_check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Warn about empty host names. Else call super.local_check().</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -649,7 +659,10 @@
             <span class="k">return</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">local_check</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="TelnetUrl.check_connection"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.telneturl.html#linkcheck.checker.telneturl.TelnetUrl.check_connection">[docs]</a>    <span class="k">def</span> <span class="nf">check_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TelnetUrl.check_connection">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.telneturl.html#linkcheck.checker.telneturl.TelnetUrl.check_connection">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Open a telnet connection and try to login. Expected login</span>
 <span class="sd">        label is &quot;login: &quot;, expected password label is &quot;Password: &quot;.</span>
@@ -667,14 +680,19 @@
                 <span class="c1"># XXX how to tell if we are logged in??</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;exit</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TelnetUrl.can_get_content"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.telneturl.html#linkcheck.checker.telneturl.TelnetUrl.can_get_content">[docs]</a>    <span class="k">def</span> <span class="nf">can_get_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TelnetUrl.can_get_content">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.telneturl.html#linkcheck.checker.telneturl.TelnetUrl.can_get_content">[docs]</a>
+    <span class="k">def</span> <span class="nf">can_get_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Telnet URLs have no content.</span>
 
 <span class="sd">        @return: False</span>
 <span class="sd">        @rtype: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="kc">False</span></div></div>
+        <span class="k">return</span> <span class="kc">False</span></div>
+</div>
+
 </pre></div>
 
            </div>

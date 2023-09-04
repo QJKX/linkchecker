@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.urlbase &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.checker.urlbase &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -655,7 +655,9 @@
 <span class="n">scheme_requires_host</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;ftp&quot;</span><span class="p">,</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span> <span class="s2">&quot;telnet&quot;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="urljoin"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.urljoin">[docs]</a><span class="k">def</span> <span class="nf">urljoin</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+<div class="viewcode-block" id="urljoin">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.urljoin">[docs]</a>
+<span class="k">def</span> <span class="nf">urljoin</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    If url is relative, join parent and url. Else leave url as-is.</span>
 
@@ -666,7 +668,10 @@
     <span class="k">return</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urljoin</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="url_norm"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.url_norm">[docs]</a><span class="k">def</span> <span class="nf">url_norm</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span>
+
+<div class="viewcode-block" id="url_norm">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.url_norm">[docs]</a>
+<span class="k">def</span> <span class="nf">url_norm</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Wrapper for url.url_norm() to convert UnicodeError in</span>
 <span class="sd">    LinkCheckerError.&quot;&quot;&quot;</span>
     <span class="k">try</span><span class="p">:</span>
@@ -678,7 +683,10 @@
         <span class="k">raise</span> <span class="n">LinkCheckerError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="UrlBase"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase">[docs]</a><span class="k">class</span> <span class="nc">UrlBase</span><span class="p">:</span>
+
+<div class="viewcode-block" id="UrlBase">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase">[docs]</a>
+<span class="k">class</span> <span class="nc">UrlBase</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;An URL with additional information like validity etc.&quot;&quot;&quot;</span>
 
     <span class="c1"># file types that can be parsed recursively</span>
@@ -761,7 +769,9 @@
             <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_result</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">set_result</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;filtered&quot;</span><span class="p">))</span>
 
-<div class="viewcode-block" id="UrlBase.init"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.init">[docs]</a>    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span>
+<div class="viewcode-block" id="UrlBase.init">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.init">[docs]</a>
+    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">base_ref</span><span class="p">,</span>
         <span class="n">base_url</span><span class="p">,</span>
@@ -815,7 +825,10 @@
             <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ignore_errors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;ignoreerrors&#39;</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="UrlBase.reset"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.reset">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.reset">[docs]</a>
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Reset all variables to default values.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -873,7 +886,10 @@
         <span class="c1"># error messages (regular expressions) to ignore</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ignore_errors</span> <span class="o">=</span> <span class="p">[]</span></div>
 
-<div class="viewcode-block" id="UrlBase.set_result"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.set_result">[docs]</a>    <span class="k">def</span> <span class="nf">set_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">valid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.set_result">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.set_result">[docs]</a>
+    <span class="k">def</span> <span class="nf">set_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">valid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set result string and validity.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -904,7 +920,10 @@
         <span class="c1"># free content data</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="UrlBase.get_title"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.get_title">[docs]</a>    <span class="k">def</span> <span class="nf">get_title</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.get_title">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.get_title">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_title</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return title of page the URL refers to.</span>
 <span class="sd">        This is per default the filename or the URL.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -920,7 +939,10 @@
                     <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span></div>
 
-<div class="viewcode-block" id="UrlBase.is_content_type_parseable"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_content_type_parseable">[docs]</a>    <span class="k">def</span> <span class="nf">is_content_type_parseable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.is_content_type_parseable">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_content_type_parseable">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_content_type_parseable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return True iff the content type of this url is parseable.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -938,19 +960,29 @@
             <span class="p">)</span>
         <span class="k">return</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="UrlBase.is_parseable"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_parseable">[docs]</a>    <span class="k">def</span> <span class="nf">is_parseable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.is_parseable">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_parseable">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_parseable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return True iff content of this url is parseable.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="UrlBase.is_html"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_html">[docs]</a>    <span class="k">def</span> <span class="nf">is_html</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.is_html">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_html">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_html</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return True iff content of this url is HTML formatted.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_ctype</span><span class="p">(</span><span class="s2">&quot;html&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.is_css"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_css">[docs]</a>    <span class="k">def</span> <span class="nf">is_css</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.is_css">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_css">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_css</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return True iff content of this url is CSS stylesheet.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_ctype</span><span class="p">(</span><span class="s2">&quot;css&quot;</span><span class="p">)</span></div>
+
 
     <span class="k">def</span> <span class="nf">_is_ctype</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctype</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return True iff content is valid and of the given type.&quot;&quot;&quot;</span>
@@ -959,41 +991,61 @@
         <span class="n">mime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ContentMimetypes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">mime</span><span class="p">)</span> <span class="o">==</span> <span class="n">ctype</span>
 
-<div class="viewcode-block" id="UrlBase.is_http"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_http">[docs]</a>    <span class="k">def</span> <span class="nf">is_http</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="UrlBase.is_http">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_http">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_http</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return True for *http://* or *https://* URLs.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">,</span> <span class="s2">&quot;https&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.is_file"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_file">[docs]</a>    <span class="k">def</span> <span class="nf">is_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.is_file">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_file">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return True for *file://* URLs.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;file&quot;</span></div>
 
-<div class="viewcode-block" id="UrlBase.is_directory"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_directory">[docs]</a>    <span class="k">def</span> <span class="nf">is_directory</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.is_directory">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_directory">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_directory</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return True if current URL represents a directory.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="UrlBase.is_local"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_local">[docs]</a>    <span class="k">def</span> <span class="nf">is_local</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.is_local">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.is_local">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_local</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return True for local (ie. *file://*) URLs.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="UrlBase.add_warning"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.add_warning">[docs]</a>    <span class="k">def</span> <span class="nf">add_warning</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.add_warning">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.add_warning">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_warning</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add a warning string.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">item</span> <span class="o">=</span> <span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
-        <span class="k">if</span> <span class="p">(</span>
-            <span class="n">item</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">warnings</span>
-            <span class="ow">and</span> <span class="n">tag</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;ignorewarnings&quot;</span><span class="p">]</span>
-        <span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">warnings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span></div>
+        <span class="k">if</span> <span class="n">item</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">warnings</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">tag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;ignorewarnings&quot;</span><span class="p">]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_info</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">warnings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.add_info"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.add_info">[docs]</a>    <span class="k">def</span> <span class="nf">add_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.add_info">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.add_info">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add an info string.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">s</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.set_cache_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.set_cache_url">[docs]</a>    <span class="k">def</span> <span class="nf">set_cache_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.set_cache_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.set_cache_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">set_cache_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the URL to be used for caching.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="s2">&quot;AnchorCheck&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;enabledplugins&quot;</span><span class="p">]:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cache_url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span>
@@ -1003,7 +1055,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">cache_url</span> <span class="o">=</span> <span class="n">urlutil</span><span class="o">.</span><span class="n">urlunsplit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">])</span>
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;cache_url &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache_url</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.check_syntax"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.check_syntax">[docs]</a>    <span class="k">def</span> <span class="nf">check_syntax</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.check_syntax">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.check_syntax">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_syntax</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called before self.check(), this function inspects the</span>
 <span class="sd">        url syntax. Success enables further checking, failure</span>
@@ -1024,7 +1079,10 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">set_cache_url</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="UrlBase.check_url_warnings"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.check_url_warnings">[docs]</a>    <span class="k">def</span> <span class="nf">check_url_warnings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.check_url_warnings">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.check_url_warnings">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_url_warnings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check URL name and length.&quot;&quot;&quot;</span>
         <span class="n">effectiveurl</span> <span class="o">=</span> <span class="n">urlutil</span><span class="o">.</span><span class="n">urlunsplit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">!=</span> <span class="n">effectiveurl</span><span class="p">:</span>
@@ -1040,7 +1098,10 @@
                 <span class="n">tag</span><span class="o">=</span><span class="n">WARN_URL_TOO_LONG</span><span class="p">,</span>
             <span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.build_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.build_url">[docs]</a>    <span class="k">def</span> <span class="nf">build_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.build_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.build_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">build_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Construct self.url and self.urlparts out of the given base</span>
 <span class="sd">        url information self.base_url, self.parent_url and self.base_ref.</span>
@@ -1074,7 +1135,10 @@
         <span class="c1"># and unsplit again</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">urlutil</span><span class="o">.</span><span class="n">urlunsplit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.build_url_parts"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.build_url_parts">[docs]</a>    <span class="k">def</span> <span class="nf">build_url_parts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.build_url_parts">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.build_url_parts">[docs]</a>
+    <span class="k">def</span> <span class="nf">build_url_parts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set userinfo, host, port and anchor from url and return urlparts.</span>
 <span class="sd">        Also checks for obfuscated IP addresses.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1115,7 +1179,10 @@
             <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">anchor</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">anchor</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">urlparts</span></div>
 
-<div class="viewcode-block" id="UrlBase.check_obfuscated_ip"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.check_obfuscated_ip">[docs]</a>    <span class="k">def</span> <span class="nf">check_obfuscated_ip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.check_obfuscated_ip">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.check_obfuscated_ip">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_obfuscated_ip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Warn if host of this URL is obfuscated IP address.&quot;&quot;&quot;</span>
         <span class="c1"># check if self.host can be an IP address</span>
         <span class="c1"># check for obfuscated IP address</span>
@@ -1129,7 +1196,10 @@
                     <span class="n">tag</span><span class="o">=</span><span class="n">WARN_URL_OBFUSCATED_IP</span><span class="p">,</span>
                 <span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.check"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.check">[docs]</a>    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.check">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.check">[docs]</a>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Main check function for checking this URL.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;trace&quot;</span><span class="p">]:</span>
             <span class="n">trace</span><span class="o">.</span><span class="n">trace_on</span><span class="p">()</span>
@@ -1144,7 +1214,10 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">raise</span></div>
 
-<div class="viewcode-block" id="UrlBase.local_check"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.local_check">[docs]</a>    <span class="k">def</span> <span class="nf">local_check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.local_check">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.local_check">[docs]</a>
+    <span class="k">def</span> <span class="nf">local_check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Local check function can be overridden in subclasses.&quot;&quot;&quot;</span>
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;Checking </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
         <span class="c1"># strict extern URLs should not be checked</span>
@@ -1169,7 +1242,10 @@
                 <span class="p">}</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">set_result</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">valid</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.check_content"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.check_content">[docs]</a>    <span class="k">def</span> <span class="nf">check_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.check_content">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.check_content">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check content of URL.</span>
 <span class="sd">        @return: True if content can be parsed, else False</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1188,7 +1264,10 @@
                 <span class="p">)</span>
         <span class="k">return</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="UrlBase.close_connection"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.close_connection">[docs]</a>    <span class="k">def</span> <span class="nf">close_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.close_connection">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.close_connection">[docs]</a>
+    <span class="k">def</span> <span class="nf">close_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Close an opened url connection.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1202,7 +1281,10 @@
             <span class="k">pass</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span> <span class="o">=</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="UrlBase.handle_exception"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.handle_exception">[docs]</a>    <span class="k">def</span> <span class="nf">handle_exception</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.handle_exception">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.handle_exception">[docs]</a>
+    <span class="k">def</span> <span class="nf">handle_exception</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        An exception occurred. Log it and set the cache flag.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1225,14 +1307,20 @@
         <span class="c1"># limit length to 240</span>
         <span class="k">return</span> <span class="n">strformat</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="n">errmsg</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">240</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.check_connection"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.check_connection">[docs]</a>    <span class="k">def</span> <span class="nf">check_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.check_connection">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.check_connection">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        The basic connection check uses urlopen to initialize</span>
 <span class="sd">        a connection object.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.add_size_info"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.add_size_info">[docs]</a>    <span class="k">def</span> <span class="nf">add_size_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.add_size_info">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.add_size_info">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_size_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set size of URL content (if any)..</span>
 <span class="sd">        Should be overridden in subclasses.&quot;&quot;&quot;</span>
         <span class="n">maxbytes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;maxfilesizedownload&quot;</span><span class="p">]</span>
@@ -1246,7 +1334,10 @@
                 <span class="n">tag</span><span class="o">=</span><span class="n">WARN_URL_CONTENT_SIZE_TOO_LARGE</span><span class="p">,</span>
             <span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.allows_simple_recursion"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.allows_simple_recursion">[docs]</a>    <span class="k">def</span> <span class="nf">allows_simple_recursion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.allows_simple_recursion">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.allows_simple_recursion">[docs]</a>
+    <span class="k">def</span> <span class="nf">allows_simple_recursion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check recursion level and extern status.&quot;&quot;&quot;</span>
         <span class="n">rec_level</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;recursionlevel&quot;</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">rec_level</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">recursion_level</span> <span class="o">&gt;=</span> <span class="n">rec_level</span><span class="p">:</span>
@@ -1257,7 +1348,10 @@
             <span class="k">return</span> <span class="kc">False</span>
         <span class="k">return</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="UrlBase.allows_recursion"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.allows_recursion">[docs]</a>    <span class="k">def</span> <span class="nf">allows_recursion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.allows_recursion">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.allows_recursion">[docs]</a>
+    <span class="k">def</span> <span class="nf">allows_recursion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return True iff we can recurse into the url&#39;s content.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1282,11 +1376,17 @@
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;... yes, recursion.&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="UrlBase.content_allows_robots"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.content_allows_robots">[docs]</a>    <span class="k">def</span> <span class="nf">content_allows_robots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.content_allows_robots">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.content_allows_robots">[docs]</a>
+    <span class="k">def</span> <span class="nf">content_allows_robots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns True: only check robots.txt on HTTP links.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="UrlBase.set_extern"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.set_extern">[docs]</a>    <span class="k">def</span> <span class="nf">set_extern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.set_extern">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.set_extern">[docs]</a>
+    <span class="k">def</span> <span class="nf">set_extern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Match URL against extern and intern link patterns. If no pattern</span>
 <span class="sd">        matches the URL is extern. Sets self.extern to a tuple (bool,</span>
@@ -1316,16 +1416,25 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">extern</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.set_content_type"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.set_content_type">[docs]</a>    <span class="k">def</span> <span class="nf">set_content_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.set_content_type">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.set_content_type">[docs]</a>
+    <span class="k">def</span> <span class="nf">set_content_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set content MIME type.</span>
 <span class="sd">        Should be overridden in subclasses.&quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="UrlBase.can_get_content"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.can_get_content">[docs]</a>    <span class="k">def</span> <span class="nf">can_get_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.can_get_content">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.can_get_content">[docs]</a>
+    <span class="k">def</span> <span class="nf">can_get_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Indicate whether url get_content() can be called.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;maxfilesizedownload&quot;</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="UrlBase.download_content"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.download_content">[docs]</a>    <span class="k">def</span> <span class="nf">download_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.download_content">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.download_content">[docs]</a>
+    <span class="k">def</span> <span class="nf">download_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;Get content of </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
         <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
         <span class="n">content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_content</span><span class="p">()</span>
@@ -1337,17 +1446,26 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">add_downloaded_bytes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">content</span></div>
 
-<div class="viewcode-block" id="UrlBase.get_soup"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.get_soup">[docs]</a>    <span class="k">def</span> <span class="nf">get_soup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.get_soup">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.get_soup">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_soup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">soup</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">get_content</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">soup</span></div>
 
-<div class="viewcode-block" id="UrlBase.get_raw_content"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.get_raw_content">[docs]</a>    <span class="k">def</span> <span class="nf">get_raw_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.get_raw_content">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.get_raw_content">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_raw_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">download_content</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span></div>
 
-<div class="viewcode-block" id="UrlBase.get_content"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.get_content">[docs]</a>    <span class="k">def</span> <span class="nf">get_content</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.get_content">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.get_content">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_content</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">get_raw_content</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">soup</span> <span class="o">=</span> <span class="n">htmlsoup</span><span class="o">.</span><span class="n">make_soup</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">encoding</span><span class="p">)</span>
@@ -1363,7 +1481,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content_encoding</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">text</span></div>
 
-<div class="viewcode-block" id="UrlBase.read_content"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.read_content">[docs]</a>    <span class="k">def</span> <span class="nf">read_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.read_content">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.read_content">[docs]</a>
+    <span class="k">def</span> <span class="nf">read_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return data for this URL. Can be overridden in subclasses.&quot;&quot;&quot;</span>
         <span class="n">buf</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">()</span>
         <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_content_chunk</span><span class="p">()</span>
@@ -1374,13 +1495,19 @@
             <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_content_chunk</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">buf</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="UrlBase.read_content_chunk"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.read_content_chunk">[docs]</a>    <span class="k">def</span> <span class="nf">read_content_chunk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.read_content_chunk">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.read_content_chunk">[docs]</a>
+    <span class="k">def</span> <span class="nf">read_content_chunk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Read one chunk of content from this URL.</span>
 <span class="sd">        Precondition: url_connection is an opened URL.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ReadChunkBytes</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.get_user_password"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.get_user_password">[docs]</a>    <span class="k">def</span> <span class="nf">get_user_password</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.get_user_password">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.get_user_password">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_user_password</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get tuple (user, password) from configured authentication.</span>
 <span class="sd">        Both user and password can be None.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1390,7 +1517,10 @@
             <span class="k">return</span> <span class="p">(</span><span class="n">split</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="n">split</span><span class="o">.</span><span class="n">password</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_user_password</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.add_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.add_url">[docs]</a>    <span class="k">def</span> <span class="nf">add_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.add_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.add_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add new URL to queue.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">base</span><span class="p">:</span>
             <span class="n">base_ref</span> <span class="o">=</span> <span class="n">urlutil</span><span class="o">.</span><span class="n">url_norm</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">content_encoding</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
@@ -1411,7 +1541,10 @@
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">urlqueue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">url_data</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.serialized"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.serialized">[docs]</a>    <span class="k">def</span> <span class="nf">serialized</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.serialized">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.serialized">[docs]</a>
+    <span class="k">def</span> <span class="nf">serialized</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return serialized url check data as unicode string.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1432,7 +1565,10 @@
             <span class="p">]</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.get_intern_pattern"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.get_intern_pattern">[docs]</a>    <span class="k">def</span> <span class="nf">get_intern_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.get_intern_pattern">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.get_intern_pattern">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_intern_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get pattern for intern URL matching.</span>
 
 <span class="sd">        @param url: the URL to set intern pattern for, else self.url</span>
@@ -1442,7 +1578,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="UrlBase.add_intern_pattern"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.add_intern_pattern">[docs]</a>    <span class="k">def</span> <span class="nf">add_intern_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.add_intern_pattern">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.add_intern_pattern">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_intern_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add intern URL regex to config.&quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">pat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_intern_pattern</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">)</span>
@@ -1452,6 +1591,7 @@
         <span class="k">except</span> <span class="ne">UnicodeError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
             <span class="n">res</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;URL has unparsable domain name: </span><span class="si">%(domain)s</span><span class="s2">&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="p">{</span><span class="s2">&quot;domain&quot;</span><span class="p">:</span> <span class="n">msg</span><span class="p">}</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">set_result</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">valid</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -1481,7 +1621,9 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">serialized</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s2">&quot;, &quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">&gt;&#39;</span>
 
-<div class="viewcode-block" id="UrlBase.to_wire_dict"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.to_wire_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_wire_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="UrlBase.to_wire_dict">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.to_wire_dict">[docs]</a>
+    <span class="k">def</span> <span class="nf">to_wire_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a simplified transport object for logging and caching.</span>
 
 <span class="sd">        The transport object must contain these attributes:</span>
@@ -1550,10 +1692,15 @@
             <span class="n">modified</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">modified</span><span class="p">,</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="UrlBase.to_wire"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.to_wire">[docs]</a>    <span class="k">def</span> <span class="nf">to_wire</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlBase.to_wire">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.UrlBase.to_wire">[docs]</a>
+    <span class="k">def</span> <span class="nf">to_wire</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return compact UrlData object with information from to_wire_dict().</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">CompactUrlData</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_wire_dict</span><span class="p">())</span></div></div>
+        <span class="k">return</span> <span class="n">CompactUrlData</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_wire_dict</span><span class="p">())</span></div>
+</div>
+
 
 
 <span class="n">urlDataAttr</span> <span class="o">=</span> <span class="p">[</span>
@@ -1582,7 +1729,9 @@
 <span class="p">]</span>
 
 
-<div class="viewcode-block" id="CompactUrlData"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.CompactUrlData">[docs]</a><span class="k">class</span> <span class="nc">CompactUrlData</span><span class="p">:</span>
+<div class="viewcode-block" id="CompactUrlData">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.urlbase.html#linkcheck.checker.urlbase.CompactUrlData">[docs]</a>
+<span class="k">class</span> <span class="nc">CompactUrlData</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Store selected UrlData attributes in slots to minimize memory usage.&quot;&quot;&quot;</span>
 
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="n">urlDataAttr</span>
@@ -1591,6 +1740,7 @@
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;Set all attributes according to the dictionary wired_url_data&#39;&#39;&#39;</span>
         <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">urlDataAttr</span><span class="p">:</span>
             <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">wired_url_data</span><span class="p">[</span><span class="n">attr</span><span class="p">])</span></div>
+
 </pre></div>
 
            </div>

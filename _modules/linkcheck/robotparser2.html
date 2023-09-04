@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.robotparser2 &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.robotparser2 &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -626,7 +626,9 @@
 <span class="n">ACCEPT_ENCODING</span> <span class="o">=</span> <span class="s1">&#39;x-gzip,gzip,deflate&#39;</span>
 
 
-<div class="viewcode-block" id="RobotFileParser"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser">[docs]</a><span class="k">class</span> <span class="nc">RobotFileParser</span><span class="p">:</span>
+<div class="viewcode-block" id="RobotFileParser">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser">[docs]</a>
+<span class="k">class</span> <span class="nc">RobotFileParser</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;This class provides a set of methods to read, parse and answer</span>
 <span class="sd">    questions about a single robots.txt file.&quot;&quot;&quot;</span>
 
@@ -650,7 +652,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">sitemap_urls</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">encoding</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="RobotFileParser.mtime"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser.mtime">[docs]</a>    <span class="k">def</span> <span class="nf">mtime</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="RobotFileParser.mtime">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser.mtime">[docs]</a>
+    <span class="k">def</span> <span class="nf">mtime</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the time the robots.txt file was last fetched.</span>
 
 <span class="sd">        This is useful for long-running web spiders that need to</span>
@@ -661,17 +665,26 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_checked</span></div>
 
-<div class="viewcode-block" id="RobotFileParser.modified"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser.modified">[docs]</a>    <span class="k">def</span> <span class="nf">modified</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="RobotFileParser.modified">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser.modified">[docs]</a>
+    <span class="k">def</span> <span class="nf">modified</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the time the robots.txt file was last fetched to the</span>
 <span class="sd">        current time.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_checked</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="RobotFileParser.set_url"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser.set_url">[docs]</a>    <span class="k">def</span> <span class="nf">set_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+
+<div class="viewcode-block" id="RobotFileParser.set_url">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser.set_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">set_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the URL referring to a robots.txt file.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlparse</span><span class="p">(</span><span class="n">url</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="RobotFileParser.read"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser.read">[docs]</a>    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="RobotFileParser.read">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser.read">[docs]</a>
+    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Read the robots.txt URL and feeds it to the parser.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_reset</span><span class="p">()</span>
         <span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
@@ -714,6 +727,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">allow_all</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%r</span><span class="s2"> allow all (request error)&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span></div>
 
+
     <span class="k">def</span> <span class="nf">_add_entry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entry</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a parsed entry to entry list.</span>
 
@@ -725,7 +739,9 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
 
-<div class="viewcode-block" id="RobotFileParser.parse"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser.parse">[docs]</a>    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lines</span><span class="p">):</span>
+<div class="viewcode-block" id="RobotFileParser.parse">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser.parse">[docs]</a>
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lines</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Parse the input lines from a robot.txt file.</span>
 <span class="sd">        We allow that a user-agent: line is not preceded by</span>
 <span class="sd">        one or more blank lines.</span>
@@ -847,7 +863,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">modified</span><span class="p">()</span>
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;Parsed rules:</span><span class="se">\n</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="RobotFileParser.can_fetch"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser.can_fetch">[docs]</a>    <span class="k">def</span> <span class="nf">can_fetch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">useragent</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+
+<div class="viewcode-block" id="RobotFileParser.can_fetch">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser.can_fetch">[docs]</a>
+    <span class="k">def</span> <span class="nf">can_fetch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">useragent</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Using the parsed robots.txt decide if useragent can fetch url.</span>
 
 <span class="sd">        @return: True if agent can fetch url, else False</span>
@@ -882,7 +901,10 @@
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot; ... agent not found, allow.&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="RobotFileParser.get_crawldelay"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser.get_crawldelay">[docs]</a>    <span class="k">def</span> <span class="nf">get_crawldelay</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">useragent</span><span class="p">):</span>
+
+<div class="viewcode-block" id="RobotFileParser.get_crawldelay">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.robotparser2.html#linkcheck.robotparser2.RobotFileParser.get_crawldelay">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_crawldelay</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">useragent</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Look for a configured crawl delay.</span>
 
 <span class="sd">        @return: crawl delay in seconds or zero</span>
@@ -892,6 +914,7 @@
             <span class="k">if</span> <span class="n">entry</span><span class="o">.</span><span class="n">applies_to</span><span class="p">(</span><span class="n">useragent</span><span class="p">):</span>
                 <span class="k">return</span> <span class="n">entry</span><span class="o">.</span><span class="n">crawldelay</span>
         <span class="k">return</span> <span class="mi">0</span></div>
+
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Constructs string representation, usable as contents of a</span>
@@ -904,6 +927,7 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_entry</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default_entry</span><span class="p">))</span>
         <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span></div>
+
 
 
 <span class="k">class</span> <span class="nc">RuleLine</span><span class="p">:</span>

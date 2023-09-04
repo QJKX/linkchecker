@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.fileurl &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.checker.fileurl &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -626,7 +626,9 @@
                     <span class="n">WARN_FILE_ANCHORCHECK_DIRECTORY</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="get_files"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.get_files">[docs]</a><span class="k">def</span> <span class="nf">get_files</span><span class="p">(</span><span class="n">dirname</span><span class="p">):</span>
+<div class="viewcode-block" id="get_files">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.get_files">[docs]</a>
+<span class="k">def</span> <span class="nf">get_files</span><span class="p">(</span><span class="n">dirname</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get iterator of entries in directory. Only allows regular files</span>
 <span class="sd">    and directories, no symlinks.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">dirname</span><span class="p">):</span>
@@ -639,7 +641,10 @@
             <span class="k">yield</span> <span class="n">entry</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span></div>
 
 
-<div class="viewcode-block" id="prepare_urlpath_for_nt"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.prepare_urlpath_for_nt">[docs]</a><span class="k">def</span> <span class="nf">prepare_urlpath_for_nt</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+
+<div class="viewcode-block" id="prepare_urlpath_for_nt">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.prepare_urlpath_for_nt">[docs]</a>
+<span class="k">def</span> <span class="nf">prepare_urlpath_for_nt</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    URLs like *file://server/path/* result in a path named */server/path*.</span>
 <span class="sd">    However urllib.url2pathname expects *////server/path*.</span>
@@ -649,7 +654,10 @@
     <span class="k">return</span> <span class="n">path</span></div>
 
 
-<div class="viewcode-block" id="get_nt_filename"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.get_nt_filename">[docs]</a><span class="k">def</span> <span class="nf">get_nt_filename</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_nt_filename">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.get_nt_filename">[docs]</a>
+<span class="k">def</span> <span class="nf">get_nt_filename</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return case sensitive filename for NT path.&quot;&quot;&quot;</span>
     <span class="n">unc</span><span class="p">,</span> <span class="n">rest</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitdrive</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
     <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">rest</span><span class="p">)</span>
@@ -662,7 +670,10 @@
     <span class="k">return</span> <span class="n">path</span></div>
 
 
-<div class="viewcode-block" id="get_os_filename"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.get_os_filename">[docs]</a><span class="k">def</span> <span class="nf">get_os_filename</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_os_filename">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.get_os_filename">[docs]</a>
+<span class="k">def</span> <span class="nf">get_os_filename</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return filesystem path for given URL path.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;nt&#39;</span><span class="p">:</span>
         <span class="n">path</span> <span class="o">=</span> <span class="n">prepare_urlpath_for_nt</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
@@ -673,7 +684,10 @@
     <span class="k">return</span> <span class="n">res</span></div>
 
 
-<div class="viewcode-block" id="is_absolute_path"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.is_absolute_path">[docs]</a><span class="k">def</span> <span class="nf">is_absolute_path</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+
+<div class="viewcode-block" id="is_absolute_path">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.is_absolute_path">[docs]</a>
+<span class="k">def</span> <span class="nf">is_absolute_path</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if given path is absolute. On Windows absolute paths start</span>
 <span class="sd">    with a drive letter. On all other systems absolute paths start with</span>
 <span class="sd">    a slash.&quot;&quot;&quot;</span>
@@ -684,12 +698,17 @@
     <span class="k">return</span> <span class="n">path</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="FileUrl"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl">[docs]</a><span class="k">class</span> <span class="nc">FileUrl</span><span class="p">(</span><span class="n">urlbase</span><span class="o">.</span><span class="n">UrlBase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FileUrl">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl">[docs]</a>
+<span class="k">class</span> <span class="nc">FileUrl</span><span class="p">(</span><span class="n">urlbase</span><span class="o">.</span><span class="n">UrlBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Url link with file scheme.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="FileUrl.init"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.init">[docs]</a>    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span>
+<div class="viewcode-block" id="FileUrl.init">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.init">[docs]</a>
+    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">base_ref</span><span class="p">,</span>
         <span class="n">base_url</span><span class="p">,</span>
@@ -719,7 +738,10 @@
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span> <span class="o">=</span> <span class="s1">&#39;file&#39;</span></div>
 
-<div class="viewcode-block" id="FileUrl.build_base_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.build_base_url">[docs]</a>    <span class="k">def</span> <span class="nf">build_base_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FileUrl.build_base_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.build_base_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">build_base_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;The URL is normed according to the platform:</span>
 <span class="sd">         - the base URL is made an absolute *file://* URL</span>
 <span class="sd">         - under Windows platform the drive specifier is normed</span>
@@ -749,7 +771,10 @@
             <span class="n">base_url</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;^file://([^/])&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;file:///\1&quot;</span><span class="p">,</span> <span class="n">base_url</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">=</span> <span class="n">base_url</span></div>
 
-<div class="viewcode-block" id="FileUrl.build_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.build_url">[docs]</a>    <span class="k">def</span> <span class="nf">build_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FileUrl.build_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.build_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">build_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Calls super.build_url() and adds a trailing slash to directories.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -773,7 +798,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+=</span> <span class="s1">&#39;/&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">urlutil</span><span class="o">.</span><span class="n">urlunsplit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="FileUrl.add_size_info"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.add_size_info">[docs]</a>    <span class="k">def</span> <span class="nf">add_size_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FileUrl.add_size_info">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.add_size_info">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_size_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get size of file content and modification time from filename path.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_directory</span><span class="p">():</span>
             <span class="c1"># Directory size always differs from the customer index.html</span>
@@ -783,7 +811,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">fileutil</span><span class="o">.</span><span class="n">get_size</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">modified</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">fileutil</span><span class="o">.</span><span class="n">get_mtime</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="FileUrl.check_connection"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.check_connection">[docs]</a>    <span class="k">def</span> <span class="nf">check_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FileUrl.check_connection">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.check_connection">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Try to open the local file. Under NT systems the case sensitivity</span>
 <span class="sd">        is checked.</span>
@@ -801,7 +832,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">check_case_sensitivity</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="FileUrl.check_case_sensitivity"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.check_case_sensitivity">[docs]</a>    <span class="k">def</span> <span class="nf">check_case_sensitivity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FileUrl.check_case_sensitivity">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.check_case_sensitivity">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_case_sensitivity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Check if url and windows path name match cases</span>
 <span class="sd">        else there might be problems when copying such</span>
@@ -822,7 +856,10 @@
                 <span class="n">tag</span><span class="o">=</span><span class="n">WARN_FILE_SYSTEM_PATH</span><span class="p">,</span>
             <span class="p">)</span></div>
 
-<div class="viewcode-block" id="FileUrl.read_content"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.read_content">[docs]</a>    <span class="k">def</span> <span class="nf">read_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FileUrl.read_content">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.read_content">[docs]</a>
+    <span class="k">def</span> <span class="nf">read_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return file content, or in case of directories a dummy HTML file</span>
 <span class="sd">        with links to the files.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_directory</span><span class="p">():</span>
@@ -831,7 +868,10 @@
             <span class="n">data</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">read_content</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">data</span></div>
 
-<div class="viewcode-block" id="FileUrl.get_os_filename"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.get_os_filename">[docs]</a>    <span class="k">def</span> <span class="nf">get_os_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FileUrl.get_os_filename">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.get_os_filename">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_os_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Construct os specific file path out of the *file://* URL.</span>
 
@@ -840,11 +880,17 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">get_os_filename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span></div>
 
-<div class="viewcode-block" id="FileUrl.get_temp_filename"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.get_temp_filename">[docs]</a>    <span class="k">def</span> <span class="nf">get_temp_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FileUrl.get_temp_filename">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.get_temp_filename">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_temp_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get filename for content to parse.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_os_filename</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="FileUrl.is_directory"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.is_directory">[docs]</a>    <span class="k">def</span> <span class="nf">is_directory</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FileUrl.is_directory">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.is_directory">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_directory</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Check if file is a directory.</span>
 
@@ -854,7 +900,10 @@
         <span class="n">filename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_os_filename</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">islink</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="FileUrl.is_parseable"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.is_parseable">[docs]</a>    <span class="k">def</span> <span class="nf">is_parseable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FileUrl.is_parseable">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.is_parseable">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_parseable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if content is parseable for recursion.</span>
 
 <span class="sd">        @return: True if content is parseable</span>
@@ -866,7 +915,10 @@
             <span class="k">return</span> <span class="kc">True</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_content_type_parseable</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="FileUrl.set_content_type"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.set_content_type">[docs]</a>    <span class="k">def</span> <span class="nf">set_content_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FileUrl.set_content_type">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.set_content_type">[docs]</a>
+    <span class="k">def</span> <span class="nf">set_content_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set URL content type, or an empty string if content</span>
 <span class="sd">        type could not be found.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">:</span>
@@ -875,7 +927,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;MIME type: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="FileUrl.get_intern_pattern"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.get_intern_pattern">[docs]</a>    <span class="k">def</span> <span class="nf">get_intern_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FileUrl.get_intern_pattern">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.get_intern_pattern">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_intern_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get pattern for intern URL matching.</span>
 
 <span class="sd">        @return non-empty regex pattern or None</span>
@@ -892,27 +947,39 @@
                 <span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="p">[:</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">url</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="FileUrl.add_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.add_url">[docs]</a>    <span class="k">def</span> <span class="nf">add_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FileUrl.add_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.FileUrl.add_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;If a local webroot directory is configured, replace absolute URLs</span>
 <span class="sd">        with it. After that queue the URL data for checking.&quot;&quot;&quot;</span>
         <span class="n">webroot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;localwebroot&quot;</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">webroot</span> <span class="ow">and</span> <span class="n">url</span> <span class="ow">and</span> <span class="n">url</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">):</span>
             <span class="n">url</span> <span class="o">=</span> <span class="n">webroot</span> <span class="o">+</span> <span class="n">url</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
             <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;Applied local webroot `</span><span class="si">%s</span><span class="s2">&#39; to `</span><span class="si">%s</span><span class="s2">&#39;.&quot;</span><span class="p">,</span> <span class="n">webroot</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">add_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="n">line</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="n">column</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="n">base</span><span class="p">)</span></div></div>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">add_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="n">line</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="n">column</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="n">base</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="AnchorCheckFileUrl"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.AnchorCheckFileUrl">[docs]</a><span class="k">class</span> <span class="nc">AnchorCheckFileUrl</span><span class="p">(</span><span class="n">FileUrl</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AnchorCheckFileUrl">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.AnchorCheckFileUrl">[docs]</a>
+<span class="k">class</span> <span class="nc">AnchorCheckFileUrl</span><span class="p">(</span><span class="n">FileUrl</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    File URL link for AnchorCheck plugin.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="AnchorCheckFileUrl.reset"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.AnchorCheckFileUrl.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AnchorCheckFileUrl.reset">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.AnchorCheckFileUrl.reset">[docs]</a>
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
         <span class="c1"># the local file URI</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">url_without_anchor</span> <span class="o">=</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="AnchorCheckFileUrl.build_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.AnchorCheckFileUrl.build_url">[docs]</a>    <span class="k">def</span> <span class="nf">build_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AnchorCheckFileUrl.build_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.AnchorCheckFileUrl.build_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">build_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Calls UrlBase.build_url() and adds a trailing slash to directories.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -937,7 +1004,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">urlutil</span><span class="o">.</span><span class="n">urlunsplit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">url_without_anchor</span> <span class="o">=</span> <span class="n">urlutil</span><span class="o">.</span><span class="n">urlunsplit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlparts</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">])</span></div>
 
-<div class="viewcode-block" id="AnchorCheckFileUrl.check_connection"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.AnchorCheckFileUrl.check_connection">[docs]</a>    <span class="k">def</span> <span class="nf">check_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AnchorCheckFileUrl.check_connection">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.AnchorCheckFileUrl.check_connection">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Try to open the local file. Under NT systems the case sensitivity</span>
 <span class="sd">        is checked.</span>
@@ -965,7 +1035,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">url_connection</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">check_case_sensitivity</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="AnchorCheckFileUrl.set_content_type"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.AnchorCheckFileUrl.set_content_type">[docs]</a>    <span class="k">def</span> <span class="nf">set_content_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AnchorCheckFileUrl.set_content_type">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.fileurl.html#linkcheck.checker.fileurl.AnchorCheckFileUrl.set_content_type">[docs]</a>
+    <span class="k">def</span> <span class="nf">set_content_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set URL content type, or an empty string if content</span>
 <span class="sd">        type could not be found.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">:</span>
@@ -973,7 +1046,9 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">url_without_anchor</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_content</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;MIME type: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span><span class="p">)</span></div></div>
+        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;MIME type: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
 
            </div>

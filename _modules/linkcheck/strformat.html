@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.strformat &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.strformat &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -630,7 +630,9 @@
 <span class="n">SECONDS_PER_DAY</span> <span class="o">=</span> <span class="mi">24</span> <span class="o">*</span> <span class="n">SECONDS_PER_HOUR</span>
 
 
-<div class="viewcode-block" id="ascii_safe"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.ascii_safe">[docs]</a><span class="k">def</span> <span class="nf">ascii_safe</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="viewcode-block" id="ascii_safe">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.ascii_safe">[docs]</a>
+<span class="k">def</span> <span class="nf">ascii_safe</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get ASCII string without raising encoding errors. Unknown</span>
 <span class="sd">    characters of the given encoding will be ignored.</span>
 
@@ -644,7 +646,10 @@
     <span class="k">return</span> <span class="n">s</span></div>
 
 
-<div class="viewcode-block" id="unquote"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.unquote">[docs]</a><span class="k">def</span> <span class="nf">unquote</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">matching</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="unquote">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.unquote">[docs]</a>
+<span class="k">def</span> <span class="nf">unquote</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">matching</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Remove leading and ending single and double quotes.</span>
 <span class="sd">    The quotes need to match if matching is True. Only one quote from each</span>
 <span class="sd">    end will be stripped.</span>
@@ -668,13 +673,16 @@
     <span class="k">return</span> <span class="n">s</span></div>
 
 
+
 <span class="n">_para_mac</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(?:</span><span class="si">{sep}</span><span class="s2">)(?:(?:</span><span class="si">{sep}</span><span class="s2">)\s*)+&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">_para_posix</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(?:</span><span class="si">{sep}</span><span class="s2">)(?:(?:</span><span class="si">{sep}</span><span class="s2">)\s*)+&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">_para_win</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(?:</span><span class="si">{sep}</span><span class="s2">)(?:(?:</span><span class="si">{sep}</span><span class="s2">)\s*)+&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">_para_ro</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">_para_mac</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="n">_para_posix</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="n">_para_win</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="get_paragraphs"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.get_paragraphs">[docs]</a><span class="k">def</span> <span class="nf">get_paragraphs</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<div class="viewcode-block" id="get_paragraphs">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.get_paragraphs">[docs]</a>
+<span class="k">def</span> <span class="nf">get_paragraphs</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A new paragraph is considered to start at a line which follows</span>
 <span class="sd">    one or more blank lines (lines containing nothing or just spaces).</span>
 <span class="sd">    The first line of the text also starts a paragraph.&quot;&quot;&quot;</span>
@@ -683,7 +691,10 @@
     <span class="k">return</span> <span class="n">_para_ro</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="wrap"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.wrap">[docs]</a><span class="k">def</span> <span class="nf">wrap</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="wrap">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.wrap">[docs]</a>
+<span class="k">def</span> <span class="nf">wrap</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Adjust lines of text to be not longer than width. The text will be</span>
 <span class="sd">    returned unmodified if width &lt;= 0.</span>
 <span class="sd">    See textwrap.wrap() for a list of supported kwargs.</span>
@@ -697,17 +708,26 @@
     <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="indent"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.indent">[docs]</a><span class="k">def</span> <span class="nf">indent</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">indent_string</span><span class="o">=</span><span class="s2">&quot;  &quot;</span><span class="p">):</span>
+
+<div class="viewcode-block" id="indent">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.indent">[docs]</a>
+<span class="k">def</span> <span class="nf">indent</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">indent_string</span><span class="o">=</span><span class="s2">&quot;  &quot;</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Indent each line of text with the given indent string.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">indent_string</span><span class="si">}{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">splitlines</span><span class="p">())</span></div>
 
 
-<div class="viewcode-block" id="paginate"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.paginate">[docs]</a><span class="k">def</span> <span class="nf">paginate</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+
+<div class="viewcode-block" id="paginate">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.paginate">[docs]</a>
+<span class="k">def</span> <span class="nf">paginate</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Print text in pages of lines.&quot;&quot;&quot;</span>
     <span class="n">pydoc</span><span class="o">.</span><span class="n">pager</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="strsize"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.strsize">[docs]</a><span class="k">def</span> <span class="nf">strsize</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">grouping</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+
+<div class="viewcode-block" id="strsize">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.strsize">[docs]</a>
+<span class="k">def</span> <span class="nf">strsize</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">grouping</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return human representation of bytes b. A negative number of bytes</span>
 <span class="sd">    raises a value error.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -735,13 +755,19 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="strtime"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.strtime">[docs]</a><span class="k">def</span> <span class="nf">strtime</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">):</span>
+
+<div class="viewcode-block" id="strtime">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.strtime">[docs]</a>
+<span class="k">def</span> <span class="nf">strtime</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return ISO 8601 formatted time.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&quot;</span><span class="p">,</span> <span class="n">func</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">+</span> <span class="n">strtimezone</span><span class="p">()</span></div>
 
 
+
 <span class="c1"># from quodlibet</span>
-<div class="viewcode-block" id="strduration_long"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.strduration_long">[docs]</a><span class="k">def</span> <span class="nf">strduration_long</span><span class="p">(</span><span class="n">duration</span><span class="p">,</span> <span class="n">do_translate</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="strduration_long">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.strduration_long">[docs]</a>
+<span class="k">def</span> <span class="nf">strduration_long</span><span class="p">(</span><span class="n">duration</span><span class="p">,</span> <span class="n">do_translate</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Turn a time value in seconds into x hours, x minutes, etc.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">do_translate</span><span class="p">:</span>
         <span class="c1"># use global translator functions</span>
@@ -789,7 +815,10 @@
     <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">time_str</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="strtimezone"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.strtimezone">[docs]</a><span class="k">def</span> <span class="nf">strtimezone</span><span class="p">():</span>
+
+<div class="viewcode-block" id="strtimezone">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.strtimezone">[docs]</a>
+<span class="k">def</span> <span class="nf">strtimezone</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return timezone info, %z on some platforms, but not supported on all.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">daylight</span><span class="p">:</span>
@@ -799,7 +828,10 @@
     <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%+04d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="o">-</span><span class="n">zone</span> <span class="o">//</span> <span class="n">SECONDS_PER_HOUR</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="stripurl"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.stripurl">[docs]</a><span class="k">def</span> <span class="nf">stripurl</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+
+<div class="viewcode-block" id="stripurl">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.stripurl">[docs]</a>
+<span class="k">def</span> <span class="nf">stripurl</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Remove any lines from string after the first line.</span>
 <span class="sd">    Also remove whitespace at start and end from given string.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
@@ -807,7 +839,10 @@
     <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="limit"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.limit">[docs]</a><span class="k">def</span> <span class="nf">limit</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">72</span><span class="p">):</span>
+
+<div class="viewcode-block" id="limit">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.limit">[docs]</a>
+<span class="k">def</span> <span class="nf">limit</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">72</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;If the length of the string exceeds the given limit, it will be cut</span>
 <span class="sd">    off and three dots will be appended.</span>
 
@@ -825,12 +860,18 @@
     <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">...&quot;</span> <span class="o">%</span> <span class="n">s</span><span class="p">[:</span><span class="n">length</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="strline"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.strline">[docs]</a><span class="k">def</span> <span class="nf">strline</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+
+<div class="viewcode-block" id="strline">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.strline">[docs]</a>
+<span class="k">def</span> <span class="nf">strline</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Display string representation on one line.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">strip_control_chars</span><span class="p">(</span><span class="s2">&quot;`</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">n&quot;</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="format_feature_warning"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.format_feature_warning">[docs]</a><span class="k">def</span> <span class="nf">format_feature_warning</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="format_feature_warning">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.format_feature_warning">[docs]</a>
+<span class="k">def</span> <span class="nf">format_feature_warning</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Format warning that a module could not be imported and that it should</span>
 <span class="sd">    be installed for a certain URL.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -843,11 +884,15 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="strip_control_chars"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.strip_control_chars">[docs]</a><span class="k">def</span> <span class="nf">strip_control_chars</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+
+<div class="viewcode-block" id="strip_control_chars">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.strformat.html#linkcheck.strformat.strip_control_chars">[docs]</a>
+<span class="k">def</span> <span class="nf">strip_control_chars</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Remove console control characters from text.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">text</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[\x01-\x1F\x7F]&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">text</span></div>
+
 </pre></div>
 
            </div>

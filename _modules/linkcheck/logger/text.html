@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.logger.text &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.logger.text &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -618,7 +618,9 @@
 <span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">ansicolor</span><span class="p">,</span> <span class="n">strformat</span><span class="p">,</span> <span class="n">configuration</span><span class="p">,</span> <span class="n">i18n</span>
 
 
-<div class="viewcode-block" id="TextLogger"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger">[docs]</a><span class="k">class</span> <span class="nc">TextLogger</span><span class="p">(</span><span class="n">_Logger</span><span class="p">):</span>
+<div class="viewcode-block" id="TextLogger">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger">[docs]</a>
+<span class="k">class</span> <span class="nc">TextLogger</span><span class="p">(</span><span class="n">_Logger</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A text logger, colorizing the output if possible.</span>
 
@@ -667,27 +669,38 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">colordlsize</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;colordlsize&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">colorreset</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;colorreset&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="TextLogger.init_fileoutput"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.init_fileoutput">[docs]</a>    <span class="k">def</span> <span class="nf">init_fileoutput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+<div class="viewcode-block" id="TextLogger.init_fileoutput">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.init_fileoutput">[docs]</a>
+    <span class="k">def</span> <span class="nf">init_fileoutput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Colorize file output if possible.&quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">init_fileoutput</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">ansicolor</span><span class="o">.</span><span class="n">Colorizer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fd</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TextLogger.start_fileoutput"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.start_fileoutput">[docs]</a>    <span class="k">def</span> <span class="nf">start_fileoutput</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.start_fileoutput">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.start_fileoutput">[docs]</a>
+    <span class="k">def</span> <span class="nf">start_fileoutput</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Needed to make file descriptor color aware.&quot;&quot;&quot;</span>
         <span class="n">init_color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fd</span> <span class="ow">is</span> <span class="kc">None</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">start_fileoutput</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">init_color</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">ansicolor</span><span class="o">.</span><span class="n">Colorizer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fd</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TextLogger.start_output"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.start_output">[docs]</a>    <span class="k">def</span> <span class="nf">start_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.start_output">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.start_output">[docs]</a>
+    <span class="k">def</span> <span class="nf">start_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write generic start checking info.&quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">start_output</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_part</span><span class="p">(</span><span class="s1">&#39;intro&#39;</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">write_intro</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_intro"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_intro">[docs]</a>    <span class="k">def</span> <span class="nf">write_intro</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_intro">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_intro">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_intro</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Log introduction text.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="n">configuration</span><span class="o">.</span><span class="n">App</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="n">configuration</span><span class="o">.</span><span class="n">Copyright</span><span class="p">)</span>
@@ -702,7 +715,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Start checking at </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="n">strformat</span><span class="o">.</span><span class="n">strtime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">starttime</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="TextLogger.log_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.log_url">[docs]</a>    <span class="k">def</span> <span class="nf">log_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.log_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.log_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">log_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url checking info.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_part</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">):</span>
@@ -731,24 +747,36 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">write_result</span><span class="p">(</span><span class="n">url_data</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_id"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_id">[docs]</a>    <span class="k">def</span> <span class="nf">write_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_id">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_id">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write unique ID of url_data.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colorinfo</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_url">[docs]</a>    <span class="k">def</span> <span class="nf">write_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url_data.base_url.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">))</span>
         <span class="n">txt</span> <span class="o">=</span> <span class="n">strformat</span><span class="o">.</span><span class="n">strline</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">base_url</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colorurl</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_name"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_name">[docs]</a>    <span class="k">def</span> <span class="nf">write_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_name">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_name">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url_data.name.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="n">strformat</span><span class="o">.</span><span class="n">strline</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">name</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colorname</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_parent"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_parent">[docs]</a>    <span class="k">def</span> <span class="nf">write_parent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_parent">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_parent">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_parent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url_data.parent_url.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s1">&#39;parenturl&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s2">&quot;parenturl&quot;</span><span class="p">))</span>
         <span class="n">txt</span> <span class="o">=</span> <span class="n">url_data</span><span class="o">.</span><span class="n">parent_url</span>
@@ -760,48 +788,75 @@
             <span class="n">txt</span> <span class="o">+=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;, page </span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="n">url_data</span><span class="o">.</span><span class="n">page</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colorparent</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_base"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_base">[docs]</a>    <span class="k">def</span> <span class="nf">write_base</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_base">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_base">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_base</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url_data.base_ref.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s2">&quot;base&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s2">&quot;base&quot;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">base_ref</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colorbase</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_real"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_real">[docs]</a>    <span class="k">def</span> <span class="nf">write_real</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_real">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_real">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_real</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url_data.url.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s2">&quot;realurl&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s2">&quot;realurl&quot;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colorreal</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_dltime"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_dltime">[docs]</a>    <span class="k">def</span> <span class="nf">write_dltime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_dltime">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_dltime">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_dltime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url_data.dltime.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s2">&quot;dltime&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s2">&quot;dltime&quot;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.3f</span><span class="s2"> seconds&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="n">url_data</span><span class="o">.</span><span class="n">dltime</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colordltime</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_size"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_size">[docs]</a>    <span class="k">def</span> <span class="nf">write_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_size">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_size">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url_data.size.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s2">&quot;dlsize&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s2">&quot;dlsize&quot;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="n">strformat</span><span class="o">.</span><span class="n">strsize</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">size</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colordlsize</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_checktime"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_checktime">[docs]</a>    <span class="k">def</span> <span class="nf">write_checktime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_checktime">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_checktime">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_checktime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url_data.checktime.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s2">&quot;checktime&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s2">&quot;checktime&quot;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.3f</span><span class="s2"> seconds&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="n">url_data</span><span class="o">.</span><span class="n">checktime</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colordltime</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_info"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_info">[docs]</a>    <span class="k">def</span> <span class="nf">write_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_info">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_info">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url_data.info.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s2">&quot;info&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s2">&quot;info&quot;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">info</span><span class="p">,</span> <span class="mi">65</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colorinfo</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_modified"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_modified">[docs]</a>    <span class="k">def</span> <span class="nf">write_modified</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_modified">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_modified">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_modified</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url_data.modified.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s2">&quot;modified&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s2">&quot;modified&quot;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">format_modified</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">modified</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_warning"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_warning">[docs]</a>    <span class="k">def</span> <span class="nf">write_warning</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_warning">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_warning">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_warning</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url_data.warning.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s2">&quot;warning&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s2">&quot;warning&quot;</span><span class="p">))</span>
         <span class="n">warning_msgs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">tag</span><span class="si">}</span><span class="s2">] </span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">tag</span><span class="p">,</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">url_data</span><span class="o">.</span><span class="n">warnings</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">warning_msgs</span><span class="p">,</span> <span class="mi">65</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colorwarning</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_result"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_result">[docs]</a>    <span class="k">def</span> <span class="nf">write_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_result">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_result">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write url_data.result.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">url_data</span><span class="o">.</span><span class="n">valid</span><span class="p">:</span>
@@ -814,7 +869,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="n">url_data</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_outro"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_outro">[docs]</a>    <span class="k">def</span> <span class="nf">write_outro</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interrupt</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_outro">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_outro">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_outro</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interrupt</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write end of checking message.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">interrupt</span><span class="p">:</span>
@@ -877,7 +935,10 @@
             <span class="p">}</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="TextLogger.write_stats"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_stats">[docs]</a>    <span class="k">def</span> <span class="nf">write_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.write_stats">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.write_stats">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write check statistic info.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Statistics:&quot;</span><span class="p">))</span>
@@ -905,7 +966,10 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;No statistics available since no URLs were checked.&quot;</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="TextLogger.end_output"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.end_output">[docs]</a>    <span class="k">def</span> <span class="nf">end_output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TextLogger.end_output">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.text.html#linkcheck.logger.text.TextLogger.end_output">[docs]</a>
+    <span class="k">def</span> <span class="nf">end_output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write end of output info, and flush all output buffers.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">downloaded_bytes</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;downloaded_bytes&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">num_urls</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;num_urls&quot;</span><span class="p">)</span>
@@ -913,7 +977,9 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">write_stats</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_part</span><span class="p">(</span><span class="s1">&#39;outro&#39;</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">write_outro</span><span class="p">(</span><span class="n">interrupt</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;interrupt&quot;</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">close_fileoutput</span><span class="p">()</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">close_fileoutput</span><span class="p">()</span></div>
+</div>
+
 </pre></div>
 
            </div>

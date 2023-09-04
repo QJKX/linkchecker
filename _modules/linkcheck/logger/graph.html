@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.logger.graph &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.logger.graph &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -690,10 +690,13 @@
 <span class="n">_disallowed</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[^a-zA-Z0-9 &#39;#()</span><span class="si">{}</span><span class="s2">\-\[\]\.,;:\!\?]+&quot;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="quote"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.graph.html#linkcheck.logger.graph.quote">[docs]</a><span class="k">def</span> <span class="nf">quote</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="viewcode-block" id="quote">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.graph.html#linkcheck.logger.graph.quote">[docs]</a>
+<span class="k">def</span> <span class="nf">quote</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Replace disallowed characters in node or edge labels.</span>
 <span class="sd">    Also remove whitespace from beginning or end of label.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_disallowed</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span></div>
+
 </pre></div>
 
            </div>

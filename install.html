@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>Installation &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -14,11 +14,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=6c975148"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -39,7 +39,7 @@
               <img src="_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -595,7 +595,7 @@
            <div itemprop="articleBody">
              
   <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
 <p>If you are upgrading from older versions of LinkChecker you should
 also read the upgrading documentation stored in <a class="reference internal" href="upgrading.html"><span class="doc">Upgrading</span></a>.</p>
 <p>Installing a LinkChecker release uses pre-built distribution packages. Building
@@ -615,7 +615,7 @@ There may already be a system copy of e.g. chardet installed;
 installing LinkChecker in a Python <a class="reference external" href="https://docs.python.org/3/library/venv.html#creating-virtual-environments">venv</a> gives control over which packages are
 used.</p>
 <section id="setup-with-pip-x">
-<h2>Setup with pip(x)<a class="headerlink" href="#setup-with-pip-x" title="Permalink to this heading"></a></h2>
+<h2>Setup with pip(x)<a class="headerlink" href="#setup-with-pip-x" title="Link to this heading"></a></h2>
 <p><a class="reference external" href="https://pypi.org/project/pip/">pip</a> or <a class="reference external" href="https://pypi.org/project/pipx/">pipx</a> can be used to install LinkChecker on the local system.</p>
 <p>To install the latest release from PyPI:
 <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">linkchecker</span></code></p>
@@ -630,19 +630,19 @@ First, if you want application translations:
 <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">https://github.com/linkchecker/linkchecker/archive/master.tar.gz</span></code></p>
 </section>
 <section id="setup-for-windows">
-<h2>Setup for Windows<a class="headerlink" href="#setup-for-windows" title="Permalink to this heading"></a></h2>
+<h2>Setup for Windows<a class="headerlink" href="#setup-for-windows" title="Link to this heading"></a></h2>
 <p>Python from the Microsoft Store does include <a class="reference external" href="https://pypi.org/project/pip/">pip</a>, but installing
 within Windows Subsystem for Linux (WSL) is the preferred option:
 <a class="reference external" href="https://docs.microsoft.com/en-us/windows/python/beginners">https://docs.microsoft.com/en-us/windows/python/beginners</a></p>
 </section>
 <section id="setup-for-macos">
-<h2>Setup for macOS<a class="headerlink" href="#setup-for-macos" title="Permalink to this heading"></a></h2>
+<h2>Setup for macOS<a class="headerlink" href="#setup-for-macos" title="Link to this heading"></a></h2>
 <p>Python from Homebrew includes <a class="reference external" href="https://pypi.org/project/pip/">pip</a>. Otherwise <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">ensurepip</span> <span class="pre">--upgrade</span></code> can be
 used to install <a class="reference external" href="https://pypi.org/project/pip/">pip</a> (untested):
 <a class="reference external" href="https://pip.pypa.io/en/stable/installation/">https://pip.pypa.io/en/stable/installation/</a></p>
 </section>
 <section id="setup-for-gnu-linux">
-<h2>Setup for GNU/Linux<a class="headerlink" href="#setup-for-gnu-linux" title="Permalink to this heading"></a></h2>
+<h2>Setup for GNU/Linux<a class="headerlink" href="#setup-for-gnu-linux" title="Link to this heading"></a></h2>
 <p>On all major Linux distributions (Debian, Mandriva, Redhat, Suse, Ubuntu),
 the <code class="docutils literal notranslate"><span class="pre">linkchecker</span></code> package is available for installation.
 To install the latest LinkChecker <a class="reference external" href="https://pypi.org/project/pip/">pip</a> will be available, often as a package
@@ -655,7 +655,7 @@ before using pip to install LinkChecker. e.g. for Debian/Ubuntu:</p>
 <p><cite>‘pipx install –system-site-packages linkchecker`</cite></p>
 </section>
 <section id="manual-setup-for-unix-systems">
-<h2>Manual setup for Unix systems<a class="headerlink" href="#manual-setup-for-unix-systems" title="Permalink to this heading"></a></h2>
+<h2>Manual setup for Unix systems<a class="headerlink" href="#manual-setup-for-unix-systems" title="Link to this heading"></a></h2>
 <p>First, install the required software.</p>
 <ol class="arabic simple">
 <li><p>Python hatchling package from <a class="reference external" href="https://pypi.org/project/hatchling/">https://pypi.org/project/hatchling/</a></p></li>
@@ -700,11 +700,11 @@ documentation.</p>
 </div></blockquote>
 </section>
 <section id="after-installation">
-<h2>After installation<a class="headerlink" href="#after-installation" title="Permalink to this heading"></a></h2>
+<h2>After installation<a class="headerlink" href="#after-installation" title="Link to this heading"></a></h2>
 <p>LinkChecker is now installed. Have fun!</p>
 </section>
 <section id="wsgi-web-interface">
-<h2>WSGI web interface<a class="headerlink" href="#wsgi-web-interface" title="Permalink to this heading"></a></h2>
+<h2>WSGI web interface<a class="headerlink" href="#wsgi-web-interface" title="Link to this heading"></a></h2>
 <p>The included WSGI script can run LinkChecker with a nice graphical web
 interface.
 You can use and adjust the example HTML files in the lconline directory

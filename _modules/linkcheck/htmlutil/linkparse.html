@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.htmlutil.linkparse &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.htmlutil.linkparse &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -687,13 +687,18 @@
 <span class="n">c_comment_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/\*.*?\*/&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="strip_c_comments"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.strip_c_comments">[docs]</a><span class="k">def</span> <span class="nf">strip_c_comments</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<div class="viewcode-block" id="strip_c_comments">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.strip_c_comments">[docs]</a>
+<span class="k">def</span> <span class="nf">strip_c_comments</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Remove C/CSS-style comments from text. Note that this method also</span>
 <span class="sd">    deliberately removes comments inside of strings.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">c_comment_re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="is_meta_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.is_meta_url">[docs]</a><span class="k">def</span> <span class="nf">is_meta_url</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">attrs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="is_meta_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.is_meta_url">[docs]</a>
+<span class="k">def</span> <span class="nf">is_meta_url</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">attrs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if the meta attributes contain a URL.&quot;&quot;&quot;</span>
     <span class="n">res</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">if</span> <span class="n">attr</span> <span class="o">==</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span>
@@ -706,7 +711,10 @@
     <span class="k">return</span> <span class="n">res</span></div>
 
 
-<div class="viewcode-block" id="is_form_get"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.is_form_get">[docs]</a><span class="k">def</span> <span class="nf">is_form_get</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">attrs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="is_form_get">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.is_form_get">[docs]</a>
+<span class="k">def</span> <span class="nf">is_form_get</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">attrs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if this is a GET form action URL.&quot;&quot;&quot;</span>
     <span class="n">res</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">if</span> <span class="n">attr</span> <span class="o">==</span> <span class="s2">&quot;action&quot;</span><span class="p">:</span>
@@ -715,7 +723,10 @@
     <span class="k">return</span> <span class="n">res</span></div>
 
 
-<div class="viewcode-block" id="LinkFinder"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.LinkFinder">[docs]</a><span class="k">class</span> <span class="nc">LinkFinder</span><span class="p">:</span>
+
+<div class="viewcode-block" id="LinkFinder">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.LinkFinder">[docs]</a>
+<span class="k">class</span> <span class="nc">LinkFinder</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Find HTML links, and apply them to the callback function with the</span>
 <span class="sd">    format (url, lineno, column, name, codebase).&quot;&quot;&quot;</span>
 
@@ -731,7 +742,9 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">[</span><span class="n">tag</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">universal_attrs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">base_ref</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-<div class="viewcode-block" id="LinkFinder.html_element"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.LinkFinder.html_element">[docs]</a>    <span class="k">def</span> <span class="nf">html_element</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag</span><span class="p">,</span> <span class="n">attrs</span><span class="p">,</span> <span class="n">element_text</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">column</span><span class="p">):</span>
+<div class="viewcode-block" id="LinkFinder.html_element">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.LinkFinder.html_element">[docs]</a>
+    <span class="k">def</span> <span class="nf">html_element</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag</span><span class="p">,</span> <span class="n">attrs</span><span class="p">,</span> <span class="n">element_text</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">column</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Search for links and store found URLs in a list.&quot;&quot;&quot;</span>
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;LinkFinder tag </span><span class="si">%s</span><span class="s2"> attrs </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">tag</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span>
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;line </span><span class="si">%d</span><span class="s2"> col </span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">column</span><span class="p">)</span>
@@ -763,7 +776,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">parse_tag</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">column</span><span class="p">)</span>
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;LinkFinder finished tag </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="LinkFinder.get_link_name"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.LinkFinder.get_link_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_link_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag</span><span class="p">,</span> <span class="n">attrs</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="LinkFinder.get_link_name">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.LinkFinder.get_link_name">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_link_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag</span><span class="p">,</span> <span class="n">attrs</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Parse attrs for link name. Return name of link.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">tag</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span> <span class="ow">and</span> <span class="n">attr</span> <span class="o">==</span> <span class="s1">&#39;href&#39;</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="p">:</span>
@@ -776,7 +792,10 @@
             <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
         <span class="k">return</span> <span class="n">name</span></div>
 
-<div class="viewcode-block" id="LinkFinder.parse_tag"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.LinkFinder.parse_tag">[docs]</a>    <span class="k">def</span> <span class="nf">parse_tag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">column</span><span class="p">):</span>
+
+<div class="viewcode-block" id="LinkFinder.parse_tag">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.LinkFinder.parse_tag">[docs]</a>
+    <span class="k">def</span> <span class="nf">parse_tag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">column</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add given url data to url list.&quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span> <span class="nb">repr</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span> <span class="nb">repr</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span>
@@ -803,13 +822,20 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">found_url</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">column</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="LinkFinder.found_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.LinkFinder.found_url">[docs]</a>    <span class="k">def</span> <span class="nf">found_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">column</span><span class="p">):</span>
+
+<div class="viewcode-block" id="LinkFinder.found_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.LinkFinder.found_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">found_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">column</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add newly found URL to queue.&quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">or</span> <span class="n">url</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="n">lineno</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="n">column</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="n">base</span><span class="p">)</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="n">lineno</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="n">column</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="n">base</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="find_links"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.find_links">[docs]</a><span class="k">def</span> <span class="nf">find_links</span><span class="p">(</span><span class="n">soup</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">tags</span><span class="p">):</span>
+
+<div class="viewcode-block" id="find_links">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.htmlutil.linkparse.html#linkcheck.htmlutil.linkparse.find_links">[docs]</a>
+<span class="k">def</span> <span class="nf">find_links</span><span class="p">(</span><span class="n">soup</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">tags</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse into content and search for URLs to check.</span>
 <span class="sd">    When a URL is found it is passed to the supplied callback.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -822,6 +848,7 @@
             <span class="n">element</span><span class="o">.</span><span class="n">sourceline</span><span class="p">,</span>
             <span class="kc">None</span> <span class="k">if</span> <span class="n">element</span><span class="o">.</span><span class="n">sourcepos</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">element</span><span class="o">.</span><span class="n">sourcepos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
         <span class="p">)</span></div>
+
 </pre></div>
 
            </div>

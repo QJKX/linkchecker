@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.decorators &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.decorators &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -636,7 +636,9 @@
 <span class="kn">import</span> <span class="nn">time</span>
 
 
-<div class="viewcode-block" id="update_func_meta"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.update_func_meta">[docs]</a><span class="k">def</span> <span class="nf">update_func_meta</span><span class="p">(</span><span class="n">fake_func</span><span class="p">,</span> <span class="n">real_func</span><span class="p">):</span>
+<div class="viewcode-block" id="update_func_meta">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.update_func_meta">[docs]</a>
+<span class="k">def</span> <span class="nf">update_func_meta</span><span class="p">(</span><span class="n">fake_func</span><span class="p">,</span> <span class="n">real_func</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Set meta information (eg. __doc__) of fake function to that</span>
 <span class="sd">    of the real function.</span>
 <span class="sd">    @return fake_func</span>
@@ -648,7 +650,10 @@
     <span class="k">return</span> <span class="n">fake_func</span></div>
 
 
-<div class="viewcode-block" id="deprecated"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.deprecated">[docs]</a><span class="k">def</span> <span class="nf">deprecated</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+
+<div class="viewcode-block" id="deprecated">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.deprecated">[docs]</a>
+<span class="k">def</span> <span class="nf">deprecated</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A decorator which can be used to mark functions as deprecated.</span>
 <span class="sd">    It emits a warning when the function is called.&quot;&quot;&quot;</span>
 
@@ -663,7 +668,10 @@
     <span class="k">return</span> <span class="n">update_func_meta</span><span class="p">(</span><span class="n">newfunc</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="signal_handler"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.signal_handler">[docs]</a><span class="k">def</span> <span class="nf">signal_handler</span><span class="p">(</span><span class="n">signal_number</span><span class="p">):</span>
+
+<div class="viewcode-block" id="signal_handler">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.signal_handler">[docs]</a>
+<span class="k">def</span> <span class="nf">signal_handler</span><span class="p">(</span><span class="n">signal_number</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;From http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/410666</span>
 
 <span class="sd">    A decorator to set the specified function as handler for a signal.</span>
@@ -686,7 +694,10 @@
     <span class="k">return</span> <span class="n">newfunc</span></div>
 
 
-<div class="viewcode-block" id="synchronize"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.synchronize">[docs]</a><span class="k">def</span> <span class="nf">synchronize</span><span class="p">(</span><span class="n">lock</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">log_duration_secs</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+
+<div class="viewcode-block" id="synchronize">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.synchronize">[docs]</a>
+<span class="k">def</span> <span class="nf">synchronize</span><span class="p">(</span><span class="n">lock</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">log_duration_secs</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return synchronized function acquiring the given lock.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">newfunc</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -706,12 +717,18 @@
     <span class="k">return</span> <span class="n">update_func_meta</span><span class="p">(</span><span class="n">newfunc</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="synchronized"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.synchronized">[docs]</a><span class="k">def</span> <span class="nf">synchronized</span><span class="p">(</span><span class="n">lock</span><span class="p">):</span>
+
+<div class="viewcode-block" id="synchronized">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.synchronized">[docs]</a>
+<span class="k">def</span> <span class="nf">synchronized</span><span class="p">(</span><span class="n">lock</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A decorator calling a function with acquired lock.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="k">lambda</span> <span class="n">func</span><span class="p">:</span> <span class="n">synchronize</span><span class="p">(</span><span class="n">lock</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="notimplemented"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.notimplemented">[docs]</a><span class="k">def</span> <span class="nf">notimplemented</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+
+<div class="viewcode-block" id="notimplemented">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.notimplemented">[docs]</a>
+<span class="k">def</span> <span class="nf">notimplemented</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Raises a NotImplementedError if the function is called.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">newfunc</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -723,7 +740,10 @@
     <span class="k">return</span> <span class="n">update_func_meta</span><span class="p">(</span><span class="n">newfunc</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="timeit"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.timeit">[docs]</a><span class="k">def</span> <span class="nf">timeit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">log</span><span class="p">,</span> <span class="n">limit</span><span class="p">):</span>
+
+<div class="viewcode-block" id="timeit">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.timeit">[docs]</a>
+<span class="k">def</span> <span class="nf">timeit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">log</span><span class="p">,</span> <span class="n">limit</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Print execution time of the function. For quick&#39;n&#39;dirty profiling.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">newfunc</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -740,12 +760,18 @@
     <span class="k">return</span> <span class="n">update_func_meta</span><span class="p">(</span><span class="n">newfunc</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="timed"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.timed">[docs]</a><span class="k">def</span> <span class="nf">timed</span><span class="p">(</span><span class="n">log</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mf">2.0</span><span class="p">):</span>
+
+<div class="viewcode-block" id="timed">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.timed">[docs]</a>
+<span class="k">def</span> <span class="nf">timed</span><span class="p">(</span><span class="n">log</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mf">2.0</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Decorator to run a function with timing info.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="k">lambda</span> <span class="n">func</span><span class="p">:</span> <span class="n">timeit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">log</span><span class="p">,</span> <span class="n">limit</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="curried"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.curried">[docs]</a><span class="k">class</span> <span class="nc">curried</span><span class="p">:</span>
+
+<div class="viewcode-block" id="curried">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.decorators.html#linkcheck.decorators.curried">[docs]</a>
+<span class="k">class</span> <span class="nc">curried</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Decorator that returns a function that keeps returning functions</span>
 <span class="sd">    until all arguments are supplied; then the original function is</span>
 <span class="sd">    evaluated.&quot;&quot;&quot;</span>
@@ -763,6 +789,7 @@
             <span class="k">return</span> <span class="n">curried</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></div>
+
 </pre></div>
 
            </div>

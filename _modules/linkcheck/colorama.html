@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.colorama &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.colorama &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -638,14 +638,19 @@
 <span class="n">DWORD</span> <span class="o">=</span> <span class="n">c_uint32</span>
 <span class="n">TCHAR</span> <span class="o">=</span> <span class="n">c_char</span>
 
-<div class="viewcode-block" id="COORD"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.COORD">[docs]</a><span class="k">class</span> <span class="nc">COORD</span><span class="p">(</span><span class="n">Structure</span><span class="p">):</span>
+<div class="viewcode-block" id="COORD">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.COORD">[docs]</a>
+<span class="k">class</span> <span class="nc">COORD</span><span class="p">(</span><span class="n">Structure</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;struct in wincon.h&quot;&quot;&quot;</span>
     <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">SHORT</span><span class="p">),</span>
         <span class="p">(</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="n">SHORT</span><span class="p">),</span>
     <span class="p">]</span></div>
 
-<div class="viewcode-block" id="SMALL_RECT"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.SMALL_RECT">[docs]</a><span class="k">class</span>  <span class="nc">SMALL_RECT</span><span class="p">(</span><span class="n">Structure</span><span class="p">):</span>
+
+<div class="viewcode-block" id="SMALL_RECT">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.SMALL_RECT">[docs]</a>
+<span class="k">class</span>  <span class="nc">SMALL_RECT</span><span class="p">(</span><span class="n">Structure</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;struct in wincon.h.&quot;&quot;&quot;</span>
     <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">(</span><span class="s2">&quot;Left&quot;</span><span class="p">,</span> <span class="n">SHORT</span><span class="p">),</span>
@@ -654,7 +659,10 @@
         <span class="p">(</span><span class="s2">&quot;Bottom&quot;</span><span class="p">,</span> <span class="n">SHORT</span><span class="p">),</span>
     <span class="p">]</span></div>
 
-<div class="viewcode-block" id="CONSOLE_SCREEN_BUFFER_INFO"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.CONSOLE_SCREEN_BUFFER_INFO">[docs]</a><span class="k">class</span> <span class="nc">CONSOLE_SCREEN_BUFFER_INFO</span><span class="p">(</span><span class="n">Structure</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CONSOLE_SCREEN_BUFFER_INFO">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.CONSOLE_SCREEN_BUFFER_INFO">[docs]</a>
+<span class="k">class</span> <span class="nc">CONSOLE_SCREEN_BUFFER_INFO</span><span class="p">(</span><span class="n">Structure</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;struct in wincon.h.&quot;&quot;&quot;</span>
     <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">(</span><span class="s2">&quot;dwSize&quot;</span><span class="p">,</span> <span class="n">COORD</span><span class="p">),</span>
@@ -673,7 +681,10 @@
             <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dwMaximumWindowSize</span><span class="o">.</span><span class="n">Y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dwMaximumWindowSize</span><span class="o">.</span><span class="n">X</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="GetConsoleScreenBufferInfo"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.GetConsoleScreenBufferInfo">[docs]</a><span class="k">def</span> <span class="nf">GetConsoleScreenBufferInfo</span><span class="p">(</span><span class="n">stream_id</span><span class="o">=</span><span class="n">STDOUT</span><span class="p">):</span>
+
+<div class="viewcode-block" id="GetConsoleScreenBufferInfo">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.GetConsoleScreenBufferInfo">[docs]</a>
+<span class="k">def</span> <span class="nf">GetConsoleScreenBufferInfo</span><span class="p">(</span><span class="n">stream_id</span><span class="o">=</span><span class="n">STDOUT</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get console screen buffer info object.&quot;&quot;&quot;</span>
     <span class="n">handle</span> <span class="o">=</span> <span class="n">handles</span><span class="p">[</span><span class="n">stream_id</span><span class="p">]</span>
     <span class="n">csbi</span> <span class="o">=</span> <span class="n">CONSOLE_SCREEN_BUFFER_INFO</span><span class="p">()</span>
@@ -684,10 +695,14 @@
     <span class="k">return</span> <span class="n">csbi</span></div>
 
 
-<div class="viewcode-block" id="SetConsoleTextAttribute"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.SetConsoleTextAttribute">[docs]</a><span class="k">def</span> <span class="nf">SetConsoleTextAttribute</span><span class="p">(</span><span class="n">stream_id</span><span class="p">,</span> <span class="n">attrs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="SetConsoleTextAttribute">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.SetConsoleTextAttribute">[docs]</a>
+<span class="k">def</span> <span class="nf">SetConsoleTextAttribute</span><span class="p">(</span><span class="n">stream_id</span><span class="p">,</span> <span class="n">attrs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Set a console text attribute.&quot;&quot;&quot;</span>
     <span class="n">handle</span> <span class="o">=</span> <span class="n">handles</span><span class="p">[</span><span class="n">stream_id</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">windll</span><span class="o">.</span><span class="n">kernel32</span><span class="o">.</span><span class="n">SetConsoleTextAttribute</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span></div>
+
 
 
 <span class="c1"># from wincon.h</span>
@@ -709,7 +724,9 @@
 <span class="n">_default_style</span> <span class="o">=</span> <span class="kc">None</span>
 
 
-<div class="viewcode-block" id="init"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.init">[docs]</a><span class="k">def</span> <span class="nf">init</span><span class="p">():</span>
+<div class="viewcode-block" id="init">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.init">[docs]</a>
+<span class="k">def</span> <span class="nf">init</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialize foreground and background attributes.&quot;&quot;&quot;</span>
     <span class="k">global</span> <span class="n">_default_foreground</span><span class="p">,</span> <span class="n">_default_background</span><span class="p">,</span> <span class="n">_default_style</span>
     <span class="k">try</span><span class="p">:</span>
@@ -724,12 +741,18 @@
         <span class="n">_default_style</span> <span class="o">=</span> <span class="n">attrs</span> <span class="o">&amp;</span> <span class="n">BRIGHT</span></div>
 
 
-<div class="viewcode-block" id="get_attrs"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.get_attrs">[docs]</a><span class="k">def</span> <span class="nf">get_attrs</span><span class="p">(</span><span class="n">foreground</span><span class="p">,</span> <span class="n">background</span><span class="p">,</span> <span class="n">style</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_attrs">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.get_attrs">[docs]</a>
+<span class="k">def</span> <span class="nf">get_attrs</span><span class="p">(</span><span class="n">foreground</span><span class="p">,</span> <span class="n">background</span><span class="p">,</span> <span class="n">style</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get foreground and background attributes.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">foreground</span> <span class="o">+</span> <span class="p">(</span><span class="n">background</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="n">style</span></div>
 
 
-<div class="viewcode-block" id="set_console"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.set_console">[docs]</a><span class="k">def</span> <span class="nf">set_console</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="n">STDOUT</span><span class="p">,</span> <span class="n">foreground</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="set_console">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.set_console">[docs]</a>
+<span class="k">def</span> <span class="nf">set_console</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="n">STDOUT</span><span class="p">,</span> <span class="n">foreground</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Set console foreground and background attributes.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">foreground</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">foreground</span> <span class="o">=</span> <span class="n">_default_foreground</span>
@@ -741,14 +764,21 @@
     <span class="n">SetConsoleTextAttribute</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="reset_console"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.reset_console">[docs]</a><span class="k">def</span> <span class="nf">reset_console</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="n">STDOUT</span><span class="p">):</span>
+
+<div class="viewcode-block" id="reset_console">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.reset_console">[docs]</a>
+<span class="k">def</span> <span class="nf">reset_console</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="n">STDOUT</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Reset the console.&quot;&quot;&quot;</span>
     <span class="n">set_console</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="get_console_size"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.get_console_size">[docs]</a><span class="k">def</span> <span class="nf">get_console_size</span><span class="p">():</span>
+
+<div class="viewcode-block" id="get_console_size">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.colorama.html#linkcheck.colorama.get_console_size">[docs]</a>
+<span class="k">def</span> <span class="nf">get_console_size</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the console size.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">GetConsoleScreenBufferInfo</span><span class="p">()</span><span class="o">.</span><span class="n">dwSize</span></div>
+
 </pre></div>
 
            </div>

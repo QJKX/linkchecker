@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.plugins.anchorcheck &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.plugins.anchorcheck &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -619,34 +619,50 @@
 <span class="kn">from</span> <span class="nn">..htmlutil</span> <span class="kn">import</span> <span class="n">linkparse</span>
 
 
-<div class="viewcode-block" id="AnchorCheck"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.anchorcheck.html#linkcheck.plugins.anchorcheck.AnchorCheck">[docs]</a><span class="k">class</span> <span class="nc">AnchorCheck</span><span class="p">(</span><span class="n">_ContentPlugin</span><span class="p">):</span>
+<div class="viewcode-block" id="AnchorCheck">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.anchorcheck.html#linkcheck.plugins.anchorcheck.AnchorCheck">[docs]</a>
+<span class="k">class</span> <span class="nc">AnchorCheck</span><span class="p">(</span><span class="n">_ContentPlugin</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Checks validity of HTML anchors.&quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="AnchorCheck.applies_to"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.anchorcheck.html#linkcheck.plugins.anchorcheck.AnchorCheck.applies_to">[docs]</a>    <span class="k">def</span> <span class="nf">applies_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+<div class="viewcode-block" id="AnchorCheck.applies_to">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.anchorcheck.html#linkcheck.plugins.anchorcheck.AnchorCheck.applies_to">[docs]</a>
+    <span class="k">def</span> <span class="nf">applies_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check for HTML anchor existence.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">url_data</span><span class="o">.</span><span class="n">is_html</span><span class="p">()</span> <span class="ow">and</span> <span class="n">url_data</span><span class="o">.</span><span class="n">anchor</span></div>
 
-<div class="viewcode-block" id="AnchorCheck.check"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.anchorcheck.html#linkcheck.plugins.anchorcheck.AnchorCheck.check">[docs]</a>    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AnchorCheck.check">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.anchorcheck.html#linkcheck.plugins.anchorcheck.AnchorCheck.check">[docs]</a>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check content for invalid anchors.&quot;&quot;&quot;</span>
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_PLUGIN</span><span class="p">,</span> <span class="s2">&quot;checking content for invalid anchors&quot;</span><span class="p">)</span>
         <span class="n">url_anchor_check</span> <span class="o">=</span> <span class="n">UrlAnchorCheck</span><span class="p">()</span>
         <span class="n">linkparse</span><span class="o">.</span><span class="n">find_links</span><span class="p">(</span>
             <span class="n">url_data</span><span class="o">.</span><span class="n">get_soup</span><span class="p">(),</span> <span class="n">url_anchor_check</span><span class="o">.</span><span class="n">add_anchor</span><span class="p">,</span> <span class="n">linkparse</span><span class="o">.</span><span class="n">AnchorTags</span><span class="p">)</span>
-        <span class="n">url_anchor_check</span><span class="o">.</span><span class="n">check_anchor</span><span class="p">(</span><span class="n">url_data</span><span class="p">)</span></div></div>
+        <span class="n">url_anchor_check</span><span class="o">.</span><span class="n">check_anchor</span><span class="p">(</span><span class="n">url_data</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="UrlAnchorCheck"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.anchorcheck.html#linkcheck.plugins.anchorcheck.UrlAnchorCheck">[docs]</a><span class="k">class</span> <span class="nc">UrlAnchorCheck</span><span class="p">:</span>
+
+<div class="viewcode-block" id="UrlAnchorCheck">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.anchorcheck.html#linkcheck.plugins.anchorcheck.UrlAnchorCheck">[docs]</a>
+<span class="k">class</span> <span class="nc">UrlAnchorCheck</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Class to thread-safely handle collecting anchors for a URL&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># list of parsed anchors</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">anchors</span> <span class="o">=</span> <span class="p">[]</span>
 
-<div class="viewcode-block" id="UrlAnchorCheck.add_anchor"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.anchorcheck.html#linkcheck.plugins.anchorcheck.UrlAnchorCheck.add_anchor">[docs]</a>    <span class="k">def</span> <span class="nf">add_anchor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">column</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">base</span><span class="p">):</span>
+<div class="viewcode-block" id="UrlAnchorCheck.add_anchor">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.anchorcheck.html#linkcheck.plugins.anchorcheck.UrlAnchorCheck.add_anchor">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_anchor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">column</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">base</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add anchor URL.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">anchors</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">url</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">column</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">base</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="UrlAnchorCheck.check_anchor"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.anchorcheck.html#linkcheck.plugins.anchorcheck.UrlAnchorCheck.check_anchor">[docs]</a>    <span class="k">def</span> <span class="nf">check_anchor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UrlAnchorCheck.check_anchor">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.anchorcheck.html#linkcheck.plugins.anchorcheck.UrlAnchorCheck.check_anchor">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_anchor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;If URL is valid, parseable and has an anchor, check it.</span>
 <span class="sd">        A warning is logged and True is returned if the anchor is not found.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -666,7 +682,9 @@
             <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Anchor `</span><span class="si">%(name)s</span><span class="s2">&#39; (decoded: `</span><span class="si">%(decoded)s</span><span class="s2">&#39;) not found.&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="n">args</span><span class="p">,</span>
             <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Available anchors: </span><span class="si">%(anchors)s</span><span class="s2">.&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="n">args</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="n">url_data</span><span class="o">.</span><span class="n">add_warning</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div></div>
+        <span class="n">url_data</span><span class="o">.</span><span class="n">add_warning</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
 
            </div>

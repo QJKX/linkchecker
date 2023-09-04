@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.director.task &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.director.task &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -616,10 +616,14 @@
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">console</span>
 
 
-<div class="viewcode-block" id="CheckedTask"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.task.html#linkcheck.director.task.CheckedTask">[docs]</a><span class="k">class</span> <span class="nc">CheckedTask</span><span class="p">(</span><span class="n">threader</span><span class="o">.</span><span class="n">StoppableThread</span><span class="p">):</span>
+<div class="viewcode-block" id="CheckedTask">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.task.html#linkcheck.director.task.CheckedTask">[docs]</a>
+<span class="k">class</span> <span class="nc">CheckedTask</span><span class="p">(</span><span class="n">threader</span><span class="o">.</span><span class="n">StoppableThread</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Stoppable URL check task, handling error conditions while running.&quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="CheckedTask.run"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.task.html#linkcheck.director.task.CheckedTask.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CheckedTask.run">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.task.html#linkcheck.director.task.CheckedTask.run">[docs]</a>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Handle keyboard interrupt and other errors.&quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">run_checked</span><span class="p">()</span>
@@ -628,18 +632,28 @@
         <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">internal_error</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="CheckedTask.run_checked"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.task.html#linkcheck.director.task.CheckedTask.run_checked">[docs]</a>    <span class="nd">@notimplemented</span>
+
+<div class="viewcode-block" id="CheckedTask.run_checked">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.task.html#linkcheck.director.task.CheckedTask.run_checked">[docs]</a>
+    <span class="nd">@notimplemented</span>
     <span class="k">def</span> <span class="nf">run_checked</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Overload in subclass.&quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="CheckedTask.internal_error"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.task.html#linkcheck.director.task.CheckedTask.internal_error">[docs]</a>    <span class="nd">@notimplemented</span>
+
+<div class="viewcode-block" id="CheckedTask.internal_error">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.task.html#linkcheck.director.task.CheckedTask.internal_error">[docs]</a>
+    <span class="nd">@notimplemented</span>
     <span class="k">def</span> <span class="nf">internal_error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Overload in subclass.&quot;&quot;&quot;</span>
-        <span class="k">pass</span></div></div>
+        <span class="k">pass</span></div>
+</div>
 
 
-<div class="viewcode-block" id="LoggedCheckedTask"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.task.html#linkcheck.director.task.LoggedCheckedTask">[docs]</a><span class="k">class</span> <span class="nc">LoggedCheckedTask</span><span class="p">(</span><span class="n">CheckedTask</span><span class="p">):</span>
+
+<div class="viewcode-block" id="LoggedCheckedTask">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.task.html#linkcheck.director.task.LoggedCheckedTask">[docs]</a>
+<span class="k">class</span> <span class="nc">LoggedCheckedTask</span><span class="p">(</span><span class="n">CheckedTask</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;URL check task with a logger instance and internal error handling.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">logger</span><span class="p">):</span>
@@ -647,10 +661,14 @@
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logger</span>
 
-<div class="viewcode-block" id="LoggedCheckedTask.internal_error"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.task.html#linkcheck.director.task.LoggedCheckedTask.internal_error">[docs]</a>    <span class="k">def</span> <span class="nf">internal_error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="LoggedCheckedTask.internal_error">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.task.html#linkcheck.director.task.LoggedCheckedTask.internal_error">[docs]</a>
+    <span class="k">def</span> <span class="nf">internal_error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Log an internal error on console and the logger.&quot;&quot;&quot;</span>
         <span class="n">console</span><span class="o">.</span><span class="n">internal_error</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">log_internal_error</span><span class="p">()</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">log_internal_error</span><span class="p">()</span></div>
+</div>
+
 </pre></div>
 
            </div>

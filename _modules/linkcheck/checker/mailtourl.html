@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.checker.mailtourl &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.checker.mailtourl &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -624,7 +624,9 @@
 <span class="kn">from</span> <span class="nn">.const</span> <span class="kn">import</span> <span class="n">WARN_MAIL_NO_MX_HOST</span>
 
 
-<div class="viewcode-block" id="getaddresses"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.getaddresses">[docs]</a><span class="k">def</span> <span class="nf">getaddresses</span><span class="p">(</span><span class="n">addr</span><span class="p">):</span>
+<div class="viewcode-block" id="getaddresses">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.getaddresses">[docs]</a>
+<span class="k">def</span> <span class="nf">getaddresses</span><span class="p">(</span><span class="n">addr</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return list of email addresses from given field value.&quot;&quot;&quot;</span>
     <span class="n">parsed</span> <span class="o">=</span> <span class="p">[</span><span class="n">mail</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">mail</span> <span class="ow">in</span> <span class="n">AddressList</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span><span class="o">.</span><span class="n">addresslist</span> <span class="k">if</span> <span class="n">mail</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">parsed</span><span class="p">:</span>
@@ -637,23 +639,33 @@
     <span class="k">return</span> <span class="n">addresses</span></div>
 
 
-<div class="viewcode-block" id="is_quoted"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.is_quoted">[docs]</a><span class="k">def</span> <span class="nf">is_quoted</span><span class="p">(</span><span class="n">addr</span><span class="p">):</span>
+
+<div class="viewcode-block" id="is_quoted">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.is_quoted">[docs]</a>
+<span class="k">def</span> <span class="nf">is_quoted</span><span class="p">(</span><span class="n">addr</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return True iff mail address string is quoted.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">addr</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">addr</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="is_literal"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.is_literal">[docs]</a><span class="k">def</span> <span class="nf">is_literal</span><span class="p">(</span><span class="n">domain</span><span class="p">):</span>
+
+<div class="viewcode-block" id="is_literal">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.is_literal">[docs]</a>
+<span class="k">def</span> <span class="nf">is_literal</span><span class="p">(</span><span class="n">domain</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return True iff domain string is a literal.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">domain</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;[&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">domain</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;]&#39;</span><span class="p">)</span></div>
+
 
 
 <span class="n">_remove_quoted</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sub</span>
 <span class="n">_quotes</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[&quot;</span><span class="se">\\</span><span class="s1">]&#39;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="is_missing_quote"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.is_missing_quote">[docs]</a><span class="k">def</span> <span class="nf">is_missing_quote</span><span class="p">(</span><span class="n">addr</span><span class="p">):</span>
+<div class="viewcode-block" id="is_missing_quote">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.is_missing_quote">[docs]</a>
+<span class="k">def</span> <span class="nf">is_missing_quote</span><span class="p">(</span><span class="n">addr</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return True iff mail address is not correctly quoted.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_quotes</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">_remove_quoted</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">addr</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span></div>
+
 
 
 <span class="c1"># list of CGI keys to search for email addresses</span>
@@ -661,12 +673,16 @@
 <span class="n">EMAIL_CGI_SUBJECT</span> <span class="o">=</span> <span class="s2">&quot;subject&quot;</span>
 
 
-<div class="viewcode-block" id="MailtoUrl"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl">[docs]</a><span class="k">class</span> <span class="nc">MailtoUrl</span><span class="p">(</span><span class="n">urlbase</span><span class="o">.</span><span class="n">UrlBase</span><span class="p">):</span>
+<div class="viewcode-block" id="MailtoUrl">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl">[docs]</a>
+<span class="k">class</span> <span class="nc">MailtoUrl</span><span class="p">(</span><span class="n">urlbase</span><span class="o">.</span><span class="n">UrlBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Url link with mailto scheme.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="MailtoUrl.build_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl.build_url">[docs]</a>    <span class="k">def</span> <span class="nf">build_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MailtoUrl.build_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl.build_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">build_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Call super.build_url(), extract list of mail addresses from URL,</span>
 <span class="sd">        and check their syntax.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -685,7 +701,10 @@
                 <span class="o">%</span> <span class="p">{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">}</span>
             <span class="p">)</span></div>
 
-<div class="viewcode-block" id="MailtoUrl.parse_addresses"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl.parse_addresses">[docs]</a>    <span class="k">def</span> <span class="nf">parse_addresses</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="MailtoUrl.parse_addresses">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl.parse_addresses">[docs]</a>
+    <span class="k">def</span> <span class="nf">parse_addresses</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Parse all mail addresses out of the URL target. Also parses</span>
 <span class="sd">        optional CGI headers like &quot;?to=foo@example.org&quot;.</span>
 <span class="sd">        Stores parsed addresses in the self.addresses set.</span>
@@ -730,7 +749,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">getaddresses</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;addresses: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">addresses</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="MailtoUrl.check_email_syntax"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl.check_email_syntax">[docs]</a>    <span class="k">def</span> <span class="nf">check_email_syntax</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mail</span><span class="p">):</span>
+
+<div class="viewcode-block" id="MailtoUrl.check_email_syntax">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl.check_email_syntax">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_email_syntax</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mail</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check email syntax. The relevant RFCs:</span>
 
 <span class="sd">        - How to check names (memo):</span>
@@ -889,7 +911,10 @@
                 <span class="p">)</span>
                 <span class="k">return</span></div>
 
-<div class="viewcode-block" id="MailtoUrl.check_connection"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl.check_connection">[docs]</a>    <span class="k">def</span> <span class="nf">check_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="MailtoUrl.check_connection">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl.check_connection">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Verify a list of email addresses. If one address fails,</span>
 <span class="sd">        the whole list will fail.</span>
@@ -904,7 +929,10 @@
             <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">valid</span><span class="p">:</span>
                 <span class="k">break</span></div>
 
-<div class="viewcode-block" id="MailtoUrl.check_smtp_domain"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl.check_smtp_domain">[docs]</a>    <span class="k">def</span> <span class="nf">check_smtp_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mail</span><span class="p">):</span>
+
+<div class="viewcode-block" id="MailtoUrl.check_smtp_domain">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl.check_smtp_domain">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_smtp_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mail</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Check a single mail address.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -961,21 +989,29 @@
             <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="s2">&quot;MX host </span><span class="si">%r</span><span class="s2">, preference </span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">preference</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_result</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Valid mail address syntax&quot;</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="MailtoUrl.set_cache_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl.set_cache_url">[docs]</a>    <span class="k">def</span> <span class="nf">set_cache_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="MailtoUrl.set_cache_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl.set_cache_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">set_cache_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        The cache url is a comma separated list of emails.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">emails</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">addresses</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cache_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">scheme</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">emails</span><span class="si">}</span><span class="s2">&quot;</span></div>
 
-<div class="viewcode-block" id="MailtoUrl.can_get_content"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl.can_get_content">[docs]</a>    <span class="k">def</span> <span class="nf">can_get_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="MailtoUrl.can_get_content">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.checker.mailtourl.html#linkcheck.checker.mailtourl.MailtoUrl.can_get_content">[docs]</a>
+    <span class="k">def</span> <span class="nf">can_get_content</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        mailto: URLs do not have any content</span>
 
 <span class="sd">        @return: False</span>
 <span class="sd">        @rtype: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="kc">False</span></div></div>
+        <span class="k">return</span> <span class="kc">False</span></div>
+</div>
+
 </pre></div>
 
            </div>

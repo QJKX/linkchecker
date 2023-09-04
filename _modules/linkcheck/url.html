@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.url &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.url &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -669,7 +669,9 @@
 
 
 <span class="c1"># snatched form urlparse.py</span>
-<div class="viewcode-block" id="splitparams"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.splitparams">[docs]</a><span class="k">def</span> <span class="nf">splitparams</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<div class="viewcode-block" id="splitparams">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.splitparams">[docs]</a>
+<span class="k">def</span> <span class="nf">splitparams</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Split off parameter part from path.</span>
 <span class="sd">    Returns tuple (path-without-param, param)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -682,7 +684,10 @@
     <span class="k">return</span> <span class="n">path</span><span class="p">[:</span><span class="n">i</span><span class="p">],</span> <span class="n">path</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span></div>
 
 
-<div class="viewcode-block" id="is_numeric_port"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.is_numeric_port">[docs]</a><span class="k">def</span> <span class="nf">is_numeric_port</span><span class="p">(</span><span class="n">portstr</span><span class="p">):</span>
+
+<div class="viewcode-block" id="is_numeric_port">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.is_numeric_port">[docs]</a>
+<span class="k">def</span> <span class="nf">is_numeric_port</span><span class="p">(</span><span class="n">portstr</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;return: integer port (== True) iff portstr is a valid port number,</span>
 <span class="sd">           False otherwise</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -694,7 +699,10 @@
     <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<div class="viewcode-block" id="parse_qsl"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.parse_qsl">[docs]</a><span class="k">def</span> <span class="nf">parse_qsl</span><span class="p">(</span><span class="n">qs</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="n">keep_blank_values</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">strict_parsing</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+
+<div class="viewcode-block" id="parse_qsl">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.parse_qsl">[docs]</a>
+<span class="k">def</span> <span class="nf">parse_qsl</span><span class="p">(</span><span class="n">qs</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="n">keep_blank_values</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">strict_parsing</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse a query given as a string argument.</span>
 
 <span class="sd">    @param qs: URL-encoded query string to be parsed</span>
@@ -744,7 +752,10 @@
     <span class="k">return</span> <span class="n">r</span></div>
 
 
-<div class="viewcode-block" id="idna_encode"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.idna_encode">[docs]</a><span class="k">def</span> <span class="nf">idna_encode</span><span class="p">(</span><span class="n">host</span><span class="p">):</span>
+
+<div class="viewcode-block" id="idna_encode">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.idna_encode">[docs]</a>
+<span class="k">def</span> <span class="nf">idna_encode</span><span class="p">(</span><span class="n">host</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Encode hostname as internationalized domain name (IDN) according</span>
 <span class="sd">    to RFC 3490.</span>
 <span class="sd">    @raise: UnicodeError if hostname is not properly IDN encoded.</span>
@@ -759,7 +770,10 @@
     <span class="k">return</span> <span class="n">host</span><span class="p">,</span> <span class="kc">False</span></div>
 
 
-<div class="viewcode-block" id="split_netloc"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.split_netloc">[docs]</a><span class="k">def</span> <span class="nf">split_netloc</span><span class="p">(</span><span class="n">netloc</span><span class="p">):</span>
+
+<div class="viewcode-block" id="split_netloc">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.split_netloc">[docs]</a>
+<span class="k">def</span> <span class="nf">split_netloc</span><span class="p">(</span><span class="n">netloc</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Separate userinfo from host in urllib.parse.SplitResult.netloc.</span>
 <span class="sd">    Originated as urllib.parse._splituser().</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -767,7 +781,10 @@
     <span class="k">return</span> <span class="p">(</span><span class="n">userinfo</span> <span class="k">if</span> <span class="n">delim</span> <span class="k">else</span> <span class="kc">None</span><span class="p">),</span> <span class="n">hostport</span></div>
 
 
-<div class="viewcode-block" id="url_fix_host"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.url_fix_host">[docs]</a><span class="k">def</span> <span class="nf">url_fix_host</span><span class="p">(</span><span class="n">urlparts</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span>
+
+<div class="viewcode-block" id="url_fix_host">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.url_fix_host">[docs]</a>
+<span class="k">def</span> <span class="nf">url_fix_host</span><span class="p">(</span><span class="n">urlparts</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Unquote and fix hostname. Returns is_idn.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">urlparts</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
         <span class="n">urlparts</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">unquote</span><span class="p">(</span><span class="n">urlparts</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
@@ -818,11 +835,15 @@
     <span class="k">return</span> <span class="n">is_idn</span></div>
 
 
-<div class="viewcode-block" id="url_fix_mailto_urlsplit"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.url_fix_mailto_urlsplit">[docs]</a><span class="k">def</span> <span class="nf">url_fix_mailto_urlsplit</span><span class="p">(</span><span class="n">urlparts</span><span class="p">):</span>
+
+<div class="viewcode-block" id="url_fix_mailto_urlsplit">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.url_fix_mailto_urlsplit">[docs]</a>
+<span class="k">def</span> <span class="nf">url_fix_mailto_urlsplit</span><span class="p">(</span><span class="n">urlparts</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Split query part of mailto url if found.&quot;&quot;&quot;</span>
     <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;?&quot;</span>
     <span class="k">if</span> <span class="n">sep</span> <span class="ow">in</span> <span class="n">urlparts</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
         <span class="n">urlparts</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">urlparts</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">urlparts</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></div>
+
 
 
 <span class="c1"># wayback urls include in the path http[s]://. By default the</span>
@@ -832,11 +853,16 @@
 <span class="n">wayback_regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(https?)(\%3A/|:/)&#39;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="url_fix_wayback_query"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.url_fix_wayback_query">[docs]</a><span class="k">def</span> <span class="nf">url_fix_wayback_query</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<div class="viewcode-block" id="url_fix_wayback_query">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.url_fix_wayback_query">[docs]</a>
+<span class="k">def</span> <span class="nf">url_fix_wayback_query</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">wayback_regex</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\1://&#39;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="url_parse_query"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.url_parse_query">[docs]</a><span class="k">def</span> <span class="nf">url_parse_query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span>
+
+<div class="viewcode-block" id="url_parse_query">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.url_parse_query">[docs]</a>
+<span class="k">def</span> <span class="nf">url_parse_query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse and re-join the given CGI query.&quot;&quot;&quot;</span>
     <span class="c1"># if ? is in the query, split it off, seen at msdn.microsoft.com</span>
     <span class="n">append</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
@@ -857,7 +883,10 @@
     <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">+</span> <span class="n">append</span></div>
 
 
-<div class="viewcode-block" id="urlunsplit"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.urlunsplit">[docs]</a><span class="k">def</span> <span class="nf">urlunsplit</span><span class="p">(</span><span class="n">urlparts</span><span class="p">):</span>
+
+<div class="viewcode-block" id="urlunsplit">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.urlunsplit">[docs]</a>
+<span class="k">def</span> <span class="nf">urlunsplit</span><span class="p">(</span><span class="n">urlparts</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Same as urllib.parse.urlunsplit but with extra UNC path handling</span>
 <span class="sd">    for Windows OS.&quot;&quot;&quot;</span>
     <span class="n">res</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlunsplit</span><span class="p">(</span><span class="n">urlparts</span><span class="p">)</span>
@@ -870,7 +899,10 @@
     <span class="k">return</span> <span class="n">res</span></div>
 
 
-<div class="viewcode-block" id="url_norm"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.url_norm">[docs]</a><span class="k">def</span> <span class="nf">url_norm</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span>
+
+<div class="viewcode-block" id="url_norm">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.url_norm">[docs]</a>
+<span class="k">def</span> <span class="nf">url_norm</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Normalize the given URL which must be quoted. Supports unicode</span>
 <span class="sd">    hostnames (IDNA encoding) according to RFC 3490.</span>
 
@@ -915,6 +947,7 @@
     <span class="k">return</span> <span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">is_idn</span><span class="p">)</span></div>
 
 
+
 <span class="n">_slashes_ro</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/+&quot;</span><span class="p">)</span>
 <span class="n">_thisdir_ro</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^\./&quot;</span><span class="p">)</span>
 <span class="n">_samedir_ro</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/\./|/\.$&quot;</span><span class="p">)</span>
@@ -922,7 +955,9 @@
 <span class="n">_relparentdir_ro</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^(?!\.\./)[^/]+/\.\.(/|$)&quot;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="collapse_segments"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.collapse_segments">[docs]</a><span class="k">def</span> <span class="nf">collapse_segments</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<div class="viewcode-block" id="collapse_segments">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.collapse_segments">[docs]</a>
+<span class="k">def</span> <span class="nf">collapse_segments</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Remove all redundant segments from the given URL path.</span>
 <span class="sd">    Precondition: path is an unquoted url path&quot;&quot;&quot;</span>
     <span class="c1"># replace backslashes</span>
@@ -955,10 +990,13 @@
     <span class="k">return</span> <span class="n">path</span></div>
 
 
+
 <span class="n">url_is_absolute</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^[-\.a-z]+:&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">I</span><span class="p">)</span><span class="o">.</span><span class="n">match</span>
 
 
-<div class="viewcode-block" id="url_quote"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.url_quote">[docs]</a><span class="k">def</span> <span class="nf">url_quote</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span>
+<div class="viewcode-block" id="url_quote">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.url_quote">[docs]</a>
+<span class="k">def</span> <span class="nf">url_quote</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Quote given URL.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">url_is_absolute</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">document_quote</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
@@ -982,7 +1020,10 @@
     <span class="k">return</span> <span class="n">urlunsplit</span><span class="p">(</span><span class="n">urlparts</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="document_quote"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.document_quote">[docs]</a><span class="k">def</span> <span class="nf">document_quote</span><span class="p">(</span><span class="n">document</span><span class="p">):</span>
+
+<div class="viewcode-block" id="document_quote">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.document_quote">[docs]</a>
+<span class="k">def</span> <span class="nf">document_quote</span><span class="p">(</span><span class="n">document</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Quote given document.&quot;&quot;&quot;</span>
     <span class="n">doc</span><span class="p">,</span> <span class="n">delim</span><span class="p">,</span> <span class="n">query</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s1">&#39;?&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">delim</span><span class="p">:</span>
@@ -994,6 +1035,7 @@
     <span class="k">return</span> <span class="n">doc</span></div>
 
 
+
 <span class="n">_nopathquote_chars</span> <span class="o">=</span> <span class="s2">&quot;-;/=,~*+()@!&quot;</span>
 <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;nt&#39;</span><span class="p">:</span>
     <span class="n">_nopathquote_chars</span> <span class="o">+=</span> <span class="s2">&quot;|&quot;</span>
@@ -1001,7 +1043,9 @@
 <span class="n">_safe_url_chars_ro</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">fr</span><span class="s2">&quot;^[</span><span class="si">{</span><span class="n">_safe_url_chars</span><span class="si">}</span><span class="s2">]*$&quot;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="url_needs_quoting"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.url_needs_quoting">[docs]</a><span class="k">def</span> <span class="nf">url_needs_quoting</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<div class="viewcode-block" id="url_needs_quoting">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.url_needs_quoting">[docs]</a>
+<span class="k">def</span> <span class="nf">url_needs_quoting</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if url needs percent quoting. Note that the method does</span>
 <span class="sd">    only check basic character sets, and not any other syntax.</span>
 <span class="sd">    The URL might still be syntactically incorrect even when</span>
@@ -1014,7 +1058,10 @@
     <span class="k">return</span> <span class="ow">not</span> <span class="n">_safe_url_chars_ro</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">url</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="splitport"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.splitport">[docs]</a><span class="k">def</span> <span class="nf">splitport</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+
+<div class="viewcode-block" id="splitport">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.url.html#linkcheck.url.splitport">[docs]</a>
+<span class="k">def</span> <span class="nf">splitport</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Split optional port number from host. If host has no port number,</span>
 <span class="sd">    the given default port is returned.</span>
 
@@ -1038,6 +1085,7 @@
             <span class="c1"># For an invalid non-empty port leave the host name as is</span>
             <span class="k">pass</span>
     <span class="k">return</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span></div>
+
 </pre></div>
 
            </div>

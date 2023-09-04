@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.director.checker &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.director.checker &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -622,7 +622,9 @@
 <span class="n">QUEUE_POLL_INTERVALL_SECS</span> <span class="o">=</span> <span class="mf">1.0</span>
 
 
-<div class="viewcode-block" id="check_urls"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.checker.html#linkcheck.director.checker.check_urls">[docs]</a><span class="k">def</span> <span class="nf">check_urls</span><span class="p">(</span><span class="n">urlqueue</span><span class="p">,</span> <span class="n">logger</span><span class="p">):</span>
+<div class="viewcode-block" id="check_urls">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.checker.html#linkcheck.director.checker.check_urls">[docs]</a>
+<span class="k">def</span> <span class="nf">check_urls</span><span class="p">(</span><span class="n">urlqueue</span><span class="p">,</span> <span class="n">logger</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check URLs without threading.&quot;&quot;&quot;</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">urlqueue</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
         <span class="n">url_data</span> <span class="o">=</span> <span class="n">urlqueue</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
@@ -632,7 +634,10 @@
             <span class="n">urlqueue</span><span class="o">.</span><span class="n">task_done</span><span class="p">(</span><span class="n">url_data</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="check_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.checker.html#linkcheck.director.checker.check_url">[docs]</a><span class="k">def</span> <span class="nf">check_url</span><span class="p">(</span><span class="n">url_data</span><span class="p">,</span> <span class="n">logger</span><span class="p">):</span>
+
+<div class="viewcode-block" id="check_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.checker.html#linkcheck.director.checker.check_url">[docs]</a>
+<span class="k">def</span> <span class="nf">check_url</span><span class="p">(</span><span class="n">url_data</span><span class="p">,</span> <span class="n">logger</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check a single URL with logging.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">url_data</span><span class="o">.</span><span class="n">has_result</span><span class="p">:</span>
         <span class="n">logger</span><span class="o">.</span><span class="n">log_url</span><span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">to_wire</span><span class="p">())</span>
@@ -674,7 +679,10 @@
             <span class="n">logger</span><span class="o">.</span><span class="n">log_url</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Checker"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.checker.html#linkcheck.director.checker.Checker">[docs]</a><span class="k">class</span> <span class="nc">Checker</span><span class="p">(</span><span class="n">task</span><span class="o">.</span><span class="n">LoggedCheckedTask</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Checker">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.checker.html#linkcheck.director.checker.Checker">[docs]</a>
+<span class="k">class</span> <span class="nc">Checker</span><span class="p">(</span><span class="n">task</span><span class="o">.</span><span class="n">LoggedCheckedTask</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;URL check thread.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urlqueue</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="n">add_request_session</span><span class="p">):</span>
@@ -684,14 +692,19 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">origname</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_request_session</span> <span class="o">=</span> <span class="n">add_request_session</span>
 
-<div class="viewcode-block" id="Checker.run_checked"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.checker.html#linkcheck.director.checker.Checker.run_checked">[docs]</a>    <span class="k">def</span> <span class="nf">run_checked</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Checker.run_checked">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.checker.html#linkcheck.director.checker.Checker.run_checked">[docs]</a>
+    <span class="k">def</span> <span class="nf">run_checked</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check URLs in the queue.&quot;&quot;&quot;</span>
         <span class="c1"># construct per-thread HTTP/S requests session</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_request_session</span><span class="p">()</span>
         <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">stopped</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">check_url</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Checker.check_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.checker.html#linkcheck.director.checker.Checker.check_url">[docs]</a>    <span class="k">def</span> <span class="nf">check_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Checker.check_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.checker.html#linkcheck.director.checker.Checker.check_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Try to get URL data from queue and check it.&quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">url_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">urlqueue</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">QUEUE_POLL_INTERVALL_SECS</span><span class="p">)</span>
@@ -706,10 +719,15 @@
         <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">internal_error</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Checker.check_url_data"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.checker.html#linkcheck.director.checker.Checker.check_url_data">[docs]</a>    <span class="k">def</span> <span class="nf">check_url_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Checker.check_url_data">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.director.checker.html#linkcheck.director.checker.Checker.check_url_data">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_url_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check one URL data instance.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;CheckThread-</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">url</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-        <span class="n">check_url</span><span class="p">(</span><span class="n">url_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">)</span></div></div>
+        <span class="n">check_url</span><span class="p">(</span><span class="n">url_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
 
            </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.cache.robots_txt &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.cache.robots_txt &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -625,7 +625,9 @@
 <span class="n">robot_lock</span> <span class="o">=</span> <span class="n">get_lock</span><span class="p">(</span><span class="s2">&quot;robots.txt_robot_lock&quot;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="RobotsTxt"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.cache.robots_txt.html#linkcheck.cache.robots_txt.RobotsTxt">[docs]</a><span class="k">class</span> <span class="nc">RobotsTxt</span><span class="p">:</span>
+<div class="viewcode-block" id="RobotsTxt">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.cache.robots_txt.html#linkcheck.cache.robots_txt.RobotsTxt">[docs]</a>
+<span class="k">class</span> <span class="nc">RobotsTxt</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Thread-safe cache of downloaded robots.txt files.</span>
 <span class="sd">    format: {cache key (string) -&gt; robots.txt content (RobotFileParser)}</span>
@@ -639,11 +641,14 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">roboturl_locks</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">useragent</span> <span class="o">=</span> <span class="n">useragent</span>
 
-<div class="viewcode-block" id="RobotsTxt.allows_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.cache.robots_txt.html#linkcheck.cache.robots_txt.RobotsTxt.allows_url">[docs]</a>    <span class="k">def</span> <span class="nf">allows_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="RobotsTxt.allows_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.cache.robots_txt.html#linkcheck.cache.robots_txt.RobotsTxt.allows_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">allows_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Ask robots.txt allowance.&quot;&quot;&quot;</span>
         <span class="n">roboturl</span> <span class="o">=</span> <span class="n">url_data</span><span class="o">.</span><span class="n">get_robots_txt_url</span><span class="p">()</span>
         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_lock</span><span class="p">(</span><span class="n">roboturl</span><span class="p">):</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allows_url</span><span class="p">(</span><span class="n">url_data</span><span class="p">,</span> <span class="n">roboturl</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span></div>
+
 
     <span class="k">def</span> <span class="nf">_allows_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">,</span> <span class="n">roboturl</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Ask robots.txt allowance. Assumes only single thread per robots.txt</span>
@@ -663,7 +668,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">add_sitemap_urls</span><span class="p">(</span><span class="n">rp</span><span class="p">,</span> <span class="n">url_data</span><span class="p">,</span> <span class="n">roboturl</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">rp</span><span class="o">.</span><span class="n">can_fetch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">useragent</span><span class="p">,</span> <span class="n">url_data</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
 
-<div class="viewcode-block" id="RobotsTxt.add_sitemap_urls"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.cache.robots_txt.html#linkcheck.cache.robots_txt.RobotsTxt.add_sitemap_urls">[docs]</a>    <span class="k">def</span> <span class="nf">add_sitemap_urls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rp</span><span class="p">,</span> <span class="n">url_data</span><span class="p">,</span> <span class="n">roboturl</span><span class="p">):</span>
+<div class="viewcode-block" id="RobotsTxt.add_sitemap_urls">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.cache.robots_txt.html#linkcheck.cache.robots_txt.RobotsTxt.add_sitemap_urls">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_sitemap_urls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rp</span><span class="p">,</span> <span class="n">url_data</span><span class="p">,</span> <span class="n">roboturl</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add sitemap URLs to queue.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">rp</span><span class="o">.</span><span class="n">sitemap_urls</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">url_data</span><span class="o">.</span><span class="n">allows_simple_recursion</span><span class="p">():</span>
             <span class="k">return</span>
@@ -674,10 +681,15 @@
                 <span class="k">continue</span>
             <span class="n">url_data</span><span class="o">.</span><span class="n">add_url</span><span class="p">(</span><span class="n">sitemap_url</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="n">line</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">roboturl</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="RobotsTxt.get_lock"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.cache.robots_txt.html#linkcheck.cache.robots_txt.RobotsTxt.get_lock">[docs]</a>    <span class="nd">@synchronized</span><span class="p">(</span><span class="n">robot_lock</span><span class="p">)</span>
+
+<div class="viewcode-block" id="RobotsTxt.get_lock">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.cache.robots_txt.html#linkcheck.cache.robots_txt.RobotsTxt.get_lock">[docs]</a>
+    <span class="nd">@synchronized</span><span class="p">(</span><span class="n">robot_lock</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">get_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">roboturl</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return lock for robots.txt url.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">roboturl_locks</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">roboturl</span><span class="p">,</span> <span class="n">get_lock</span><span class="p">(</span><span class="n">roboturl</span><span class="p">))</span></div></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">roboturl_locks</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">roboturl</span><span class="p">,</span> <span class="n">get_lock</span><span class="p">(</span><span class="n">roboturl</span><span class="p">))</span></div>
+</div>
+
 </pre></div>
 
            </div>

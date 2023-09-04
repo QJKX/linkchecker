@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.loader &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.loader &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -609,7 +609,9 @@
 <span class="kn">from</span> <span class="nn">.fileutil</span> <span class="kn">import</span> <span class="n">is_writable_by_others</span>
 
 
-<div class="viewcode-block" id="check_writable_by_others"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.loader.html#linkcheck.loader.check_writable_by_others">[docs]</a><span class="k">def</span> <span class="nf">check_writable_by_others</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<div class="viewcode-block" id="check_writable_by_others">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.loader.html#linkcheck.loader.check_writable_by_others">[docs]</a>
+<span class="k">def</span> <span class="nf">check_writable_by_others</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if file is writable by others on POSIX systems.</span>
 <span class="sd">    On non-POSIX systems the check is ignored.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">!=</span> <span class="s1">&#39;posix&#39;</span><span class="p">:</span>
@@ -618,7 +620,10 @@
     <span class="k">return</span> <span class="n">is_writable_by_others</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="get_package_modules"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.loader.html#linkcheck.loader.get_package_modules">[docs]</a><span class="k">def</span> <span class="nf">get_package_modules</span><span class="p">(</span><span class="n">packagename</span><span class="p">,</span> <span class="n">packagepath</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_package_modules">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.loader.html#linkcheck.loader.get_package_modules">[docs]</a>
+<span class="k">def</span> <span class="nf">get_package_modules</span><span class="p">(</span><span class="n">packagename</span><span class="p">,</span> <span class="n">packagepath</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Find all valid modules in the given package which must be a folder</span>
 <span class="sd">    in the same directory as this loader.py module. A valid module has</span>
 <span class="sd">    a .py extension, and is importable.</span>
@@ -635,7 +640,10 @@
                 <span class="nb">print</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;WARN: could not load module </span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">mod</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">msg</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="get_folder_modules"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.loader.html#linkcheck.loader.get_folder_modules">[docs]</a><span class="k">def</span> <span class="nf">get_folder_modules</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">parentpackage</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_folder_modules">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.loader.html#linkcheck.loader.get_folder_modules">[docs]</a>
+<span class="k">def</span> <span class="nf">get_folder_modules</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">parentpackage</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">check_writable_by_others</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERROR: refuse to load modules from world writable folder </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">folder</span><span class="p">)</span>
@@ -652,7 +660,10 @@
             <span class="nb">print</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;WARN: could not load file </span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">fullname</span><span class="p">,</span> <span class="n">msg</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="get_importable_files"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.loader.html#linkcheck.loader.get_importable_files">[docs]</a><span class="k">def</span> <span class="nf">get_importable_files</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_importable_files">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.loader.html#linkcheck.loader.get_importable_files">[docs]</a>
+<span class="k">def</span> <span class="nf">get_importable_files</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Find all module files in the given folder that end with &#39;.py&#39; and</span>
 <span class="sd">    don&#39;t start with an underscore.</span>
 
@@ -671,7 +682,10 @@
                 <span class="k">yield</span> <span class="n">fname</span></div>
 
 
-<div class="viewcode-block" id="get_plugins"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.loader.html#linkcheck.loader.get_plugins">[docs]</a><span class="k">def</span> <span class="nf">get_plugins</span><span class="p">(</span><span class="n">modules</span><span class="p">,</span> <span class="n">classes</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_plugins">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.loader.html#linkcheck.loader.get_plugins">[docs]</a>
+<span class="k">def</span> <span class="nf">get_plugins</span><span class="p">(</span><span class="n">modules</span><span class="p">,</span> <span class="n">classes</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Find all given (sub-)classes in all modules.</span>
 
 <span class="sd">    @param modules: the modules to search</span>
@@ -683,7 +697,10 @@
         <span class="k">yield from</span> <span class="n">get_module_plugins</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">classes</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="get_module_plugins"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.loader.html#linkcheck.loader.get_module_plugins">[docs]</a><span class="k">def</span> <span class="nf">get_module_plugins</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">classes</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_module_plugins">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.loader.html#linkcheck.loader.get_module_plugins">[docs]</a>
+<span class="k">def</span> <span class="nf">get_module_plugins</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">classes</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return all subclasses of a class in the module.</span>
 <span class="sd">    If the module defines __all__, only those entries will be searched,</span>
 <span class="sd">    otherwise all objects not starting with &#39;_&#39; will be searched.</span>
@@ -703,6 +720,7 @@
                     <span class="k">yield</span> <span class="n">obj</span>
         <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
             <span class="k">continue</span></div>
+
 </pre></div>
 
            </div>

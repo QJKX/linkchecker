@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.logger.dot &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.logger.dot &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -616,7 +616,9 @@
 <span class="kn">from</span> <span class="nn">.graph</span> <span class="kn">import</span> <span class="n">_GraphLogger</span>
 
 
-<div class="viewcode-block" id="DOTLogger"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.dot.html#linkcheck.logger.dot.DOTLogger">[docs]</a><span class="k">class</span> <span class="nc">DOTLogger</span><span class="p">(</span><span class="n">_GraphLogger</span><span class="p">):</span>
+<div class="viewcode-block" id="DOTLogger">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.dot.html#linkcheck.logger.dot.DOTLogger">[docs]</a>
+<span class="k">class</span> <span class="nc">DOTLogger</span><span class="p">(</span><span class="n">_GraphLogger</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generates .dot sitemap graphs. Use graphviz to see the sitemap graph.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -628,7 +630,9 @@
         <span class="s2">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;ascii&quot;</span><span class="p">,</span>
     <span class="p">}</span>
 
-<div class="viewcode-block" id="DOTLogger.start_output"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.dot.html#linkcheck.logger.dot.DOTLogger.start_output">[docs]</a>    <span class="k">def</span> <span class="nf">start_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DOTLogger.start_output">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.dot.html#linkcheck.logger.dot.DOTLogger.start_output">[docs]</a>
+    <span class="k">def</span> <span class="nf">start_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write start of checking info as DOT comment.&quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">start_output</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_part</span><span class="p">(</span><span class="s2">&quot;intro&quot;</span><span class="p">):</span>
@@ -640,12 +644,18 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="s2">&quot;  ];&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="DOTLogger.comment"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.dot.html#linkcheck.logger.dot.DOTLogger.comment">[docs]</a>    <span class="k">def</span> <span class="nf">comment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DOTLogger.comment">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.dot.html#linkcheck.logger.dot.DOTLogger.comment">[docs]</a>
+    <span class="k">def</span> <span class="nf">comment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write DOT comment.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;// &quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DOTLogger.log_url"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.dot.html#linkcheck.logger.dot.DOTLogger.log_url">[docs]</a>    <span class="k">def</span> <span class="nf">log_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DOTLogger.log_url">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.dot.html#linkcheck.logger.dot.DOTLogger.log_url">[docs]</a>
+    <span class="k">def</span> <span class="nf">log_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write one node.&quot;&quot;&quot;</span>
         <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_node</span><span class="p">(</span><span class="n">url_data</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">node</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -662,7 +672,10 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="s2">&quot;    extern=</span><span class="si">%d</span><span class="s2">,&quot;</span> <span class="o">%</span> <span class="n">node</span><span class="p">[</span><span class="s2">&quot;extern&quot;</span><span class="p">])</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="s2">&quot;  ];&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DOTLogger.write_edge"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.dot.html#linkcheck.logger.dot.DOTLogger.write_edge">[docs]</a>    <span class="k">def</span> <span class="nf">write_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DOTLogger.write_edge">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.dot.html#linkcheck.logger.dot.DOTLogger.write_edge">[docs]</a>
+    <span class="k">def</span> <span class="nf">write_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write edge from parent to node.&quot;&quot;&quot;</span>
         <span class="n">source</span> <span class="o">=</span> <span class="n">dotquote</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">node</span><span class="p">[</span><span class="s2">&quot;parent_url&quot;</span><span class="p">]][</span><span class="s2">&quot;label&quot;</span><span class="p">])</span>
         <span class="n">target</span> <span class="o">=</span> <span class="n">dotquote</span><span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">])</span>
@@ -672,14 +685,22 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;    valid=</span><span class="si">{</span><span class="n">node</span><span class="p">[</span><span class="s2">&quot;valid&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">,&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="s2">&quot;  ];&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DOTLogger.end_graph"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.dot.html#linkcheck.logger.dot.DOTLogger.end_graph">[docs]</a>    <span class="k">def</span> <span class="nf">end_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DOTLogger.end_graph">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.dot.html#linkcheck.logger.dot.DOTLogger.end_graph">[docs]</a>
+    <span class="k">def</span> <span class="nf">end_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write end of graph marker.&quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="s2">&quot;}&quot;</span><span class="p">)</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">writeln</span><span class="p">(</span><span class="s2">&quot;}&quot;</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="dotquote"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.dot.html#linkcheck.logger.dot.dotquote">[docs]</a><span class="k">def</span> <span class="nf">dotquote</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+
+<div class="viewcode-block" id="dotquote">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.logger.dot.html#linkcheck.logger.dot.dotquote">[docs]</a>
+<span class="k">def</span> <span class="nf">dotquote</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Quote string for usage in DOT output format.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&quot;&#39;</span><span class="p">)</span></div>
+
 </pre></div>
 
            </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.plugins.syntaxchecks &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.plugins.syntaxchecks &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -621,7 +621,9 @@
 <span class="n">_w3_time_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
 
 
-<div class="viewcode-block" id="W3Timer"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.W3Timer">[docs]</a><span class="k">class</span> <span class="nc">W3Timer</span><span class="p">:</span>
+<div class="viewcode-block" id="W3Timer">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.W3Timer">[docs]</a>
+<span class="k">class</span> <span class="nc">W3Timer</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Ensure W3C apis are not hammered.&quot;&quot;&quot;</span>
 
     <span class="c1"># every X seconds</span>
@@ -631,15 +633,21 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Remember last API call.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_w3_call</span> <span class="o">=</span> <span class="mi">0</span>
 
-<div class="viewcode-block" id="W3Timer.check_w3_time"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.W3Timer.check_w3_time">[docs]</a>    <span class="nd">@synchronized</span><span class="p">(</span><span class="n">_w3_time_lock</span><span class="p">)</span>
+<div class="viewcode-block" id="W3Timer.check_w3_time">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.W3Timer.check_w3_time">[docs]</a>
+    <span class="nd">@synchronized</span><span class="p">(</span><span class="n">_w3_time_lock</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">check_w3_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Make sure the W3C validators are at most called once a second.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_w3_call</span> <span class="o">&lt;</span> <span class="n">W3Timer</span><span class="o">.</span><span class="n">SleepSeconds</span><span class="p">:</span>
             <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">W3Timer</span><span class="o">.</span><span class="n">SleepSeconds</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">last_w3_call</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_w3_call</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span></div>
+</div>
 
 
-<div class="viewcode-block" id="HtmlSyntaxCheck"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.HtmlSyntaxCheck">[docs]</a><span class="k">class</span> <span class="nc">HtmlSyntaxCheck</span><span class="p">(</span><span class="n">_ContentPlugin</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HtmlSyntaxCheck">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.HtmlSyntaxCheck">[docs]</a>
+<span class="k">class</span> <span class="nc">HtmlSyntaxCheck</span><span class="p">(</span><span class="n">_ContentPlugin</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check the syntax of HTML pages with the online W3C HTML validator.</span>
 <span class="sd">    See https://validator.w3.org/docs/api.html.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -652,13 +660,18 @@
             <span class="n">LOG_PLUGIN</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;HTML syntax check plugin is broken. Fixes welcome.&quot;</span><span class="p">)</span>
         <span class="p">)</span>
 
-<div class="viewcode-block" id="HtmlSyntaxCheck.applies_to"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.HtmlSyntaxCheck.applies_to">[docs]</a>    <span class="k">def</span> <span class="nf">applies_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+<div class="viewcode-block" id="HtmlSyntaxCheck.applies_to">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.HtmlSyntaxCheck.applies_to">[docs]</a>
+    <span class="k">def</span> <span class="nf">applies_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check for HTML, extern and session.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="kc">False</span>  <span class="c1"># XXX Plugin disabled</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">is_html</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">url_data</span><span class="o">.</span><span class="n">extern</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
                 <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">url_data</span><span class="p">,</span> <span class="s2">&quot;session&quot;</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="HtmlSyntaxCheck.check"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.HtmlSyntaxCheck.check">[docs]</a>    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HtmlSyntaxCheck.check">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.HtmlSyntaxCheck.check">[docs]</a>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check HTML syntax of given URL.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">check_w3_time</span><span class="p">()</span>
         <span class="n">session</span> <span class="o">=</span> <span class="n">url_data</span><span class="o">.</span><span class="n">session</span>
@@ -675,10 +688,14 @@
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
             <span class="n">log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
                 <span class="n">LOG_PLUGIN</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;HTML syntax check plugin error: </span><span class="si">%(msg)s</span><span class="s2"> &quot;</span><span class="p">)</span> <span class="o">%</span> <span class="p">{</span><span class="s2">&quot;msg&quot;</span><span class="p">:</span> <span class="n">msg</span><span class="p">}</span>
-            <span class="p">)</span></div></div>
+            <span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CssSyntaxCheck"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.CssSyntaxCheck">[docs]</a><span class="k">class</span> <span class="nc">CssSyntaxCheck</span><span class="p">(</span><span class="n">_ContentPlugin</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CssSyntaxCheck">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.CssSyntaxCheck">[docs]</a>
+<span class="k">class</span> <span class="nc">CssSyntaxCheck</span><span class="p">(</span><span class="n">_ContentPlugin</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check the syntax of HTML pages with the online W3C CSS validator.</span>
 <span class="sd">    See https://jigsaw.w3.org/css-validator/manual.html#expert.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -688,12 +705,17 @@
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="n">W3Timer</span><span class="p">()</span>
 
-<div class="viewcode-block" id="CssSyntaxCheck.applies_to"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.CssSyntaxCheck.applies_to">[docs]</a>    <span class="k">def</span> <span class="nf">applies_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+<div class="viewcode-block" id="CssSyntaxCheck.applies_to">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.CssSyntaxCheck.applies_to">[docs]</a>
+    <span class="k">def</span> <span class="nf">applies_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check for CSS, extern and session.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">url_data</span><span class="o">.</span><span class="n">is_css</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">url_data</span><span class="o">.</span><span class="n">extern</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
                 <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">url_data</span><span class="p">,</span> <span class="s2">&quot;session&quot;</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="CssSyntaxCheck.check"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.CssSyntaxCheck.check">[docs]</a>    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CssSyntaxCheck.check">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.CssSyntaxCheck.check">[docs]</a>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check CSS syntax of given URL.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">check_w3_time</span><span class="p">()</span>
         <span class="n">session</span> <span class="o">=</span> <span class="n">url_data</span><span class="o">.</span><span class="n">session</span>
@@ -715,10 +737,14 @@
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
             <span class="n">log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
                 <span class="n">LOG_PLUGIN</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;CSS syntax check plugin error: </span><span class="si">%(msg)s</span><span class="s2"> &quot;</span><span class="p">)</span> <span class="o">%</span> <span class="p">{</span><span class="s2">&quot;msg&quot;</span><span class="p">:</span> <span class="n">msg</span><span class="p">}</span>
-            <span class="p">)</span></div></div>
+            <span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="check_w3_errors"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.check_w3_errors">[docs]</a><span class="k">def</span> <span class="nf">check_w3_errors</span><span class="p">(</span><span class="n">url_data</span><span class="p">,</span> <span class="n">xml</span><span class="p">,</span> <span class="n">w3type</span><span class="p">):</span>
+
+<div class="viewcode-block" id="check_w3_errors">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.check_w3_errors">[docs]</a>
+<span class="k">def</span> <span class="nf">check_w3_errors</span><span class="p">(</span><span class="n">url_data</span><span class="p">,</span> <span class="n">xml</span><span class="p">,</span> <span class="n">w3type</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Add warnings for W3C HTML or CSS errors in xml format.</span>
 <span class="sd">    w3type is either &quot;W3C HTML&quot; or &quot;W3C CSS&quot;.&quot;&quot;&quot;</span>
     <span class="n">dom</span> <span class="o">=</span> <span class="n">parseString</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
@@ -741,7 +767,10 @@
         <span class="n">url_data</span><span class="o">.</span><span class="n">add_warning</span><span class="p">(</span><span class="n">warnmsg</span> <span class="o">%</span> <span class="n">attrs</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="getXmlText"><a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.getXmlText">[docs]</a><span class="k">def</span> <span class="nf">getXmlText</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+
+<div class="viewcode-block" id="getXmlText">
+<a class="viewcode-back" href="../../../code/linkcheck/linkcheck.plugins.syntaxchecks.html#linkcheck.plugins.syntaxchecks.getXmlText">[docs]</a>
+<span class="k">def</span> <span class="nf">getXmlText</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return XML content of given tag in parent element.&quot;&quot;&quot;</span>
     <span class="n">elem</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="n">tag</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
     <span class="c1"># Yes, the DOM standard is awful.</span>
@@ -750,6 +779,7 @@
         <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">nodeType</span> <span class="o">==</span> <span class="n">node</span><span class="o">.</span><span class="n">TEXT_NODE</span><span class="p">:</span>
             <span class="n">rc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
     <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">rc</span><span class="p">)</span></div>
+
 </pre></div>
 
            </div>

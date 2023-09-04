@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -639,24 +639,35 @@
 <span class="n">PACKAGE_NAME</span> <span class="o">=</span> <span class="n">__package__</span>
 
 
-<div class="viewcode-block" id="module_path"><a class="viewcode-back" href="../code/linkcheck/linkcheck.html#linkcheck.module_path">[docs]</a><span class="k">def</span> <span class="nf">module_path</span><span class="p">():</span>
+<div class="viewcode-block" id="module_path">
+<a class="viewcode-back" href="../code/linkcheck/linkcheck.html#linkcheck.module_path">[docs]</a>
+<span class="k">def</span> <span class="nf">module_path</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return absolute directory of system executable.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="LinkCheckerError"><a class="viewcode-back" href="../code/linkcheck/linkcheck.html#linkcheck.LinkCheckerError">[docs]</a><span class="k">class</span> <span class="nc">LinkCheckerError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+
+<div class="viewcode-block" id="LinkCheckerError">
+<a class="viewcode-back" href="../code/linkcheck/linkcheck.html#linkcheck.LinkCheckerError">[docs]</a>
+<span class="k">class</span> <span class="nc">LinkCheckerError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Exception to be raised on linkchecker-specific check errors.&quot;&quot;&quot;</span>
 
     <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="LinkCheckerInterrupt"><a class="viewcode-back" href="../code/linkcheck/linkcheck.html#linkcheck.LinkCheckerInterrupt">[docs]</a><span class="k">class</span> <span class="nc">LinkCheckerInterrupt</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+
+<div class="viewcode-block" id="LinkCheckerInterrupt">
+<a class="viewcode-back" href="../code/linkcheck/linkcheck.html#linkcheck.LinkCheckerInterrupt">[docs]</a>
+<span class="k">class</span> <span class="nc">LinkCheckerInterrupt</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Used for testing.&quot;&quot;&quot;</span>
 
     <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="get_link_pat"><a class="viewcode-back" href="../code/linkcheck/linkcheck.html#linkcheck.get_link_pat">[docs]</a><span class="k">def</span> <span class="nf">get_link_pat</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_link_pat">
+<a class="viewcode-back" href="../code/linkcheck/linkcheck.html#linkcheck.get_link_pat">[docs]</a>
+<span class="k">def</span> <span class="nf">get_link_pat</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get a link pattern matcher for intern/extern links.</span>
 <span class="sd">    Returns a compiled pattern and a negate and strict option.</span>
 
@@ -687,7 +698,10 @@
     <span class="p">}</span></div>
 
 
-<div class="viewcode-block" id="init_i18n"><a class="viewcode-back" href="../code/linkcheck/linkcheck.html#linkcheck.init_i18n">[docs]</a><span class="k">def</span> <span class="nf">init_i18n</span><span class="p">():</span>
+
+<div class="viewcode-block" id="init_i18n">
+<a class="viewcode-back" href="../code/linkcheck/linkcheck.html#linkcheck.init_i18n">[docs]</a>
+<span class="k">def</span> <span class="nf">init_i18n</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialize i18n with the configured locale dir. The environment</span>
 <span class="sd">    variable LOCPATH can also specify a locale dir.</span>
 
@@ -709,6 +723,7 @@
     <span class="n">logging</span><span class="o">.</span><span class="n">addLevelName</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;INFO&#39;</span><span class="p">))</span>
     <span class="n">logging</span><span class="o">.</span><span class="n">addLevelName</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;DEBUG&#39;</span><span class="p">))</span>
     <span class="n">logging</span><span class="o">.</span><span class="n">addLevelName</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">NOTSET</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;NOTSET&#39;</span><span class="p">))</span></div>
+
 
 
 <span class="c1"># initialize i18n, puts _() and _n() function into global namespace</span>

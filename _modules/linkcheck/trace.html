@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.trace &mdash; LinkChecker 10.2.1.post64+gf7446043f documentation</title>
+  <title>linkcheck.trace &mdash; LinkChecker 10.2.1.post68+g2185f6ee8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -13,11 +13,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=6c975148"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.2.1.post64+gf7446043f
+                10.2.1.post68+g2185f6ee8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -619,7 +619,9 @@
 <span class="n">_trace_filter</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
 
 
-<div class="viewcode-block" id="trace_ignore"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.trace.html#linkcheck.trace.trace_ignore">[docs]</a><span class="k">def</span> <span class="nf">trace_ignore</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
+<div class="viewcode-block" id="trace_ignore">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.trace.html#linkcheck.trace.trace_ignore">[docs]</a>
+<span class="k">def</span> <span class="nf">trace_ignore</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Add given names to trace ignore set, or clear set if names is None.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">names</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">_trace_ignore</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -627,13 +629,17 @@
         <span class="n">_trace_ignore</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">names</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="trace_filter"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.trace.html#linkcheck.trace.trace_filter">[docs]</a><span class="k">def</span> <span class="nf">trace_filter</span><span class="p">(</span><span class="n">patterns</span><span class="p">):</span>
+
+<div class="viewcode-block" id="trace_filter">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.trace.html#linkcheck.trace.trace_filter">[docs]</a>
+<span class="k">def</span> <span class="nf">trace_filter</span><span class="p">(</span><span class="n">patterns</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Add given patterns to trace filter set or clear set if patterns is</span>
 <span class="sd">    None.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">patterns</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">_trace_filter</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">_trace_filter</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">pat</span><span class="p">)</span> <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">patterns</span><span class="p">)</span></div>
+
 
 
 <span class="k">def</span> <span class="nf">_trace</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
@@ -677,7 +683,9 @@
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;THREAD(</span><span class="si">%d</span><span class="s2">) </span><span class="si">%r</span><span class="s2"> </span><span class="si">%.2f</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> # </span><span class="si">%s</span><span class="s2">:</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">args</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="trace_on"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.trace.html#linkcheck.trace.trace_on">[docs]</a><span class="k">def</span> <span class="nf">trace_on</span><span class="p">(</span><span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="trace_on">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.trace.html#linkcheck.trace.trace_on">[docs]</a>
+<span class="k">def</span> <span class="nf">trace_on</span><span class="p">(</span><span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Start tracing of the current thread (and the current thread only).&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">full</span><span class="p">:</span>
         <span class="n">sys</span><span class="o">.</span><span class="n">settrace</span><span class="p">(</span><span class="n">_trace_full</span><span class="p">)</span>
@@ -685,9 +693,13 @@
         <span class="n">sys</span><span class="o">.</span><span class="n">settrace</span><span class="p">(</span><span class="n">_trace</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="trace_off"><a class="viewcode-back" href="../../code/linkcheck/linkcheck.trace.html#linkcheck.trace.trace_off">[docs]</a><span class="k">def</span> <span class="nf">trace_off</span><span class="p">():</span>
+
+<div class="viewcode-block" id="trace_off">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.trace.html#linkcheck.trace.trace_off">[docs]</a>
+<span class="k">def</span> <span class="nf">trace_off</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Stop tracing of the current thread (and the current thread only).&quot;&quot;&quot;</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">settrace</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span></div>
+
 </pre></div>
 
            </div>
