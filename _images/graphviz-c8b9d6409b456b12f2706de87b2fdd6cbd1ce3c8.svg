@@ -1,7 +1,7 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="786pt" height="191pt" viewBox="0.00 0.00 786.00 191.00">
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="698pt" height="191pt" viewBox="0.00 0.00 697.50 191.00">
 <ns0:g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 187)">
 <ns0:title>linkcheck.checker classes</ns0:title>
-<ns0:polygon fill="white" stroke="transparent" points="-4,4 -4,-187 782,-187 782,4 -4,4" />
+<ns0:polygon fill="white" stroke="transparent" points="-4,4 -4,-187 693.5,-187 693.5,4 -4,4" />
 
 <ns0:g id="node1" class="node">
 <ns0:title>1</ns0:title>
@@ -84,22 +84,25 @@
 <ns0:g id="node5" class="node">
 <ns0:title>5</ns0:title>
 <ns0:g id="a_node5"><ns0:a ns1:href="../code/linkcheck/linkcheck.checker.ignoreurl.html" ns1:title="IgnoreUrl" target="_blank">
-<ns0:polygon fill="none" stroke="black" points="692,-0.5 692,-36.5 778,-36.5 778,-0.5 692,-0.5" />
-<ns0:text text-anchor="middle" x="735" y="-14.8" font-family="Times,serif" font-size="14.00">IgnoreUrl</ns0:text>
+<ns0:polygon fill="none" stroke="black" points="593,-0.5 593,-36.5 679,-36.5 679,-0.5 593,-0.5" />
+<ns0:text text-anchor="middle" x="636" y="-14.8" font-family="Times,serif" font-size="14.00">IgnoreUrl</ns0:text>
 </ns0:a>
 </ns0:g>
 </ns0:g>
 
-<ns0:g id="node11" class="node">
-<ns0:title>11</ns0:title>
-<ns0:ellipse fill="none" stroke="black" cx="735" cy="-91.5" rx="27" ry="18" />
-<ns0:text text-anchor="middle" x="735" y="-87.8" font-family="Times,serif" font-size="14.00">11</ns0:text>
+<ns0:g id="node9" class="node">
+<ns0:title>9</ns0:title>
+<ns0:g id="a_node9"><ns0:a ns1:href="../code/linkcheck/linkcheck.checker.unknownurl.html" ns1:title="UnknownUrl" target="_blank">
+<ns0:polygon fill="none" stroke="black" points="582.5,-73.5 582.5,-109.5 689.5,-109.5 689.5,-73.5 582.5,-73.5" />
+<ns0:text text-anchor="middle" x="636" y="-87.8" font-family="Times,serif" font-size="14.00">UnknownUrl</ns0:text>
+</ns0:a>
+</ns0:g>
 </ns0:g>
 
 <ns0:g id="edge5" class="edge">
-<ns0:title>5-&gt;11</ns0:title>
-<ns0:path fill="none" stroke="black" d="M735,-36.69C735,-44.71 735,-54.45 735,-63.43" />
-<ns0:polygon fill="none" stroke="black" points="731.5,-63.47 735,-73.47 738.5,-63.47 731.5,-63.47" />
+<ns0:title>5-&gt;9</ns0:title>
+<ns0:path fill="none" stroke="black" d="M636,-36.69C636,-44.71 636,-54.45 636,-63.43" />
+<ns0:polygon fill="none" stroke="black" points="632.5,-63.47 636,-73.47 639.5,-63.47 632.5,-63.47" />
 </ns0:g>
 
 <ns0:g id="edge6" class="edge">
@@ -136,15 +139,6 @@
 <ns0:title>8-&gt;10</ns0:title>
 <ns0:path fill="none" stroke="black" d="M477.52,-107.56C443.94,-119.19 397.52,-135.27 363.06,-147.2" />
 <ns0:polygon fill="none" stroke="black" points="361.53,-144.03 353.23,-150.61 363.82,-150.64 361.53,-144.03" />
-</ns0:g>
-
-<ns0:g id="node9" class="node">
-<ns0:title>9</ns0:title>
-<ns0:g id="a_node9"><ns0:a ns1:href="../code/linkcheck/linkcheck.checker.unknownurl.html" ns1:title="UnknownUrl" target="_blank">
-<ns0:polygon fill="none" stroke="black" points="582.5,-73.5 582.5,-109.5 689.5,-109.5 689.5,-73.5 582.5,-73.5" />
-<ns0:text text-anchor="middle" x="636" y="-87.8" font-family="Times,serif" font-size="14.00">UnknownUrl</ns0:text>
-</ns0:a>
-</ns0:g>
 </ns0:g>
 
 <ns0:g id="edge9" class="edge">
