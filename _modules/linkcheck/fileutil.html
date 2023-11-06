@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.fileutil &mdash; LinkChecker 10.3.0.post12+g7f50c62b6 documentation</title>
+  <title>linkcheck.fileutil &mdash; LinkChecker 10.3.0.post14+gb3b3cd520 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -15,7 +15,7 @@
   
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../_static/documentation_options.js?v=c6d67a70"></script>
+        <script src="../../_static/documentation_options.js?v=4c8a9ce9"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.3.0.post12+g7f50c62b6
+                10.3.0.post14+gb3b3cd520
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -351,6 +351,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.is_accessable_by_others"><code class="docutils literal notranslate"><span class="pre">is_accessable_by_others()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.is_readable"><code class="docutils literal notranslate"><span class="pre">is_readable()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.is_tty"><code class="docutils literal notranslate"><span class="pre">is_tty()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.is_valid_config_source"><code class="docutils literal notranslate"><span class="pre">is_valid_config_source()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.is_writable_by_others"><code class="docutils literal notranslate"><span class="pre">is_writable_by_others()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.path_safe"><code class="docutils literal notranslate"><span class="pre">path_safe()</span></code></a></li>
 </ul>
@@ -702,8 +703,8 @@
 <a class="viewcode-back" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.is_readable">[docs]</a>
 <span class="nd">@lru_cache</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">is_readable</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if file is a regular file and is readable.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">R_OK</span><span class="p">)</span></div>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if file is readable.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">R_OK</span><span class="p">)</span></div>
 
 
 
@@ -722,6 +723,14 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if file or directory is world writable.&quot;&quot;&quot;</span>
     <span class="n">mode</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">filename</span><span class="p">)[</span><span class="n">stat</span><span class="o">.</span><span class="n">ST_MODE</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">mode</span> <span class="o">&amp;</span> <span class="n">stat</span><span class="o">.</span><span class="n">S_IWOTH</span></div>
+
+
+
+<div class="viewcode-block" id="is_valid_config_source">
+<a class="viewcode-back" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.is_valid_config_source">[docs]</a>
+<span class="k">def</span> <span class="nf">is_valid_config_source</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if the file is a valid config file.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="ow">or</span> <span class="n">stat</span><span class="o">.</span><span class="n">S_ISFIFO</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">st_mode</span><span class="p">)</span></div>
 
 </pre></div>
 

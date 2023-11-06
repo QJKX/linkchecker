@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.configuration &mdash; LinkChecker 10.3.0.post12+g7f50c62b6 documentation</title>
+  <title>linkcheck.configuration &mdash; LinkChecker 10.3.0.post14+gb3b3cd520 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -15,7 +15,7 @@
   
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../_static/documentation_options.js?v=c6d67a70"></script>
+        <script src="../../_static/documentation_options.js?v=4c8a9ce9"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.3.0.post12+g7f50c62b6
+                10.3.0.post14+gb3b3cd520
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -351,6 +351,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.is_accessable_by_others"><code class="docutils literal notranslate"><span class="pre">is_accessable_by_others()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.is_readable"><code class="docutils literal notranslate"><span class="pre">is_readable()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.is_tty"><code class="docutils literal notranslate"><span class="pre">is_tty()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.is_valid_config_source"><code class="docutils literal notranslate"><span class="pre">is_valid_config_source()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.is_writable_by_others"><code class="docutils literal notranslate"><span class="pre">is_writable_by_others()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../code/linkcheck/linkcheck.fileutil.html#linkcheck.fileutil.path_safe"><code class="docutils literal notranslate"><span class="pre">path_safe()</span></code></a></li>
 </ul>
@@ -840,7 +841,7 @@
         <span class="c1"># filter invalid files</span>
         <span class="n">filtered_cfiles</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">cfile</span> <span class="ow">in</span> <span class="n">cfiles</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">cfile</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">fileutil</span><span class="o">.</span><span class="n">is_valid_config_source</span><span class="p">(</span><span class="n">cfile</span><span class="p">):</span>
                 <span class="n">log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Configuration file </span><span class="si">%r</span><span class="s2"> does not exist.&quot;</span><span class="p">),</span> <span class="n">cfile</span><span class="p">)</span>
             <span class="k">elif</span> <span class="ow">not</span> <span class="n">fileutil</span><span class="o">.</span><span class="n">is_readable</span><span class="p">(</span><span class="n">cfile</span><span class="p">):</span>
                 <span class="n">log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">LOG_CHECK</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Configuration file </span><span class="si">%r</span><span class="s2"> is not readable.&quot;</span><span class="p">),</span> <span class="n">cfile</span><span class="p">)</span>
