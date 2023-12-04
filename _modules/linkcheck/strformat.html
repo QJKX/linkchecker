@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>linkcheck.strformat &mdash; LinkChecker 10.3.0.post29+gd13ef0448 documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <title>linkcheck.strformat &mdash; LinkChecker 10.3.0.post33+g268799ee0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+
+  
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="canonical" href="https://linkchecker.github.io/linkchecker/_modules/linkcheck/strformat.html" />
   <!--[if lt IE 9]>
@@ -15,7 +17,7 @@
   
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../_static/documentation_options.js?v=c83eb79a"></script>
+        <script src="../../_static/documentation_options.js?v=3104a977"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -36,7 +38,7 @@
               <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                10.3.0.post29+gd13ef0448
+                10.3.0.post33+g268799ee0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -60,6 +62,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../upgrading.html">Upgrading</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../upgrading.html#migrating-from-10-3-to-10-x">Migrating from 10.3 to 10.x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../upgrading.html#migrating-from-10-2-to-10-3">Migrating from 10.2 to 10.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../upgrading.html#migrating-from-10-1-to-10-2">Migrating from 10.1 to 10.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../upgrading.html#migrating-from-10-0-to-10-1">Migrating from 10.0 to 10.1</a></li>
@@ -616,6 +619,7 @@
 <span class="sd">necessarily optimised for large strings, so use with care.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
+<span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">textwrap</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -807,7 +811,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="n">duration</span><span class="p">,</span> <span class="n">unit</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">duration</span><span class="p">,</span> <span class="n">divisor</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">unit</span><span class="p">:</span>
-            <span class="n">time_str</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_n</span><span class="p">(</span><span class="n">single</span><span class="p">,</span> <span class="n">plural</span><span class="p">,</span> <span class="n">unit</span><span class="p">)</span> <span class="o">%</span> <span class="n">unit</span><span class="p">)</span>
+            <span class="n">time_str</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_n</span><span class="p">(</span><span class="n">single</span><span class="p">,</span> <span class="n">plural</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">unit</span><span class="p">))</span> <span class="o">%</span> <span class="n">unit</span><span class="p">)</span>
     <span class="n">time_str</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">time_str</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
         <span class="n">time_str</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
